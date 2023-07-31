@@ -1,0 +1,16 @@
+@charset "utf-8" ;
+/* 서브페이지 css */
+
+/* 공통외부 CSS 합치기 */
+@import url(./common.css);
+
+
+/* 서브타이틀 */
+h2.stit {
+    text-shadow: 2px 2px 2px #00000057;
+    text-align: center;
+    font-weight: normal;
+    color: rgb(39, 57, 218);
+    font-size: 24px;
+    font-family: "Bagel Fat One", cursive;
+}
