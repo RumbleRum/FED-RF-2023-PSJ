@@ -54,7 +54,7 @@
 html,
 body,
 h1,
-h2 {
+h2, figure {
     margin: 0;
     padding: 0;
 }
@@ -62,12 +62,21 @@ h2 {
 /* 레이아웃 박스 공통 디자안 */
 .bx {
     /* 크기 : w800 -> 가로크기 */
-    width: 800px;
+    /* width: 800px; */
+
+    max-width: 1000px;  /* maw */
+    /* 최대 가로크기 1000px의 의미는 100px보다 안커지고 
+    작을경우 auto로 전환함(부모박스에 크기로 맞춤) */
+    
+    /* min-width: 700px; */
+    /* 최소 가로크기 설정하면 그거보다 줄어들지않음 */
+
+
     /* 외곽선 : bd */
     /* border: 4px double darkblue; */
     border: 4px double lightblue;
     /* 패딩 */
-    padding: 20px;
+    padding: 30px;
     /* 마진 : 마영오 씨를 무대중앙으로 모시겠습니다 */
     margin: 0 auto;
     /* 양쪽 마진을 auto로 쓰면 등분할 되어 박스가 중앙위치 */
