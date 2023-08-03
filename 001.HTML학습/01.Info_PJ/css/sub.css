@@ -310,6 +310,138 @@ h2.st5 {
 
 }
 
+/* 뉴스파트공통 a요소 */
+.nbx a{
+    font-size: 17px;
+    line-height: 2.5; /* 줄간격 */
+    color: #222;
+    text-decoration: none; /* 밑줄없앰 */
+
+}
+
+/* 공통  a마우스 오버*/
+.nbx a:hover{
+    color: blue;
+    text-shadow: 1px 1px 1px #000;
+}
+
+
+/* 타이틀 공통  */
+.nbx h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    background-image: linear-gradient(to right, yellow , transparent );
+    padding: 10px;
+}
+
+
+
+/* 한줄말 줄임표시하기 (...) */
+.nbx li, .nbx dd, .nbx td{
+    
+    white-space: nowrap;
+    /* 넘치는 컨텐츠 숨기기 */
+    overflow: hidden;
+    /* 넘치는 금자 말줄임표시 */
+    text-overflow: ellipsis;
+    /* 
+     추가) 여러줄일떄 말줄임은 아래 3가지 추가
+     1. dispalt: -webkit-box;
+     2. -webkit-line-clamp : 라인수;
+     3.  -webkit-box-orient : vertical;
+
+     단 박스 높이값을 글자가 보일만큼 조절함
+     -> white-space : nowrap; 이 없음
+    */
+
+
+}
+
+
+
+/* 주요뉴스 ul */
+.cnews ul li::before{
+    content: '💎';
+}
+
+/* 
+[CSS 가상요소 : before , after] 
+- 모든 요소는 맨 앞과 맨 뒤에 가상요소를 사용할 수 있다
+- 맨 앞은 before, 맨 뒤는 after 
+- 필수속성 : content 
+- 이미지는 url()사용
+*/
+
+/* 주요 뉴스 li별 글자색 바꾸기 */
+.cnews li:first-child a{
+    color: red;
+    
+}
+.cnews li:nth-child(2) a{                   /* 자식 요소 선택 가상클래스 */
+    color: green;
+}
+.cnews li:last-child a{
+    color: blue;
+}
+
+
+
+
+/* 분야뉴스 */
+.snews dt{
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 30px;
+    padding: 5px;
+    background-color: rgb(0, 255, 200);
+    display: inline-block;
+    border-radius: 40%;
+    border: 4px dashed #000;
+    margin: 40px 0px 20px;
+    
+
+}
+
+/* dd앞에 가상요소로 불릿넣기 */
+.snews dd::before{
+    content: '👁‍🗨';
+}
+
+/* 분야별 뉴스 dt별 글자색, 배경색변경 */
+.snews dt:first-of-type{
+    color: red;
+    background-color: orange;
+}
+.snews dt:nth-of-type(2){                        /* 여러종류가 섞여있을 경우 형제 선택하는법  */
+    color: blue;
+    background-color: pink
+}
+
+.snews dt:last-of-type{
+    color: green;
+    background-color: rgb(0, 255, 200);
+}
+
+
+
+
+/* [ 자식요소 선택 가상클래스 : 자식요소 종류가 같아야함! ]
+    요소:first-child -> 첫번째 자식요소
+    요소:nth-child(n) -> n번째 자식요소
+    요소:last-child -> 마지막째 자식요소
+[ 여러종류가 섞여 있을 경우 형제 선택하기 ]
+    요소:first-of-type -> 같은 요소 중 첫번째
+    요소:nth-of-type(n) -> 같은 요소 중 n번째
+    요소:last-of-type -> 같은 요소 중 마지막째
+ */
+
+
+
+
+
+
+
+
 
 
 
