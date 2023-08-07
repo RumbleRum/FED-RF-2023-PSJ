@@ -11,19 +11,48 @@ h1.tit{
 }
 /* 라디오버튼 숨기기 */
 
+
+.rdo{
+    display: none;    
+}
+
+
+
 /* 메뉴 */
 .menu{
-    
-    width: 49%;
+    display: inline-block;
+    /* 디자인 적용을 위해서 */
+    width: 49%; /* 화면에 엔터간극 떄문에 50%로 반띵을 못함 */
     margin-bottom: 50px;
     font-size: 24px;
     font-weight: bold;
     color: #222;
     cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box; /* 패딩 보더 크기포함 보더박스 bxb */
 }
 .mn1{
     text-align: right;
 }
+
+/* 라디오 버튼 체크시 lable 디자인 변경 */
+/* +는 다음에 있는 형제요소 선택자, 클래스 */
+.rdo:checked+.menu{
+    color: aquamarine;
+    text-decoration: overline;
+}
+
+/* 메뉴사이 구분선 가상요소넣기 */
+
+.mn2::before{
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 25px;
+    background-color: aquamarine;
+}
+
+
 
 /* 드라마 테이블 박스 */
 .drama{
@@ -48,6 +77,25 @@ h1.tit{
 }
 
 /* 라디오버튼 체크시 보이기/숨기기 */
+/* #rdo1 라디오 버튼 체크시 형제들 선택자 (~)틸드로 table변경 */
+#rdo1:checked ~ 
+.drama>table:first-child{
+    display: table;
+}
+#rdo1:checked ~ 
+.drama>table:last-child{
+    display: none;
+}
+/* 두번째 table 보이기 / 첫번쨰 테이블 숨기기 */
+#rdo2:checked ~ 
+.drama>table:first-child{
+    display: none;
+}
+#rdo2:checked ~ 
+.drama>table:last-child{
+    display: table;
+}
+
 
 
 /* 테이블 이미지 */
