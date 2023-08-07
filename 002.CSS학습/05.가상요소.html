@@ -126,7 +126,7 @@
         
         dt:nth-of-type(2) ~ dd::before{
             content: '👠';
-            
+        
         }
         
         /* 아티스트의 dd부터 아이콘변경 */
@@ -179,7 +179,12 @@
         /* 기타 가상요소 ::selection */
         /* 드래그 선택시 글자색 배경색 설정변경! */
         
-        dd::selection {
+        p::selection {
+            color: lightgreen;
+            background-color: darkcyan;
+        }
+
+        span::selection {
             color: lightgreen;
             background-color: darkcyan;
         }
@@ -189,6 +194,8 @@
         특정선택자::selection 으로 쓰면 자식태그로 싸지 않은 글자만 적용됨!*/
 
 
+
+        
     </style>
 </head>
 
