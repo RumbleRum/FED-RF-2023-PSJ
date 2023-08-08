@@ -38,9 +38,14 @@ html,body{
         font-size: 20px;
         margin: 0 auto;
         /* 테이블은 가로크기설정 없고 내용만큼 늘어남 */
-        max-width: 1000px;
+        /* max-width를 특정 픽셀로 줄떄 table은 적용안됌! */
+        width: 1000px;
+        /* 가로크기 1000 px*/
+        max-width: 95%;
+        /* 최대크기 95%란 싸고있는 박스의 95%를 유지함 */
       }
       /* 테이블제목 - 기본 중앙정렬 되어 있음*/
+
       #drama caption{
         font-size: 35px;
         font-weight: bold;
@@ -56,12 +61,21 @@ html,body{
       #drama tbody td{
         border-bottom: 1px solid #ccc;
       }
-      /* th는 두꺼운선 넣기 */
+      
+      /* tbodt에 첫번째 tr의 첫번째 td 중앙정렬 */
+      #drama tbody tr td:first-child{
+        text-align: center;
+      }
+
+
+
+      /* th는 두꺼운선 넣기 + 배경색  */
       #drama th{
         border-top: 2px solid #222;
         border-bottom: 2px solid #222;
+        background-color: #cccccc;
     }
-    /* tbody에 마지막 tr의 td 아랫줄 두꺼운보더 */
+    /* tbody에 마지막 tr의 td 아랫줄 두꺼운보더  */
       #drama tbody tr:last-child td{
         border-bottom: 2px solid #222;
       }
@@ -98,3 +112,51 @@ html,body{
         text-decoration-style: double;
       }
       
+
+      /* 구분 테이블 박스 */
+      .gubun{
+        width: 1000px;
+        /* 가로크기 100px*/
+        max-width: 95%;
+        /* 최대크기 95%란 싸고있는 박스의 95%를 유지함 */
+        /* outline: 2px dashed red; */
+        margin: 0 auto;
+        margin-bottom: 200px;
+        
+        /*  자식테이블에 float 감싸기  */
+        overflow: hidden;
+      } 
+
+      /* 구분테이블 */
+      /* 요소명#아이디명 - 종속선택자 */
+      table#gubun{
+        font-size: 20px;
+        border: 1px solid #999;
+
+        /* 테이블을 오른쪽 끝으로 보내기 */
+        float: right;
+
+        /* td(테이블데이터) 의 사이간격 주기 */
+        border-collapse: separate;
+        border-spacing: 10px;
+              /* td 셀사이 간격 
+              border-spacing: 가로 세로; 
+              border-spacing: 양방향; 
+              */
+
+              
+            }
+            /* 구분테이블 td */
+            #gubun td{
+              padding: 10px;
+              
+            }
+            /* 구분테이블 첫번째 tr의 첫번째 td의 오른쪽 점선 넣기 */
+            #gubun tr:first-child td:first-child{
+              border-right: 2px dotted #ccc;
+            }
+
+            /* 구분테이블의 두번째 tr부터 끝까지 td 윗쪽점선보더 넣기 */
+            #gubun tr+tr td{
+              border-top: 5px dotted lightseagreen;
+            }
