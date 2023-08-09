@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+/* Robot PJ 메인 CSS - robot.css */
+
+/* 웹폰트 CDN */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Black+Ops+One&family=Chakra+Petch&family=Orbitron:wght@500&display=swap');
+
+/* 
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+*/
+
+/* 초기화 */
+html,body,h1,h2,h3,ul,ol{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* 전체 배경이미지 */
+    background: url(../images/bg.jpg) no-repeat fixed top / cover;
+
+}
+
+/* 공사중 표시 */
+body *{
+    outline: 2px dashed red;
+}
+
+/* 공통 클래스 */
+
+/* 메탈 배경 클래스 */
+.metal1{
+    background: url(../images/metal01.jpg) no-repeat center / cover;
+}
+.metal2{
+    background: url(../images/metal02.jpg) no-repeat center / cover;
+}
+
+
+
+
+
+
+/*********************1. 상단영역************************* */
+/* 1-1 로고  */
+/* 1-2 링크 타이틀 */
+/* 1-3 탑 이동버튼 */
+/* ********************2. 메인영역************************* */
+.main-aria{
+    /* overflow: hidden; */
+    /*
+    
+    첫번쨰 자식요소 블록박스에 마진탑을 준 경우
+    그 마진값은 부모요소 바깥쪽으로 나간다!(기본성질)
+    마진탑을 포함하려면 부모요소에 overflow : hidden을 셋팅해야함!
+    + 하단 마진도 같은 부모요소 바깥으로 나감!
+    
+    */
+}
+/* 2-1 로봇 박스 */
+.box-robot{
+/* 패딩 : 위 아래 */
+    /* margin-top: 30px; */
+    padding: 200px 0 700px;
+}
+/* 2-1-1 머리 */
+.head{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    /* 무대중앙은 마영오! */
+    margin: 0 auto;
+    background: url(../images/metal01.jpg) no-repeat center / cover;
+    border-radius: 120px 120px 80px 80px;
+    /* .body 보다 위 */
+    z-index: 1;
+}
+
+/* 가상요소로 머리에 가발씌우기 ::after */
+.head::after{
+    content: '';
+    display: block;
+    /* 마치 div를 넣은것 같음 */
+    position: absolute;
+    /* 앱솔루트요소 */
+    top: -105px;
+    left: -104px;
+    width: 465px;
+    height: 428px;
+    /* 배경 */
+    background: url(../images/hair2.png) no-repeat 0 / 100% 100% ;
+}
+/* 가상요소를 추가하여 가발2개만들기 */
+.head:hover::after{
+    content: '';
+    display: block;
+    /* 마치 div를 넣은것 같음 */
+    position: absolute;
+    /* 앱솔루트요소 */
+    top: -16px;
+    left: -269px;
+    width: 778px;
+    height: 504px;
+    /* 배경 */
+    background: url(../images/8rm01530005408431.png) no-repeat 0 / 100% 100% ;
+}
+/* 머리/몸통 하위요소 공통 */
+.head>div,.body>div{
+    position: absolute;
+    /* 모든 직계 하위요소는 앱솔루트 */
+}
+
+/* 눈 공통 */
+.eye{
+    /* 앱솔루트 top값은 공통임 */
+    top: 50px;
+
+    width: 50px;
+    height: 50px;
+    /* 원형 */
+    border-radius: 50%;
+    /* 이중선보더 */
+    border: 4px double #000;
+    /* 배경공통 */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #fff;
+}
+/* 왼 눈 */
+.eye1{
+    background-image: url(../images/e1.jpg);
+    left: 50px;
+}
+/* 오른눈 */
+.eye2{
+    right: 50px;
+    background-image: url(../images/e2.jpg);
+}
+/* 코 */
+.nose{
+    /* 위치 */
+    top: 110px;
+    left: 100px;
+    /* 크기 */
+
+    border-radius: 15px;
+    width: 50px;
+    height: 60px;
+    background: url(../images/nose.jpg) no-repeat -7px / 140% ;
+}
+.mouth{
+    top: 184px;
+    left: 66px;
+    width: 120px;
+    height: 20%;
+    background: url(../images/mouth.png) no-repeat 0 /100% 100% ;
+}
+
+/* 귀공통 */
+.ear{
+    top: 100px;
+    /* 크기 */
+    width: 50px;
+    height: 80px;
+    /* 배경 */
+    background: url(../images/metal02.jpg) no-repeat center / cover ;
+}
+/* 왼귀 */
+.ear1{
+    top: 80px;
+    /* 개별위치 왼쪽 바깥이라 l-50 */
+    left: -50px;
+    /* 둥근모서리 : 왼쪽위 왼쪽아래 */
+    border-radius: 20px 0 0 20px;
+}
+/* 오른귀 */
+.ear2{
+    top: 80px;
+    /* 개별위치 오른쪽 바깥이라 r-50 */
+    right: -50px;
+    /* 둥근모서리 : 오른위 오른아래 */
+    border-radius: 0 20px 20px 0;
+
+}
+
+/* 2-1-2 몸통 */
+
+.body{
+    position: relative;
+    /* 부모자격 - 하위직계자식 div 앱솔루트 */
+    width: 220px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* 배경이미지 사이즈조정 가로만 수정할시 세로는 생략가능
+    원래 bgz - 80% auto;                                    */
+    background-size: 80%;
+}
+/* 몸통의 가상요소로 상체만들기 */
+.body::before{
+    top: -4px;
+    left: -18px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 257px;
+    height: 200px;
+    background: url(../images/aaaa22.jpg) no-repeat 0 / 100% 100% ;
+    border-radius: 40px;
+}
+
+/* 몸통의 가상요소로 하체만들기 */
+.body::after{
+    bottom: -5px;
+    left: -18px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 257px;
+    height: 140px;
+    background-image: linear-gradient(to top, #920e66, #fd37c2);
+    border-radius: 100px 100px 40px 40px ;
+}
+
+/* 목 */
+.neck{
+    top: -60px;
+    left: calc(50% - 25px);
+    /*   중앙보내기원리
+
+       부모 박스의 50%보내고 자신크기의 절반(50px 나누기2) 빼기
+       자신크기는 left는 width
+       top은 height 이다!          */
+    
+    width: 50px;
+    height: 80px;
+    border-radius: 20px;
+}
+/* 팔공통 */
+.arm{
+    width: 50px;
+    height: 200px;
+    border-radius: 20%;
+}
+
+/* 팔 하단부분 공통 - 팔꿈치*/
+.arm span{
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    /* 부모는? .arm */
+    border-radius: 20%;
+}
+/* 가상요소로 손 만들기 */
+.arm span::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 120px;
+    /* outline: 2px dashed lime; */
+
+    background: url(../images/hand_left.png) no-repeat 0 / 100%;
+}
+
+/* 공통 left조정후 미세개별 위치조정은 margin으로 하자 ! */
+
+/* 왼손 가상요소 변경 */
+.arm1 span::after{
+    margin-left: 6px;
+}
+
+/* 오른손 가상요소 변경 */
+.arm2 span::after{
+    margin-left: -6px;
+    background-image: url(../images/hand_right.png);
+}
+
+
+/* 왼팔 */
+.arm1{
+    left: -70px;
+}
+/* 오른팔 */
+.arm2{
+    right : -70px;
+}
+/* 다리공통 */
+.leg{
+    top: 95%;
+    /* 부모박스 높이만큼 나감 
+    아랫쪽 바깥에 위치! */
+    width: 80px;
+    height: 250px;
+    border-radius: 20%;
+}
+
+/* 다리 하단부분 공통 - 무릎 */
+.leg span{
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    /* 부모는? .leg */
+    border-radius: 20%;
+}
+
+/* 가상요소로 부츠 만들기 ! */
+.leg span::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: -5px;
+    width: 110%;
+    height: 80%;
+    background-image: linear-gradient(to left, #ccc, #5e5701);
+    border: 5px solid #4e0de6;
+}
+
+/* 가상요소로 부츠 만들기 ! */
+.leg span::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 85%;
+    left: -14px;
+    width: 152%;
+    height: 40%;
+    background-image: linear-gradient(to left, #ccc, #5e5701);
+    border: 2px solid #4e0de6;
+    border-bottom :  5px solid #4e0de6 ;
+    border-radius : 40px 40px 0 0 ;
+    /* 크기에 보더까지 포함하는 박스 */
+    box-sizing: border-box;
+
+}
+
+
+
+/* 왼다리 */
+.leg1{
+    left: 10px;
+}
+/* 오른다리 */
+.leg2{
+    right: 10px;
+}
+/* 어깨공통 */
+.shdr{
+    top: -15px;
+    width: 80px;
+    height: 80px;
+}
+/* 왼어깨 */
+.shdr1{
+    left: -85px;
+    border-radius: 50% 0 0 50%;
+}
+/* [둥근모서리 값 설정] 
+1 1개 - 네방향
+2 2개 - 왼위 오른아래 / 오른위 왼아레
+3 3개 - 왼위 / 오른위 / 왼아래 / 오른아래
+4 4개 - 왼위 / 오른위 /오른아래 / 왼아래        */
+
+/* 오른어꺠 */
+.shdr2{
+    right: -85px;
+    border-radius:  0 50% 50% 0 ;
+}
+/* tv */
+
+/* 2-2 로봇 설명박스 */
+/* ********************3. 하단영역************************* */
+/* 3-1 회사정보 */
+
