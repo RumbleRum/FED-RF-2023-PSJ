@@ -25,9 +25,9 @@ body{
 }
 
 /* 공사중 표시 */
-body *{
+/* body *{
     outline: 2px dashed red;
-}
+} */
 
 /* 공통 클래스 */
 
@@ -58,6 +58,8 @@ body *{
 
     width: 200px;
     height: 200px;
+
+
     /* 배경이미지 */
 
     background: pink url(../images/robot_03.png) no-repeat center / 160px ;
@@ -162,6 +164,10 @@ body *{
 .head>div,.body>div{
     position: absolute;
     /* 모든 직계 하위요소는 앱솔루트 */
+}
+/* 각 몸에 글로우 효과 주기 */
+.ear, .body>div, .body>div>span{
+    box-shadow: 0 0 10px 5px aquamarine;
 }
 
 /* 눈 공통 */
@@ -565,8 +571,61 @@ overflow: hidden;
 
 
 
-
 /* 2-2 로봇 설명박스 */
+.box-text{
+    /* 로봇보다 위 */
+    position: relative;
+    /* 최대크기 800px */
+    max-width: 800px;
+    /* 박스중앙 : 마영오 */
+    margin: 0 auto;
+    /* 하단마진 200px */
+    margin-bottom: 200px;
+    /* 반투명 검정배경 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 글자색 : 흰섹 */
+    color: #fff;
+    /* 글자그림자 */
+    text-shadow: 1px 1px 1px #000;
+    /* 패딩: 15px 30px */
+    padding: 15px 30px;
+    /* 경계선 : 3px solid 흰색 */
+    border: 3px solid white;
+    /* 둥근 모서리 20px */
+    border-radius: 20px;
+    /* 박스 그림자를 이용한 글로우효과 : 내부 2개줌 */
+    box-shadow: 
+    inset 0 0 20px blue,
+    inset 0 0 50px 10px aqua;
+    /* 박스그림자 : x y blur spread color */
+
+
+}
+
+/* 2-2-1.제목 */
+.box-text h2{
+    /* 스티키 포지션 */
+    position: sticky;
+    /* top값 설정시 스티키 효과 위치고정 작동 */
+    top: 15px;
+    /* 글자 : 35px 'Chakra Petch' */
+    font: 2.18rem 'Chakra Petch';
+    /* 글자색 라임 */
+    color: lime;
+    /* 글자중앙 */
+    text-align: center;
+    /* 배경색 흰색 반투명 */
+    background-color: rgba(255, 255, 255, 0.521);
+    /* 둥근 모서리 20px */
+    border-radius: 20px;
+}
+/* 2-2-2.출처 */
+
+/* 2-2-3.내용단락 */
+
+
+
+
 /* ********************3. 하단영역************************* */
 /* 3-1 회사정보 */
 
