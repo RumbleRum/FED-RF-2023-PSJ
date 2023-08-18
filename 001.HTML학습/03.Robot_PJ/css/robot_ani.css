@@ -249,3 +249,14 @@ animation : 이시이지반방마
 .mouth{
     animation: mouth-ani .01s linear 10s infinite alternate ;
 }
+
+/* 말풍선 애니 */
+@keyframes balloon-ani {
+    to{
+        transform: scale(1);
+    }    
+}
+/* 말풍선 애니 호출 */
+.link-title{
+    animation: balloon-ani .1s ease-in 10s forwards ;
+}
