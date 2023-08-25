@@ -85,6 +85,8 @@
                 btns[1].onclick = changeImg;
                 btns[2].onclick = changeImg;
                 btns[3].onclick = changeImg;
+
+
                 // -> 함수명만 써야 함수내부코드가 이벤트속성에
                 // 값으로 할당된다!
 
@@ -99,6 +101,7 @@
                 // 따옴표안에 값을 쓰는 것은 아래와
                 // 같이 익명함수구역안에 코드를
                 // 쓰는 것과 같기때문이다!
+
                 // btns[2].onclick = function(){
                 //     changeImg();
                 // }
@@ -106,10 +109,13 @@
                 // <button class="btns" onclick="changeImg()">
             } //////////// loadFn 함수 /////////
 
+
             /*********************************** 
         함수명 : changeImg
         기능 : 메인 이미지 src변경하기
     ***********************************/
+
+
             function changeImg() {
                 // 1. 호출확인
                 console.log("변경!!!", this.innerText);
@@ -134,18 +140,15 @@
 
                 // 4. 이미지 src속성값 만들기(switch문 분기)
                 switch (btnTxt) {
-                    case "포스터":
-                        isrc = "./images/ala1.jpg";
-                        break;
-                    case "장면1":
-                        isrc = "./images/ala4.jpg";
-                        break;
-                    case "장면2":
-                        isrc = "./images/ala2.jpg";
-                        break;
-                    case "장면3":
-                        isrc = "./images/ala3.jpg";
-                        break;
+                    case '포스터': isrc = './images/ala1.jpg';
+                    break;
+                    case '장면1': isrc = './images/ala3.jpg';
+                    break;
+                    case '장면2': isrc = './images/ala2.jpg';
+                    break;
+                    case '장면3': isrc = './images/ala4.jpg';
+                    break;
+                   
                 } ////////// switch case //////////
 
                 // if (btnTxt == "포스터") {
