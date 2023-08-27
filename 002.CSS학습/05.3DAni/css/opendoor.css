@@ -45,6 +45,19 @@ body{
     height: 300px;
     margin: 0 auto;
     background-color: #900;
+    /* 처음에 아랫쪽으로 나가있음 */
+    transform: translateY(150%);
+
+    /* 애니메이션 호출 */
+    animation: appear-ani .5s ease-in-out 1s forwards;
+}
+
+/* 문짝 등장애니 키프레임 */
+@keyframes appear-ani {
+    to{
+        transform: translateY(0%);
+        
+    }
 }
 /* 문프레임 */
 .frame{
@@ -68,6 +81,8 @@ body{
     *******************************/
     
         perspective: 480px;
+
+        perspective-origin:  50% 50%;
 
      /*********************************************** 
         [ 뷰포인트(관찰자위치) 변경옵션 ]
