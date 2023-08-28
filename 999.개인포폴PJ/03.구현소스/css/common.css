@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/************* 1. 상단영역 *************/
+#header {
+    
+}
+.header .partbox {
+    height: 120px;
+}
+t
+.header__logo img{
+    margin-top: 40px;
+    width: 126px;
+}
+
+.top-menu ul{
+    
+    display: flex;
+    justify-content: flex-end;   
+    padding: 15px 15px 5px 0;
+    background-color: #2c2c2c;
+}
+
+.top-menu li+li{
+    margin-left: 12px;
+}
+
+.top-menu a{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+
+.gnb ul{
+    
+    display: flex;
+    justify-content: flex-end;   
+    background-color: #000;
+}
+
+.gnb ul>li>a{
+    font-size: 1.5rem;
+    display: block;
+    padding: 28px 30px ;
+   
+    white-space: nowrap;
+    color: #fff;
+}
+
+.gnb ul>li.d1>a{
+    position: relative;
+    background-color: red;
+    top: 23px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+#main {
+    min-height: 800px;
+}
+
+#footer {
+    background-color: lightskyblue;
+}
+.footer .partbox {
+    height: 100px;
+}
