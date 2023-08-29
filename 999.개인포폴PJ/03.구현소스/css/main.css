@@ -101,7 +101,8 @@ body > div > * {
 
 
 #main {
-    background-color: #fff;
+    background: url(../images/bg1.jpg) no-repeat center /cover;
+    background-color: #000;
 }
 
 .main .group-part-01 .partbox {
