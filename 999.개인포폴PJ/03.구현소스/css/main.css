@@ -13,8 +13,28 @@ body > div > * {
     outline-color: red;
 }
 
+.logo{
+    background-color: #000;
+    height: 100%;
+    line-height: 150px;
+}
 
-#banner {
+
+.vidbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%)
+}
+.vidbox video{
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+
+}
+
+.banner {
+    position: relative;
    
 }
 .banner .partbox {
