@@ -13,11 +13,7 @@ body > div > * {
     outline-color: red;
 }
 
-.logo{
-    background-color: #000;
-    height: 100%;
-    line-height: 150px;
-}
+
 
 
 .vidbox{
@@ -39,64 +35,6 @@ body > div > * {
 }
 .banner .partbox {
     height: 900px;
-}
-
-
-#dokebi-menu{
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-}
-.dokebi-menu ul{
-   
-    display: flex;
-    padding: 12px 0;
-}
-
-.dokebi-menu ul>li>a{
-    color: #fff;
-    font-size: 1.8rem;
-    display: block;
-    padding: 9px 24px;
-    white-space: nowrap;
-}
-
-.dokebi-menu ul>li:hover>a{
-    color: #222;
-}
-
-.dokebi-menu ul>li.be-sub>a::after{
-    content: '∨';
-    display: inline-block;
-    transform: scale(.5,.3);
-    margin-left: 3px;
-}
-
-.dokebi-menu ul>li.on>a{    
-    background-color: red;
-    color: #fff;
-    border-radius: 30px;
-}
-
-
-.dokebi-sub-menu{
-    position: absolute;
-    border: 1px solid red;
-    border-radius: 30px;
-    width: 180px;
-    background-color: #fff;
-
-    display: none;
-}
-
-.dokebi-menu ul>li:hover .dokebi-sub-menu{
-    display: block;
-}
-
-.dokebi-sub-menu a{
-    display: block;
-    padding: 10px 15px;
-    font-size: 1.8rem;
 }
 
 

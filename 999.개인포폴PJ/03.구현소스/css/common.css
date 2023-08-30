@@ -4,14 +4,46 @@
 #header {
     
 }
-.header .partbox {
-    height: 120px;
+
+.right{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px 15px;
 }
 
-.header_logo img{
-    margin-top: 50px;
-    width: 126px;
+.right li>a{
+    color: #fff;
 }
+
+.jif_wrap{
+    background-color: #000;
+    border-bottom: solid 2px #424141 ;
+}
+
+.header{
+    background-color: #000;
+}
+
+
+.header .logo{
+    /* display: flex; */
+    height: 100%;
+    line-height: 100px;
+}
+
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+}
+.ic{
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+
 
 .top-menu ul{
     
@@ -63,6 +95,9 @@
 
 #footer {
     background-color: #000;
+
+
+
 }
 .footer .partbox {
     height: 150px;
