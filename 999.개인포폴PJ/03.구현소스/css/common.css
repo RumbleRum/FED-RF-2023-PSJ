@@ -32,10 +32,7 @@
 }
 
 
-.icons{
-    display: flex;
-    justify-content: flex-end;
-}
+
 .ic{
     color: #fff;
     font-size: 15px;
@@ -101,4 +98,51 @@
 }
 .footer .partbox {
     height: 150px;
+}
+
+
+
+
+/* 하단 아이콘영역 */
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4px;
+}
+
+.ha1{
+   background-color: #424141;
+}
+.ha2{
+   background-color: #424141;
+}
+
+.ha3{
+    background-color: #424141;
+}
+
+.ha4{
+    background-color: #424141;
+}
+
+
+.fa-instagram{
+    font-size: 40px;
+    color: white;
+}
+
+.fa-facebook{
+    font-size: 40px;
+    color: white;
+}
+
+.fa-twitter{
+    font-size: 40px;
+    color: white;
+}
+
+.fa-youtube{
+    font-size: 40px;
+    color: white;
 }
