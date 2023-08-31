@@ -24,8 +24,35 @@ body > div > * {
 #banner {
     background: url(../images/bg_mainvisual2.jpg) no-repeat center/auto 100%; /* 가로는 auto 세로 100% */
 }
-.banner .partbox {
-    height: 530px;
+
+/* 캐릭터 파트박스 */
+.cat-area{
+    position: relative; /* 부모자격 */
+
+    aspect-ratio: 2/1;
+    /* 파트박스에 비율 만들기
+    -> height 높이값을 절대 주면 안된다 !! */
+}
+
+.cat-box{
+    position: absolute;
+    bottom: 5%;
+    /* 플렉스 박스 */
+    display: flex;
+    flex-wrap: wrap;
+    /* 진행방향 정렬 */
+    justify-content: center;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 개별 캐릭터 박스 */
+.cat-box article{
+    width: calc(95%/4); /* 전체 비율에서 4등분 으로 나눌때 퍼센트를 칼크로 쓴다 */
+    /* 개별박스 비율설정 : height 설정 안함! */
+    aspect-ratio: 2/1.5;
+    outline: 2px dashed #000;
 }
 
 /************* 3. 도깨비메뉴박스 *************/
@@ -71,7 +98,7 @@ body > div > * {
 .dokebi-sub-menu{
     position: absolute;
     border: 1px solid red;
-    border-radius: 30px;
+    border-radius: 20px;
     width: 180px;
     background-color: #fff;
 
@@ -88,6 +115,8 @@ body > div > * {
     padding: 10px 15px;
     font-size: 1.8rem;
 }
+
+
 
 /************* 4. 메인영역 : .group-part *************/
 #main {
