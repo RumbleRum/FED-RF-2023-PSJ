@@ -79,7 +79,7 @@ body{
 }
 /* 2. 오른쪽면 */
 .cube span:nth-child(2){
-    background: url(../images/car.png) no-repeat right/auto 105%;
+    background: url(../images/en.jpg) no-repeat right/auto 105%;
 
     /* y축회전 + 화면방향이동 : z축 */
     transform: rotateY(90deg)
@@ -103,7 +103,7 @@ body{
 }
 /* 5. 윗면 */
 .cube span:nth-child(5){
-    background: url(../images/citys.jpg) no-repeat center/cover;
+    background: url(../images/img6.jpg) no-repeat center/cover;
 
     /* x축회전 + 화면방향이동 : z축 */
     transform: rotateX(90deg)
@@ -111,7 +111,7 @@ body{
 }
 /* 6. 아랫면 */
 .cube span:nth-child(6){
-    background: url(../images/kim.png) no-repeat center/cover;
+    background: url(../images/shk.jpg) no-repeat center/cover;
 
     /* x축회전 + 화면방향이동 : z축 */
     transform: rotateX(-90deg)
@@ -139,7 +139,7 @@ body{
         /* transform: rotateX(370deg) rotateY(-330deg); */
         /* transform: rotate3d(370,-330deg,0); */
         transform: 
-        rotateX(370deg) rotateY(390deg) rotateZ(360deg);
+        rotateX(370deg) rotateY(360deg) rotateZ(350deg);
         
         /* 
             x축 양의 방향으로 10도에서 출발
