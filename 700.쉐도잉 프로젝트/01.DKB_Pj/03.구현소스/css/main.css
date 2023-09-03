@@ -42,6 +42,8 @@ body > div > * {
     flex-wrap: wrap;
     /* 진행방향 정렬 */
     justify-content: center;
+    /* 사진 사이간격 */
+    gap: 0 1.1vw; /* 위아래 0 가로 1.1 */
 
     width: 100%;
     margin: 0 auto;
