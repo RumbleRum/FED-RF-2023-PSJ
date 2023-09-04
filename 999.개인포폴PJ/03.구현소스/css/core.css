@@ -19,12 +19,6 @@ html{
     clear: both;
 }
 
-.partbox {
-    float: left;
-    box-sizing: border-box;
-    border: 2px dotted blue;
-    height: 100%;
-}
 
 .col-1 {
     width: 8.33%;
@@ -63,17 +57,12 @@ html{
     width: 100%;
 }
 
-.clb::after{
-    content: '';
-    display: block;
-    clear: both;
-}
 
-.ir{
-    display: block;
-    width: 0;
-    height: 0;
-    overflow: hidden;
+.partbox {
+    float: left;
+    box-sizing: border-box;
+    border: 2px dotted blue;
+    height: 100%;
 }
 
 .blind{
