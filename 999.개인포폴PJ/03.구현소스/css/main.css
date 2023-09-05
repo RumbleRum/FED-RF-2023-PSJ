@@ -13,7 +13,9 @@ body > div > * {
     outline-color: red;
 }
 
-
+.group-part-01{
+    position: relative;
+}
 
 
 .vidbox{
@@ -33,7 +35,7 @@ body > div > * {
    
 }
 .banner .partbox {
-    height: 900px;
+    height: 880px;
 }
 
 
@@ -43,15 +45,15 @@ body > div > * {
 }
 
 .main .group-part-01 .partbox {
-    height: 1000px;
+    height: 700px;
 }
 
 .main .group-part-02 .partbox {
-    height: 1000px;
+    height: 700px;
 }
 
 .main .group-part-03 .partbox {
-    height: 1000px;
+    height: 700px;
 }
 
 .footer .group-part-04 .partbox {
