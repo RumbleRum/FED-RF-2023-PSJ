@@ -42,7 +42,7 @@
     line-height: 120px;
 }
 
-/* 중단 영역 */
+/* 타이틀 제목 설정 */
 
 .tit1{
     text-align: center;
@@ -60,7 +60,7 @@
     color: #fff;
 }
 
-
+/* 메인1 - 영화 출품작  */
 .ch{
     text-align: center;
     padding: 1vw;
@@ -84,6 +84,44 @@
 .group-part-01.on .ch3 .img-box img{    
     transition-delay: .4s;
 }    
+
+/* 메인2 - 영화 개막작  */
+
+.km{
+    position: relative;
+}
+
+.poster1{
+    position: absolute;
+}
+
+.poster1 img{
+    width: 100%;
+    
+}
+
+.mv_info1{
+    text-align: center;
+}
+
+
+.mv_info1 li>a{
+    font-size: 20px;
+    color: #fff;
+   
+}
+
+
+.poster2 li>a{
+    font-size: 40px;
+    color: aqua;
+    padding: 0 30px;
+}
+
+.mv_info2 li>a{
+    color: #fff;
+    font-size: 2.5vw;
+}
 
 
 #main {
