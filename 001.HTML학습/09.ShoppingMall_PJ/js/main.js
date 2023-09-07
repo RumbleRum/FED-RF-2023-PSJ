@@ -41,6 +41,20 @@ addEvt(window,"DOMContentLoaded", loadFn);
 
 *****************************************************/
 
+// 전역변수 구역 ////////////////
+// 1. 광클금지 상태 변수 : 0-허용,1-불허용
+let clickSts = 0;
+// 2. 슬라이드 이동시간 : 상수로 설정
+const TIME_SLIDE = 400;
+
+/* 
+    (참고:JS에서 이름짓는 일반규칙)
+    1. 변수/함수 : 캐믈 캐이스(첫단어 소문자 뒷단어 대문자시작)
+    2. 생성자함수 / 클래스 : 파스칼 케이스 (모든 첫글자 대문자)
+    3. 상수 : 모든 글자 대문자 (연결은 언더스코어 - 스네이크 케이스)
+*/
+
+
 /****************************************** 
     함수명: loadFn
     기능: 로딩 후 버튼 이벤트 및 기능구현
@@ -66,6 +80,12 @@ function loadFn() {
 
     // 3. 함수만들기
     function goSlide(){
+        // 광클금지
+        if(clickSts) return; // 나가!
+        clickSts-1;// 잠금!
+        setTimeout(() => clickSts=0,TIME_SLIDE); // 잠금 해제! - 0.4초
+
+
         console.log('나야',this,this.classList.contains('ab2'));
 
         // classList.contains(클래스명)
@@ -82,7 +102,7 @@ function loadFn() {
             // 1. 대상 이동하기
             slide.style.left = '-100%';
             // 2. 트랜지션 주기
-            slide.style.transition = '.4s ease-in-out'
+            slide.style.transition = TIME_SLIDE+'ms ease-in-out'
             // 이동시간 후 맨앞 li 잘라서 맨뒤로 이동하기
             // appendChild(요소)
             setTimeout(()=>{
@@ -92,13 +112,13 @@ function loadFn() {
                 slide.style.left = '0';
                 // 5. 트랜지션 없애기
                 slide.style.transition = 'none';
-            },400);
+            },TIME_SLIDE);
 
         }  ///////// if문
 
         else{ ////////////// 왼쪽버튼   <
             // 1. 맨뒤 li 맨앞으로 이동
-            // insertBefore(넣을놈,넣을놈전놈)
+            // insertBefore(사진 넣을놈,넣을놈전놈)
             slide.insertBefore(
                 eachOne[eachOne.length-1],eachOne[0]);
 
@@ -119,7 +139,7 @@ function loadFn() {
                 slide.style.left = '0%';    
     
                 // 5. 트랜지션 주기
-                slide.style.transition = '.4s ease-in-out'
+                slide.style.transition = TIME_SLIDE+'ms ease-in-out'
             }, 0);
 
 
