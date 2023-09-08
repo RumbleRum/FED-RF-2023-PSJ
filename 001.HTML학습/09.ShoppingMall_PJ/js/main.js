@@ -65,12 +65,21 @@ function loadFn() {
     // 1. 대상선정
     // 이벤트 대상 : abtn
     const abtn = qsa('.abtn');
-    // 변경 대상: #slide
+    // 변경 대상 : #slide
     const slide = qs('#slide');
+    // 블릿박스 대상 : 
+    const indic = qsa('.indic li');
 
 
     // 대상확인
-    console.log('대상',abtn,slide);
+    console.log('대상',abtn,slide,indic);
+
+    // 1.5. li 리스트에 순번속성 만들어 넣기
+    // 만드는 이유 : 블릿변경 등에 현재 슬라이드 순번 필요!
+    // 사용자 정의 속성은 반드시 'data-'로 시작해야함!(W3C규칙)
+    // data-seq 로 순번속성을 넣을것임!
+    slide.querySelectorAll('li').forEach((ele,idx)=>ele.setAttribute('data-seq',idx));
+    // setAttribute(속성명,속성값) -> 속성셋팅 JS내장 매서드
 
     // 2. 이벤트 설정하기 : 버튼 요소들 -> forEach()
     abtn.forEach(ele=>{
@@ -145,7 +154,23 @@ function loadFn() {
 
         } /////////// else 문
 
-    } ////////// goSlide ///
+        // 4. 슬라이드 순번과 일치하는 블릿에 클래스넣기
+        // 대상 : .indic li -> indic변수
+        // 맨앞 슬라이드 li 'data-seq' 값 읽어오기
+        // isRight 값이 트루이면 오른쪽버튼이고 순번은 [1]
+        // isRight 값이 false이면 왼쪽버튼이고 순번은 [0]
+        let nowSeq = 
+        slide.querySelectorAll('li')[isRight?1:0].getAttribute('data-seq');
+        console.log('현재슬라이드 순번:',nowSeq);
+        
+        // 해당순번 블릿li에 클래스 on넣기
+        // 블릿전체 순회시 해당순번에 on넣고 나머지는 on빼기
+        indic.forEach((ele,idx)=>{
+                if(idx==nowSeq) ele.classList.add('on');
+                else ele.classList.remove('on');
+        }); ///////// forEach //////////////////////
+
+    } ////////// goSlide /////////////////
 
 
 
