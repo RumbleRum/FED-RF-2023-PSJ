@@ -18,9 +18,55 @@
 .top-menu{
     position: sticky;
     top: 0;
+    /* padding: 20px 0; */
+    background-color: #000;
     z-index: 999;
-    background-color: #fff;
 }
+
+.ab>ul{
+    display: flex;
+    justify-content: flex-end;
+    white-space:  nowrap;
+    gap: 0 80px;
+    padding-top: 38px;
+}
+.ab>ul>li>a{
+    font-size: 18px;
+    color: white;
+}
+
+.ab>ul>li>a:hover{
+    color: aqua;
+}
+
+.ab>ul>li:hover>a::after{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
+
+
+
+.time-box{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4px 4px;
+    background-color: orangered;
+    width: 100px;
+}
+
+.time-box>ul>li>a{
+    color: #fff;
+    font-size: 15px;
+}
+
 
 .jif_wrap{
     background-color: #000;
@@ -29,7 +75,7 @@
 
 .inbox-jif{
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     height: 100px;
     margin: 0 auto;
 }

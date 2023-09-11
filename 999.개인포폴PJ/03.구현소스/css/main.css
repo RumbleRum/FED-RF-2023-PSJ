@@ -17,6 +17,17 @@ body > div > * {
     position: relative;
 }
 
+.partbox {
+    float: left;
+    box-sizing: border-box;
+    border: 2px dotted blue;
+    height: 100%;
+}
+
+.blind{
+    display: none;
+}
+
 
 .vidbox{
     position: absolute;
