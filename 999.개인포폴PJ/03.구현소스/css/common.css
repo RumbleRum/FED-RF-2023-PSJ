@@ -39,10 +39,11 @@
     color: aqua;
 }
 
+/* 오버시 밑줄 */
 .ab>ul>li:hover>a::after{
     content: '';
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 0;
     display: block;
     width: 100%;
@@ -177,32 +178,46 @@
     min-height: 800px;
 }
 
+
+
+
+
+/* 하단 영역 & 아이콘 */
+
+
 #footer {
     background-color: #000;
 
-
-
 }
 .footer .partbox {
-    height: 150px;
+    height: 144px;
+}
+
+.footer_logo>li{
+    height: 110px;
+}
+
+.footer_logo img{
+    height: 70%;
+    width: 95%;
 }
 
 
-
-
-/* 하단 아이콘영역 */
-
-.icons{
+.ha3>ul>li{
     display: flex;
-    justify-content: space-evenly;
-    margin: 4px;
 }
+
+.ha3>ul>li>a{
+    color: #fff;
+    font-size: 15px;
+}
+
 
 .ha1{
    background-color: #424141;
 }
 .ha2{
-   background-color: #424141;
+    background-color: #424141;
 }
 
 .ha3{
@@ -213,6 +228,11 @@
     background-color: #424141;
 }
 
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4px;
+}
 
 .fa-instagram{
     font-size: 40px;
