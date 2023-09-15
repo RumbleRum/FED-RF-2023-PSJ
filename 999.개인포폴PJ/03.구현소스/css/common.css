@@ -214,6 +214,10 @@
     filter: brightness(90%);
 }
 
+.but{
+    position: absolute;
+    
+}
 
 /* 하단 영역 & 아이콘 */
 
