@@ -25,10 +25,12 @@
 
 .ab>ul{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     white-space:  nowrap;
     gap: 0 80px;
-    padding-top: 38px;
+    height: 100px;
+    /* padding-top: 38px; */
+    align-items: center;
 }
 .ab>ul>li>a{
     font-size: 18px;
@@ -61,6 +63,9 @@
     padding: 4px 4px;
     background-color: orangered;
     width: 100px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .time-box>ul>li>a{
@@ -77,31 +82,25 @@
 .inbox-jif{
     position: relative;
     max-width: 1200px;
-    height: 100px;
+    /* height: 100px; */
     margin: 0 auto;
 }
 
-.part-box{
-    float: left;
-}
 
 .logo{
-    line-height: 120px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+.logo img{
+    width: 200%;
 }
 
 /* 타이틀 제목 설정 */
 
-.tit1{
-    text-align: center;
-    font-size: 35px;
-    color: #fff;
-}
-.tit2{
-    text-align: center;
-    font-size: 35px;
-    color: #fff;
-}
-.tit3{
+.tit{
     text-align: center;
     font-size: 35px;
     color: #fff;
@@ -206,11 +205,15 @@
 }
 
 /* 메인3 - 영화제 찿아오는 길 */
-
-.map img{
+.map{
+    position: relative;
     width: 100%;
-    aspect-ratio: 1;
-    /* opacity: 0.9; */
+    height: 100%;
+    text-align: center;
+}
+.map img{
+    height: 80%;
+    margin-top: 10%;
     filter: brightness(90%);
 }
 
@@ -218,11 +221,15 @@
     position: relative;
 }
 
-.col-4 .but{
-    position: relative;
+.btn-grp{
     display: flex;
-    justify-content: center;
-    
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;    
+}
+.btn-grp button{
+    width: 200px;
 }
 
 /* 하단 영역 & 아이콘 */
