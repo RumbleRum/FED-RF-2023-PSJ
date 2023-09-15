@@ -75,13 +75,13 @@ ol {
     등분할시 자동 100%임! */
 }
 
-#slide li img {
+#slide img {
     display: block;
     margin-top: 160px;
     margin-left: 320px;
     /*이미지는 박스에 맞춤!*/
-    width: 750px;
-    height: 450px;
+    width: 40%;
+    height: 30%;
     object-fit: cover;
     /* 이미지 비율유지 채우기! */
 }

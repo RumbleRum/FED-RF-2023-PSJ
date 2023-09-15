@@ -214,8 +214,14 @@
     filter: brightness(90%);
 }
 
-.but{
-    position: absolute;
+.col-4{
+    position: relative;
+}
+
+.col-4 .but{
+    position: relative;
+    display: flex;
+    justify-content: center;
     
 }
 
