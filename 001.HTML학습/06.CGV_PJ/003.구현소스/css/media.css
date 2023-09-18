@@ -86,6 +86,17 @@
             gap: 15px;
         }
 
+      
+        .btn-map{
+            display: none;
+        }
+
+        .sns-box{
+            display: none;
+        }
+        .co-info{
+            display: none;
+        }
 
 }
 /************* 800px 이하 사이즈 종료 *************/

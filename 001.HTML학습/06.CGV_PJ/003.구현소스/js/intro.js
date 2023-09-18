@@ -10,9 +10,10 @@ myvid.addEventListener('timeupdate' , ()=>{
     // 1. 동영상 멈춤여부 알아내기 : 비디오요소.paused -> 멈춤상태면 true
     let isStop = myvid.paused;
     console.log('dd',isStop);
-    
+
     // 2. 멈춘 상태일때 페이지이동
     if(isStop){
         location.href = 'main.html';
     } /// if ////
 }) ////// timeupdate ////////////////
+
