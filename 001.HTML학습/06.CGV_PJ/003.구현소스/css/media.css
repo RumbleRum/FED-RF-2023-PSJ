@@ -69,6 +69,17 @@
     }
 
 
+/* 영화정보박스 */
+.mv-info{
+    font-size: 3.2vw;
+    }
+    /* 영화정보박스 제목만 변경 */
+    .mv-info li:first-child {
+        font-size: 3.5vw;
+    }
+
+
+
     footer{
         height: auto;
         flex-direction: column;
