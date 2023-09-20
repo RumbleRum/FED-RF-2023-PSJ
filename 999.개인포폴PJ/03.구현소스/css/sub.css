@@ -31,7 +31,7 @@ ol {
 #main {
     /*최상위부모*/
     position: relative;
-    max-width: 1381px;
+    /* max-width: 1381px; */
     margin: 0px auto;
     background: url(../images/bg1.jpg) no-repeat center / cover;
 }
@@ -86,13 +86,14 @@ ol {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /*Y축 중앙이동*/
+    filter: contrast(80%);
 }
+
 
 /*왼쪽버튼*/
 .ab1 {
     left: 20px;
-    
+    font-size: 30px;
 }
 
 /*오른쪽버튼*/
@@ -147,9 +148,9 @@ ol {
     margin: 0 auto;
     outline: 2px dashed pink;
 
-    grid-template-columns: repeat(5,1fr);
-    grid-column-gap: min(1vw,10px);
-    grid-row-gap: min(1vw,15px);
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: min(1vw,30px);
+    grid-row-gap: min(1vw,30px);
 }
 
 
@@ -165,14 +166,16 @@ ol {
     height: 90%;
     object-fit: cover;
     object-position: top;
-
-    vertical-align: middle;
 }
 
-.first{
-    grid-column: 2/3;
-    grid-row: 2/3;
+.award-su{
+    transform: scale(1);
+    transition: .4s ease-in-out;
 }
+.award-su:hover{
+    transform: scale(1.1);
+}
+
 
 .award-su>a{
     position: absolute;
@@ -183,5 +186,5 @@ ol {
     display: block;
     font-weight: bold;
     text-align: center;
-    font-size: min(1.2vw,30px);
+    font-size: min(1.5vw,30px);
 }
