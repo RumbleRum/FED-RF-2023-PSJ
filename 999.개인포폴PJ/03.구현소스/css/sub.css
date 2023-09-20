@@ -126,3 +126,43 @@ ol {
     box-sizing: border-box;
     padding-top: 10px;
 }
+
+.grid{
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    outline: 2px dashed pink;
+
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: min(1vw,10px);
+    grid-row-gap: min(1vw,15px);
+}
+
+
+.grid>div{
+    position: relative;
+    /* 부모자격 */
+    aspect-ratio: 280/400;
+}
+
+.grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    vertical-align: middle;
+}
+
+.first{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.award-su>a{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    font-size: min(1.2vw,30px);
+}
