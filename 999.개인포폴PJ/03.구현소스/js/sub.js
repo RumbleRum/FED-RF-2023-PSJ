@@ -53,6 +53,7 @@ function loadFn() {
     const abtn = qsa('.abtn');
     // 변경 대상: #slide
     const slide = qs('#slide');
+    let stsClick = 0;
 
 
     // 대상확인
@@ -66,6 +67,11 @@ function loadFn() {
 
     // 3. 함수만들기
     function goSlide(){
+        if(stsClick) return;
+        stsClick= 1;
+        setTimeout(()=>stsClick=0,400);
+
+        
         console.log('나야',this,this.classList.contains('ab2'));
 
         // classList.contains(클래스명)
