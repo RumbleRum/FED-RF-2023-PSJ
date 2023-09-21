@@ -4,7 +4,7 @@
 
 // startSS()함수를 호출하여 사용
 function startSS() {
-  new SmoothScroll(document, 70, 32);
+  new SmoothScroll(document, 80, 32);
 }
 
 // 전역변수 스크롤 위치값
