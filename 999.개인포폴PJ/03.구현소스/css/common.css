@@ -12,9 +12,9 @@
 /* font-family: 'Sunflower', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Stylish&family=Sunflower:wght@500&display=swap");
 /* font-family: 'Stylish', sans-serif; */
-
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 /* font-family: 'Noto Sans KR', sans-serif; */
+
 
 /************* 1. 상단영역 *************/
 #header {
@@ -59,17 +59,8 @@
     color: red;
 }
 
-/* 오버시 밑줄 */
-.ab > ul > li:hover > a::after {
-    content: "";
-    position: absolute;
-    top: 60px;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: red;
-}
+
+
 
 .time-box {
     display: flex;
@@ -122,7 +113,7 @@
 .start-txt {
     position: absolute;
     /* display: flex; */
-    top: 65%;
+    top: 50%;
     left: 5%;
     border-top: 3px solid red;
     border-bottom: 3px solid red;
@@ -131,7 +122,7 @@
 .start-txt p {
     font-family: "Sunflower", sans-serif;
     color: #fff;
-    font-size: 5.5rem;
+    font-size: 7rem;
 }
 
 /* 타이틀 제목 설정 */
@@ -153,7 +144,7 @@
 
 /* 메인 밑에 컨텐츠박스 */
 .inbox1 {
-    padding-top: 8rem;
+    padding-top: 18rem;
     padding-bottom: 15rem;
 }
 
@@ -161,26 +152,134 @@
 .ch {
     text-align: center;
     padding: 1vw;
+    opacity: 0;
+    transition: all 3s ease-in;
 }
 .ch .img-box img {
     width: 100%;
     aspect-ratio: 1;
     border-radius: 10%;
-    transform: translateY(50%);
-    opacity: 0;
-    transition: 0.4s;
 }
 
-.group-part-01.on .ch .img-box img {
-    transform: translateY(0);
-    opacity: 1;
+/* 박스 애니메이션 */
+
+.tit1{
+    opacity: 0;
+    transition: all 4s ease-in-out;
+    animation: tit1-ani 4s ease-in;
 }
-.group-part-01.on .ch2 .img-box img {
-    transition-delay: 0.2s;
+
+@keyframes tit1-ani {
+    0%{
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
 }
-.group-part-01.on .ch3 .img-box img {
-    transition-delay: 0.4s;
+.tit2{
+    opacity: 0;
+    transition: all 4s ease-in-out;
+    animation: tit2-ani 4s ease-in;
 }
+
+@keyframes tit2-ani {
+    0%{
+        transform: translateY(70%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+.tit3{
+    opacity: 0;
+    transition: all 4s ease-in-out;
+    animation: tit3-ani 4s ease-in;
+}
+
+@keyframes tit3-ani {
+    0%{
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+
+.ch1{
+    opacity: 0;
+    transition: all 6s ;
+    animation: ch1-ani 6s ;
+
+}
+@keyframes ch1-ani {
+    0%{
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+.ch2{
+    opacity: 0;
+    transition: all 8s ;
+    animation: ch2-ani 8s ;
+}
+@keyframes ch2-ani {
+    0%{
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+.ch3{
+    opacity: 0;
+    transition: all 10s ;
+    animation: ch3-ani 10s ;
+}
+@keyframes ch3-ani {
+    0%{
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+
+
+
+
+
+
+.start-txt{
+    opacity: 0;
+    transition: all 2.5s ease-in-out;
+    animation: start-txt-ani 2.5s ease-in;
+}
+
+@keyframes start-txt-ani {
+    0%{
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+
+
+
+
+
+
+
 
 /* 메인1-2 영화 출품작 설명박스 */
 
@@ -230,7 +329,7 @@
 }
 
 .poster2 {
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .poster2 li > a {
@@ -327,7 +426,6 @@
 
 .ha3 > ul > li > a {
     color: #fff;
-    font-size: 15px;
 }
 
 .ha1 {
@@ -338,11 +436,11 @@
 }
 
 .ha3 {
-    font-family: 'Noto Sans KR', sans-serif;
     background-color: #000;
 }
 .ha3 ul>li>a{
-    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.3rem;
 }
 
 .ha4 {
@@ -417,7 +515,7 @@
     overflow: hidden;
     position: relative;
     border: 1px solid black;
-    width: 1354px;
+    max-width: 1360px;
     height: 60px;
 }
 
@@ -433,4 +531,22 @@
     100% {
         transform: translate(calc(-140px * 13), 0);
     }
+}
+
+
+
+
+.scbar::-webkit-scrollbar{
+    /* 전체 스크롤바 크기변경 */
+    width: 7px;
+}
+.scbar::-webkit-scrollbar-thumb{
+    /* 스크롤바 */
+    background-color: #a57332dc;
+    border-radius: 5px;
+}
+.scbar::-webkit-scrollbar-track{
+    /* 스크롤바 트랙 */
+    background-color: #ddd;
+    border-radius: 5px;
 }
