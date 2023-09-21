@@ -12,6 +12,12 @@ const domFn = {
     addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn),
   }; /////// domFn 객체 /////////////
   
+  
+// 부드러운 스크롤 모듈
+import { startSS, setPos } from "./smoothScroll23.js";
+
+startSS();
+
 
 // 대상: .btn-grp button
 const btns = domFn.qsa('.btn-grp button');

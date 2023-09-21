@@ -1,22 +1,38 @@
 @charset "utf-8";
 
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+/* font-family: 'Hahmlet', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+/* font-family: 'Gowun Batang', serif; */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+/* font-family: 'IBM Plex Sans KR', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap");
+/* font-family: 'Sunflower', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Stylish&family=Sunflower:wght@500&display=swap");
+/* font-family: 'Stylish', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
+
 /************* 1. 상단영역 *************/
 #header {
-    
 }
 
-.right{
+.right {
     display: flex;
     justify-content: flex-end;
     padding: 15px 30px 15px;
 }
 
-.right li>a{
+.right li > a {
     color: #fff;
     font-size: 12px;
+    font-family: "Gowun Batang", serif;
 }
 
-.top-menu{
+.top-menu {
     position: sticky;
     top: 0;
     /* padding: 20px 0; */
@@ -24,27 +40,28 @@
     z-index: 999;
 }
 
-.ab>ul{
+.ab > ul {
     display: flex;
     justify-content: center;
-    white-space:  nowrap;
+    white-space: nowrap;
     gap: 0 80px;
     height: 80px;
     /* padding-top: 38px; */
     align-items: center;
 }
-.ab>ul>li>a{
-    font-size: 20px;
+.ab > ul > li > a {
+    font-family: "Gowun Batang", serif;
+    font-size: 22px;
     color: white;
 }
 
-.ab>ul>li>a:hover{
+.ab > ul > li > a:hover {
     color: red;
 }
 
 /* 오버시 밑줄 */
-.ab>ul>li:hover>a::after{
-    content: '';
+.ab > ul > li:hover > a::after {
+    content: "";
     position: absolute;
     top: 60px;
     left: 0;
@@ -54,10 +71,7 @@
     background-color: red;
 }
 
-
-
-
-.time-box{
+.time-box {
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -69,314 +83,337 @@
     transform: translateY(-50%);
 }
 
-.time-box>ul>li>a{
+.time-box > ul > li > a {
     color: #fff;
     font-size: 20px;
     font-weight: bold;
+    font-family: "IBM Plex Sans KR", sans-serif;
 }
 
-.time-box>ul>li:hover>a{
+.time-box > ul > li:hover > a {
     color: blue;
 }
 
-.jif_wrap{
+.jif_wrap {
     background-color: #000;
-    border-bottom: solid 2px #424141 ;
+    border-bottom: solid 2px #424141;
 }
 
-.inbox-jif{
+.inbox-jif {
     position: relative;
     max-width: 1200px;
     /* height: 100px; */
     margin: 0 auto;
 }
 
-
-.logo{
+.logo {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;
 }
 
-.logo img{
+.logo img {
     width: 200%;
+}
+
+/* 시작페이지 글귀 */
+
+.start-txt {
+    position: absolute;
+    /* display: flex; */
+    top: 65%;
+    left: 5%;
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+}
+
+.start-txt p {
+    font-family: "Sunflower", sans-serif;
+    color: #fff;
+    font-size: 5.5rem;
 }
 
 /* 타이틀 제목 설정 */
 
-.tit{
-    text-align: center;
-    font-size: 35px;
+.tit {
+    font-size: 2.8vw;
     color: #fff;
+    font-family: "Hahmlet", serif;
+    padding: 40rem 0 1.5rem;
+    border-bottom: 3px solid #fff;
+}
+
+.tit-box {
+    position: absolute;
+    left: 95%;
+    transform: translateY(50%);
+    color: white;
+}
+
+/* 메인 밑에 컨텐츠박스 */
+.inbox1 {
+    padding-top: 8rem;
+    padding-bottom: 15rem;
 }
 
 /* 메인1 - 영화 출품작  */
-.ch{
+.ch {
     text-align: center;
     padding: 1vw;
 }
-.ch .img-box img{
+.ch .img-box img {
     width: 100%;
     aspect-ratio: 1;
     border-radius: 10%;
     transform: translateY(50%);
     opacity: 0;
-    transition: .4s;
+    transition: 0.4s;
 }
 
-.group-part-01.on .ch .img-box img{    
+.group-part-01.on .ch .img-box img {
     transform: translateY(0);
     opacity: 1;
 }
-.group-part-01.on .ch2 .img-box img{
-    transition-delay: .2s;
-}    
-.group-part-01.on .ch3 .img-box img{    
-    transition-delay: .4s;
-}    
+.group-part-01.on .ch2 .img-box img {
+    transition-delay: 0.2s;
+}
+.group-part-01.on .ch3 .img-box img {
+    transition-delay: 0.4s;
+}
 
 /* 메인1-2 영화 출품작 설명박스 */
 
-.mov-box{
+.mov-box {
     background: url(../images/mov_back3.avif) no-repeat center / cover;
     height: 38%;
     overflow: auto;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
-.mov-box h3{
-    font-size: min(1.9rem,1.4vw);
+.mov-box h3 {
+    font-size: min(1.9rem, 1.4vw);
     font-weight: bold;
     white-space: nowrap;
     padding: 10px 10px 5px;
     letter-spacing: -1px;
 }
 
-.mov-box p{
-    font-size: min(1.6rem,1.5vw);
+.mov-box p {
+    font-size: min(1.6rem, 1.5vw);
     line-height: 1.4;
-    padding: min(1vw,1.2rem);
+    padding: min(1vw, 1.2rem);
     text-align: justify;
 }
 
-
-
-
 /* 메인2 - 영화 개막작  */
 
-.km{
+.km {
     position: relative;
 }
 
-.poster1{
+.poster1 {
     position: absolute;
 }
 
-.poster1 img{
+.poster1 img {
     width: 100%;
-    
 }
 
-.mv_info1{
+.mv_info1 {
     text-align: center;
 }
 
-
-.mv_info1 li>a{
+.mv_info1 li > a {
     font-size: 20px;
     color: #fff;
-   
 }
 
-.poster2{
+.poster2 {
     padding-top: 100px;
 }
 
-.poster2 li>a{
+.poster2 li > a {
     font-size: 40px;
     color: aqua;
     padding: 0 30px;
     font-size: 1.8vw;
 }
 
-.mv_info2 li>a{
+.mv_info2 li > a {
     color: #fff;
 }
-
 
 #main {
     min-height: 800px;
 }
 
 /* 메인3 - 영화제 찿아오는 길 */
-.map{
+.map {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     background: url(../images/but_bg1.jpg) no-repeat center / cover;
 }
-.map img{
+.map img {
     height: 85%;
     width: 65%;
     margin-top: 8%;
     filter: brightness(90%);
 }
 
-.col-4{
+.col-4 {
     position: relative;
 }
 
-.btn-grp{
+.btn-grp {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 100%;    
+    height: 100%;
 }
-.btn-grp button{
+.btn-grp button {
     width: 300px;
     box-shadow: 0px 1px 0px 0px #1c1b18;
-	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
-	background-color:#eae0c2;
-	border-radius:15px;
-	border:2px solid #333029;
-	display:inline-block;
-	cursor:pointer;
-	color:#505739;
-	font-family:Arial;
-	font-size:30px;
-	font-weight:bold;
-	padding:12px 16px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
+    background: linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+    background-color: #eae0c2;
+    border-radius: 15px;
+    border: 2px solid #333029;
+    display: inline-block;
+    cursor: pointer;
+    color: #505739;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
 }
 
-.btn-grp button:hover{
-    background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
-	background-color:#ccc2a6;
+.btn-grp button:hover {
+    background: linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+    background-color: #ccc2a6;
 }
 
-.btn-grp button:hover>a{
+.btn-grp button:hover > a {
     color: blue;
 }
 
-
-
-
 /* 하단 영역 & 아이콘 */
-
 
 #footer {
     background-color: #000;
-
 }
 .footer .partbox {
     height: 144px;
 }
 
-.footer_logo>li{
+.footer_logo > li {
     height: 110px;
 }
 
-.footer_logo img{
+.footer_logo img {
     margin-top: 33px;
     height: 70%;
     width: 97%;
 }
 
-
-.ha3>ul>li{
+.ha3 > ul > li {
     display: flex;
     padding-left: 5%;
 }
 
-.ha3>ul>li>a{
+.ha3 > ul > li > a {
     color: #fff;
     font-size: 15px;
 }
 
-
-.ha1{
-   background-color: #313131;
+.ha1 {
+    background-color: #313131;
 }
-.ha2{
+.ha2 {
     background-color: #313131;
 }
 
-.ha3{
+.ha3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #000;
+}
+.ha3 ul>li>a{
+    font-size: 1.4rem;
+}
+
+.ha4 {
     background-color: #000;
 }
 
-.ha4{
+.ha5 {
+    font-family: 'Noto Sans KR', sans-serif;
     background-color: #000;
 }
 
-.ha5{
-    background-color: #000;
-}
-
-.ha5 ul>li{
+.ha5 ul > li {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
 
-.ha5 ul>li>a{
+.ha5 ul > li > a {
     color: white;
     font-size: 20px;
 }
 
-.ha5 img{
+.ha5 img {
     width: 100%;
 }
 
-.icons{
+.icons {
     display: flex;
     justify-content: space-evenly;
     margin: 4px;
 }
 
-.fa-instagram{
+.fa-instagram {
     font-size: 40px;
     color: violet;
 }
 
-.fa-instagram:hover{
+.fa-instagram:hover {
     color: yellow;
 }
 
-.fa-facebook{
+.fa-facebook {
     font-size: 40px;
     color: cornflowerblue;
 }
 
-.fa-facebook:hover{
+.fa-facebook:hover {
     color: yellow;
 }
 
-.fa-twitter{
+.fa-twitter {
     font-size: 40px;
     color: aqua;
 }
 
-.fa-twitter:hover{
+.fa-twitter:hover {
     color: yellow;
 }
 
-.fa-youtube{
+.fa-youtube {
     font-size: 40px;
     color: red;
 }
 
-.fa-youtube:hover{
+.fa-youtube:hover {
     color: yellow;
 }
 
 /* 하단 슬라이드 영역 */
 
-#slider{
+#slider {
     overflow: hidden;
     position: relative;
     border: 1px solid black;
@@ -384,7 +421,7 @@
     height: 60px;
 }
 
-.slider-box{
+.slider-box {
     width: 2240px;
     height: 100%;
     display: flex;
@@ -393,7 +430,7 @@
 }
 
 @keyframes banner-ani {
-    100%{
-        transform: translate(calc(-140px*13),0);
+    100% {
+        transform: translate(calc(-140px * 13), 0);
     }
 }
