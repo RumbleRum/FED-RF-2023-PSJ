@@ -46,9 +46,10 @@ body{
     display: block;
     clear: both;
 }
-/* 그룹파트 박스 */
+/* 그룹파트박스 */
 .group-part{
-    padding: 60px 0; /* 상&하 패딩 넣기 */
+    /* 상하패딩 넣기 */
+    padding: 60px 0;
 }
 /* 파트박스 */
 .partbox {
@@ -59,7 +60,7 @@ body{
     /* 내부패딩 */
     /* padding: 15px; - 제외 */
     /* 임시 보이게 보더 */
-    /* border: 2px dotted blue; */
+    border: 2px dotted blue;
     /* 높이값이 속박스에 있을 경우 
             채우기셋팅 - 높이값이 파티션박스에 있으면 안씀! */
     height: 100%;
@@ -70,7 +71,6 @@ body{
     padding-bottom: 32px;
     font-size: 3.8rem;
 }
-
 
 /* 12 그리드 클래스 : 
         한줄에 합이 12컬럼이 되도록 셋팅! */
@@ -143,7 +143,7 @@ body{
 }
 .scbar::-webkit-scrollbar-thumb{
     /* 스크롤바 */
-    background-color: blue;
+    background-color: #555;
     border-radius: 5px;
 }
 .scbar::-webkit-scrollbar-track{
@@ -151,3 +151,4 @@ body{
     background-color: #ddd;
     border-radius: 5px;
 }
+
