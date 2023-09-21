@@ -16,6 +16,7 @@
 /* font-family: 'Noto Sans KR', sans-serif; */
 
 
+
 /************* 1. 상단영역 *************/
 #header {
 }
@@ -117,6 +118,7 @@
     left: 5%;
     border-top: 3px solid red;
     border-bottom: 3px solid red;
+    padding: 8px;
 }
 
 .start-txt p {
@@ -144,9 +146,17 @@
 
 /* 메인 밑에 컨텐츠박스 */
 .inbox1 {
-    padding-top: 18rem;
+    position: relative;
+    padding-top: 1rem;
     padding-bottom: 15rem;
 }
+
+
+
+
+
+
+
 
 /* 메인1 - 영화 출품작  */
 .ch {
@@ -213,11 +223,12 @@
     opacity: 0;
     transition: all 6s ;
     animation: ch1-ani 6s ;
+    overflow: hidden;
 
 }
 @keyframes ch1-ani {
     0%{
-        transform: translateY(100%);
+        transform: translateY(40%);
     }
     100% {
         transform: translateY(0%);
@@ -226,12 +237,13 @@
 }
 .ch2{
     opacity: 0;
-    transition: all 8s ;
-    animation: ch2-ani 8s ;
+    transition: all 10s ;
+    animation: ch2-ani 10s ;
+    overflow: hidden;
 }
 @keyframes ch2-ani {
     0%{
-        transform: translateY(100%);
+        transform: translateY(60%);
     }
     100% {
         transform: translateY(0%);
@@ -240,12 +252,13 @@
 }
 .ch3{
     opacity: 0;
-    transition: all 10s ;
-    animation: ch3-ani 10s ;
+    transition: all 14s ;
+    animation: ch3-ani 14s ;
+    overflow: hidden;
 }
 @keyframes ch3-ani {
     0%{
-        transform: translateY(100%);
+        transform: translateY(90%);
     }
     100% {
         transform: translateY(0%);
@@ -284,25 +297,28 @@
 /* 메인1-2 영화 출품작 설명박스 */
 
 .mov-box {
-    background: url(../images/mov_back3.avif) no-repeat center / cover;
+    background: url(../images/bin.jpg) no-repeat center / 155% ;
     height: 38%;
     overflow: auto;
     border-radius: 10px;
 }
 
 .mov-box h3 {
-    font-size: min(1.9rem, 1.4vw);
+    font-size: min(2.3rem, 1.4vw);
     font-weight: bold;
     white-space: nowrap;
-    padding: 10px 10px 5px;
+    padding-top: 1vw;
     letter-spacing: -1px;
+    font-family: 'Stylish', sans-serif;
+    border-bottom: 1px dashed #000;
 }
 
 .mov-box p {
     font-size: min(1.6rem, 1.5vw);
     line-height: 1.4;
-    padding: min(1vw, 1.2rem);
+    padding: 1vw;
     text-align: justify;
+    font-family: 'Sunflower', sans-serif;
 }
 
 /* 메인2 - 영화 개막작  */
@@ -324,18 +340,23 @@
 }
 
 .mv_info1 li > a {
-    font-size: 20px;
+    line-height: 1.9vw;
+    position: relative;
+    top: 7px;
+    font-weight: bold;
+    font-size: 24px;
     color: #fff;
+
 }
 
 .poster2 {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .poster2 li > a {
     font-size: 40px;
     color: aqua;
-    padding: 0 30px;
+    padding: 10px 30px;
     font-size: 1.8vw;
 }
 
@@ -550,3 +571,20 @@
     background-color: #ddd;
     border-radius: 5px;
 }
+
+
+.cat-content{
+    position: absolute;
+    bottom: 0;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    height: 56%;
+    /* 61% */
+    transition: height 1s ease-in-out;
+}
+
+.cat-content:hover{
+    height: 100%;
+}
+
