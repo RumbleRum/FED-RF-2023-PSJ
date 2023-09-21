@@ -15,7 +15,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 /* font-family: 'Noto Sans KR', sans-serif; */
 
+  @import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+  /* font-family: 'Orbit', sans-serif; */
 
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Orbit&display=swap');
+/* font-family: 'Gugi', cursive; */
 
 /************* 1. 상단영역 *************/
 #header {
@@ -169,6 +173,7 @@
     width: 100%;
     aspect-ratio: 1;
     border-radius: 10%;
+    /* outline: 8px solid #000; */
 }
 
 /* 박스 애니메이션 */
@@ -297,6 +302,7 @@
 /* 메인1-2 영화 출품작 설명박스 */
 
 .mov-box {
+    padding-top: 2px;
     background: url(../images/bin.jpg) no-repeat center / 155% ;
     height: 38%;
     overflow: auto;
@@ -327,6 +333,12 @@
     position: relative;
 }
 
+.km2{
+    background: url(../images/gggaaa.jpg) no-repeat center/ cover;
+    /* filter: brightness(40%); */
+}
+
+
 .poster1 {
     position: absolute;
 }
@@ -340,7 +352,7 @@
 }
 
 .mv_info1 li > a {
-    line-height: 1.9vw;
+    line-height: 1.5vw;
     position: relative;
     top: 7px;
     font-weight: bold;
@@ -351,18 +363,37 @@
 
 .poster2 {
     padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .poster2 li > a {
-    font-size: 40px;
-    color: aqua;
-    padding: 10px 30px;
+    font-size: 60px;
+    color: lightskyblue;
+    
     font-size: 1.8vw;
+    font-family: 'Gugi', cursive;
+
 }
 
 .mv_info2 li > a {
-    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Orbit', sans-serif;
 }
+
+.mv_info2 li > a > p{
+    top: 10px;
+    display: block;
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+
+}
+
+
+
 
 #main {
     min-height: 800px;
@@ -374,7 +405,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    background: url(../images/but_bg1.jpg) no-repeat center / cover;
+    background: url(../images/but_bg1.jpg) no-repeat bottom / cover;
 }
 .map img {
     height: 85%;
@@ -449,11 +480,26 @@
     color: #fff;
 }
 
-.ha1 {
-    background-color: #313131;
+.ha1 a{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 0 80px;
+    height: 50px;
+    /* padding-top: 38px; */
+    align-items: center;
+    font-size: 13px;
+    color: #ccc2a6;
+    padding-right: 30px;
+    padding-left: 70px;
+    
 }
+
+
+
 .ha2 {
-    background-color: #313131;
+    /* background-color: #313131; */
 }
 
 .ha3 {
@@ -579,7 +625,7 @@
     width: 92%;
     display: flex;
     flex-direction: column;
-    height: 56%;
+    height: 56.5%;
     /* 61% */
     transition: height 1s ease-in-out;
 }
