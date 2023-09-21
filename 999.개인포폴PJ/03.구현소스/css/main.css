@@ -10,7 +10,7 @@ body * {
     /* outline: 2px dashed #ccc; */
 }
 body > div > * {
-    outline-color: red;
+    /* outline-color: red; */
 }
 
 .group-part-01{
@@ -19,7 +19,7 @@ body > div > * {
 
 .partbox {
     box-sizing: border-box;
-    border: 2px dotted blue;
+    /* border: 2px dotted blue; */
     height: 100%;
 }
 

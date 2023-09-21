@@ -336,6 +336,8 @@
 .km2{
     background: url(../images/gggaaa.jpg) no-repeat center/ cover;
     /* filter: brightness(40%); */
+    border-radius: 5%;
+    width: 60%;
 }
 
 
@@ -345,6 +347,7 @@
 
 .poster1 img {
     width: 100%;
+    border-radius: 10%;
 }
 
 .mv_info1 {
@@ -412,6 +415,7 @@
     width: 65%;
     margin-top: 8%;
     filter: brightness(90%);
+    border-radius: 3%;
 }
 
 .col-4 {
