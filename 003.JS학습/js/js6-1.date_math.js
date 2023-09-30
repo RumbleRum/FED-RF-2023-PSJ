@@ -106,24 +106,23 @@ function showTime() {
   
   ***************************************/
 
-      // 난수 발생시키기
-    //   let rdm = Math.random();
-    //   console.log(rdm);
+// 난수 발생시키기
+//   let rdm = Math.random();
+//   console.log(rdm);
 
-    //  1~7사이 난수 발생하기
-    // 방법 : 난수에 발생할 최대수 곱하기 -> 올림/ 내림
-    // rdm = rdm * 7;
-    // console.log('난수*7:',rdm);
-    // console.log('난수*7 내림:',Math.floor(rdm));
-    // console.log('난수*7 올림:',Math.ceil(rdm));
-    // -> 1부터 최대수는 올림처리 / 0부터 최대수 -1은 내림처리
+//  1~7사이 난수 발생하기
+// 방법 : 난수에 발생할 최대수 곱하기 -> 올림/ 내림
+// rdm = rdm * 7;
+// console.log('난수*7:',rdm);
+// console.log('난수*7 내림:',Math.floor(rdm));
+// console.log('난수*7 올림:',Math.ceil(rdm));
+// -> 1부터 최대수는 올림처리 / 0부터 최대수 -1은 내림처리
 
-    // 중간 난수는?
-    // 예) 4~12 사이 난수는?
-    // console.log('4~12사이 난수:',Math.ceil(Math.random()*9)+3)
+// 중간 난수는?
+// 예) 4~12 사이 난수는?
+// console.log('4~12사이 난수:',Math.ceil(Math.random()*9)+3)
 
-
-    /**************************************** 
+/**************************************** 
     [ 내가 원하는 난수 만들기 ]
 
     1. 먼저 난수를 발생시킨다!
@@ -162,3 +161,64 @@ function showTime() {
 
 
                 ****************************************/
+
+// 이미지 웹 경로 배열
+
+const rimg = [
+    "https://img.etnews.com/photonews/2110/1461216_20211007085904_466_0001.jpg",
+    "https://d2qqqnyszmt41w.cloudfront.net/wp-content/uploads/2021/04/23150534/202104231445162082.jpg",
+    "https://img.imbc.com/adams/Program/202111/132804027350463581.jpg",
+    "https://image.ytn.co.kr/general/jpg/2021/0925/202109251350012465_d.jpg",
+];
+
+
+// 1. 요구사항 : 웹 경로 이미지를 화면에 넣고 랜덤하게 
+// 이미지를 칼라로 약간 커지게 클래스 on을 주어서 변경함!
+
+// 2. 대상선정 : .imbx
+const imbx = dFn.qs('.imbx');
+
+// 3. 이미지 넣기
+// 배열만큼 이미지 넣기
+rimg.forEach(val=>{
+    imbx.innerHTML += `
+        <div>
+            <img src="${val}" alt="드라마이미지">
+        </div>
+    `;
+}); ///////// forEach ///////////
+
+// 랜덤처리 대상 선정 : .imbx div
+const target = dFn.qsa('.imbx div');
+console.log('랜덤대상:',target);
+
+//////////////////////////////////////////
+
+    // 함수명 : colorImg
+    // 기능 : 랜덤하게 선택 박스에 .on넣기
+
+//////////////////////////////////////////
+
+// 랜덤수 범윞 : 0~3 (4개의 배열이므로)
+
+// 2초 간격으로 인터발호출
+setInterval(colorImg,2000);
+
+function colorImg(){
+
+    // 1. 난수만들기 : 0~3 -> 1~4 를 만들고 내림처리
+    let rdmNum = Math.floor(Math.random()*4);
+    console.log('랜덤수:',rdmNum);
+
+
+    // 2. 대상에 클래스 on넣기
+    // 나머지는 빼기
+    target.forEach((ele,idx)=>{
+    if(idx==rdmNum)
+       ele.classList.add('on');
+    else
+        ele.classList.remove('on');
+}); ///// forEach //////////
+
+}////// colorImg /////////
+
