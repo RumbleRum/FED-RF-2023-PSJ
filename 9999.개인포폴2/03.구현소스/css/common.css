@@ -1,0 +1,640 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+/* font-family: 'Hahmlet', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+/* font-family: 'Gowun Batang', serif; */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+/* font-family: 'IBM Plex Sans KR', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap");
+/* font-family: 'Sunflower', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Stylish&family=Sunflower:wght@500&display=swap");
+/* font-family: 'Stylish', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+  @import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+  /* font-family: 'Orbit', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Orbit&display=swap');
+/* font-family: 'Gugi', cursive; */
+
+/************* 1. 상단영역 *************/
+#header {
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px 15px;
+}
+
+.right li > a {
+    color: #fff;
+    font-size: 12px;
+    font-family: "Gowun Batang", serif;
+}
+
+.top-menu {
+    position: sticky;
+    top: 0;
+    /* padding: 20px 0; */
+    background-color: #313131;
+    z-index: 999;
+}
+
+.ab > ul {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 0 80px;
+    height: 80px;
+    /* padding-top: 38px; */
+    align-items: center;
+}
+.ab > ul > li > a {
+    font-family: "Gowun Batang", serif;
+    font-size: 22px;
+    color: white;
+}
+
+.ab > ul > li > a:hover {
+    color: red;
+}
+
+
+
+
+.time-box {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4px 4px;
+    background-color: orangered;
+    width: 140px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.time-box > ul > li > a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.time-box > ul > li:hover > a {
+    color: blue;
+}
+
+.jif_wrap {
+    background-color: #000;
+    border-bottom: solid 2px #424141;
+}
+
+.inbox-jif {
+    position: relative;
+    max-width: 1200px;
+    /* height: 100px; */
+    margin: 0 auto;
+}
+
+.logo {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+.logo img {
+    width: 200%;
+}
+
+/* 시작페이지 글귀 */
+
+.start-txt {
+    position: absolute;
+    /* display: flex; */
+    top: 50%;
+    left: 5%;
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+    padding: 8px;
+}
+
+.start-txt p {
+    font-family: "Sunflower", sans-serif;
+    color: #fff;
+    font-size: 7rem;
+}
+
+/* 타이틀 제목 설정 */
+
+.tit {
+    font-size: 2.8vw;
+    color: #fff;
+    font-family: "Hahmlet", serif;
+    padding: 40rem 0 1.5rem;
+    border-bottom: 3px solid #fff;
+}
+
+.tit-box {
+    position: absolute;
+    left: 95%;
+    transform: translateY(50%);
+    color: white;
+}
+
+/* 메인 밑에 컨텐츠박스 */
+.inbox1 {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 15rem;
+}
+
+
+
+
+
+
+
+
+/* 메인1 - 영화 출품작  */
+.ch {
+    text-align: center;
+    padding: 1vw;
+    opacity: 0;
+    transition: all 3s ease-in;
+}
+.ch .img-box img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10%;
+    /* outline: 8px solid #000; */
+}
+
+/* 박스 애니메이션 */
+
+.tit1{
+    opacity: 0;
+    transition: all 4s ease-in-out;
+    animation: tit1-ani 4s ease-in;
+}
+
+@keyframes tit1-ani {
+    0%{
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+.tit2{
+    opacity: 0;
+    transition: all 4s ease-in-out;
+    animation: tit2-ani 4s ease-in;
+}
+
+@keyframes tit2-ani {
+    0%{
+        transform: translateY(70%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+.tit3{
+    opacity: 0;
+    transition: all 4s ease-in-out;
+    animation: tit3-ani 4s ease-in;
+}
+
+@keyframes tit3-ani {
+    0%{
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+
+.ch1{
+    opacity: 0;
+    transition: all 6s ;
+    animation: ch1-ani 6s ;
+    overflow: hidden;
+
+}
+@keyframes ch1-ani {
+    0%{
+        transform: translateY(40%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+.ch2{
+    opacity: 0;
+    transition: all 10s ;
+    animation: ch2-ani 10s ;
+    overflow: hidden;
+}
+@keyframes ch2-ani {
+    0%{
+        transform: translateY(60%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+.ch3{
+    opacity: 0;
+    transition: all 14s ;
+    animation: ch3-ani 14s ;
+    overflow: hidden;
+}
+@keyframes ch3-ani {
+    0%{
+        transform: translateY(90%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+
+
+
+
+
+
+.start-txt{
+    opacity: 0;
+    transition: all 2.5s ease-in-out;
+    animation: start-txt-ani 2.5s ease-in;
+}
+
+@keyframes start-txt-ani {
+    0%{
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+
+
+
+
+
+
+
+
+/* 메인1-2 영화 출품작 설명박스 */
+
+.mov-box {
+    padding-top: 2px;
+    background: url(../images/bin.jpg) no-repeat center / 155% ;
+    height: 38%;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.mov-box h3 {
+    font-size: min(2.3rem, 1.4vw);
+    font-weight: bold;
+    white-space: nowrap;
+    padding-top: 1vw;
+    letter-spacing: -1px;
+    font-family: 'Stylish', sans-serif;
+    border-bottom: 1px dashed #000;
+}
+
+.mov-box p {
+    font-size: min(1.6rem, 1.5vw);
+    line-height: 1.4;
+    padding: 1vw;
+    text-align: justify;
+    font-family: 'Sunflower', sans-serif;
+}
+
+/* 메인2 - 영화 개막작  */
+
+.km {
+    position: relative;
+}
+
+.km2{
+    background: url(../images/gggaaa.jpg) no-repeat center/ cover;
+    /* filter: brightness(40%); */
+    border-radius: 5%;
+    width: 60%;
+}
+
+
+.poster1 {
+    position: absolute;
+}
+
+.poster1 img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.mv_info1 {
+    text-align: center;
+}
+
+.mv_info1 li > a {
+    line-height: 1.5vw;
+    position: relative;
+    top: 7px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.poster2 {
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.poster2 li > a {
+    font-size: 60px;
+    color: lightskyblue;
+    
+    font-size: 1.8vw;
+    font-family: 'Gugi', cursive;
+
+}
+
+.mv_info2 li > a {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Orbit', sans-serif;
+}
+
+.mv_info2 li > a > p{
+    top: 10px;
+    display: block;
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+
+}
+
+
+
+
+#main {
+    min-height: 800px;
+}
+
+/* 메인3 - 영화제 찿아오는 길 */
+.map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../images/but_bg1.jpg) no-repeat bottom / cover;
+}
+.map img {
+    height: 85%;
+    width: 65%;
+    margin-top: 8%;
+    filter: brightness(90%);
+    border-radius: 3%;
+}
+
+.col-4 {
+    position: relative;
+}
+
+.btn-grp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+.btn-grp button {
+    width: 300px;
+    box-shadow: 0px 1px 0px 0px #1c1b18;
+    background: linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+    background-color: #eae0c2;
+    border-radius: 15px;
+    border: 2px solid #333029;
+    display: inline-block;
+    cursor: pointer;
+    color: #505739;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+.btn-grp button:hover {
+    background: linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+    background-color: #ccc2a6;
+}
+
+.btn-grp button:hover > a {
+    color: blue;
+}
+
+/* 하단 영역 & 아이콘 */
+
+#footer {
+    background-color: #000;
+}
+.footer .partbox {
+    height: 144px;
+}
+
+.footer_logo > li {
+    height: 110px;
+}
+
+.footer_logo img {
+    margin-top: 33px;
+    height: 70%;
+    width: 97%;
+}
+
+.ha3 > ul > li {
+    display: flex;
+    padding-left: 5%;
+}
+
+.ha3 > ul > li > a {
+    color: #fff;
+}
+
+.ha1 a{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 0 80px;
+    height: 50px;
+    /* padding-top: 38px; */
+    align-items: center;
+    font-size: 13px;
+    color: #ccc2a6;
+    padding-right: 30px;
+    padding-left: 70px;
+    
+}
+
+
+
+.ha2 {
+    /* background-color: #313131; */
+}
+
+.ha3 {
+    background-color: #000;
+}
+.ha3 ul>li>a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.3rem;
+}
+
+.ha4 {
+    background-color: #000;
+}
+
+.ha5 {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #000;
+}
+
+.ha5 ul > li {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ha5 ul > li > a {
+    color: white;
+    font-size: 20px;
+}
+
+.ha5 img {
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4px;
+}
+
+.fa-instagram {
+    font-size: 40px;
+    color: violet;
+}
+
+.fa-instagram:hover {
+    color: yellow;
+}
+
+.fa-facebook {
+    font-size: 40px;
+    color: cornflowerblue;
+}
+
+.fa-facebook:hover {
+    color: yellow;
+}
+
+.fa-twitter {
+    font-size: 40px;
+    color: aqua;
+}
+
+.fa-twitter:hover {
+    color: yellow;
+}
+
+.fa-youtube {
+    font-size: 40px;
+    color: red;
+}
+
+.fa-youtube:hover {
+    color: yellow;
+}
+
+/* 하단 슬라이드 영역 */
+
+#slider {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+    max-width: 1360px;
+    height: 60px;
+}
+
+.slider-box {
+    width: 2240px;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    animation: banner-ani 18s linear infinite;
+}
+
+@keyframes banner-ani {
+    100% {
+        transform: translate(calc(-140px * 13), 0);
+    }
+}
+
+
+
+
+.scbar::-webkit-scrollbar{
+    /* 전체 스크롤바 크기변경 */
+    width: 7px;
+}
+.scbar::-webkit-scrollbar-thumb{
+    /* 스크롤바 */
+    background-color: #a57332dc;
+    border-radius: 5px;
+}
+.scbar::-webkit-scrollbar-track{
+    /* 스크롤바 트랙 */
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+.cat-content{
+    position: absolute;
+    bottom: 0;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    height: 56.5%;
+    /* 61% */
+    transition: height 1s ease-in-out;
+}
+
+.cat-content:hover{
+    height: 100%;
+}
+

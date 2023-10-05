@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+/* font-family: 'Hahmlet', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+/* font-family: 'Gowun Batang', serif; */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+/* font-family: 'IBM Plex Sans KR', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap");
+/* font-family: 'Sunflower', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Stylish&family=Sunflower:wght@500&display=swap");
+/* font-family: 'Stylish', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    border: none;
+}
+
+/*링크걸린 이미지 테두리 없앰*/
+
+
+ul,
+ol {
+    /*3무*/
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+
+
+/**************************************/
+
+
+#main {
+    /*최상위부모*/
+    position: relative;
+    /* max-width: 1381px; */
+    margin: 0px auto;
+    background: url(../images/bg1.jpg) no-repeat center / cover;
+}
+
+
+#slide {
+    display: flex;
+    /* 플렉스박스!!! */
+
+    /*사진을 싸고 있는 슬라이드*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#slide li {
+    flex-shrink: 0;
+    /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+    flex-basis: 100%;
+    /* 가로크기를 부모박스 크기에 맞춤! */
+    /* height 값은 flex박스 자식요소에서
+    등분할시 자동 100%임! */
+}
+
+#slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*이동버튼*/
+.abtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: contrast(80%);
+}
+
+
+/*왼쪽버튼*/
+.ab1 {
+    left: 150px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+    right: 150px;
+}
+
+.tit{
+    padding: 8rem 0 8rem;
+}
+.main{
+    position: relative;
+    overflow: hidden;
+}
+.wrap-banner{
+    position: relative;
+    overflow: hidden;
+    margin: 140px 0;
+}
+.banner-box{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+
+.grid{
+    display: grid;
+    max-width: 1360px;
+    margin: 0 auto;
+    outline: 2px dashed pink;
+
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: min(1vw,30px);
+    grid-row-gap: min(1vw,30px);
+}
+
+
+.grid>div{
+    position: relative;
+    /* 부모자격 */
+    aspect-ratio: 280/400;
+}
+
+.grid img{
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5%;
+}
+
+.award-su{
+    transform: scale(0.9);
+    transition: .5s ease-in-out;
+}
+.award-su:hover{
+    transform: scale(1.1);
+}
+
+
+.award-su>a{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: min(1.6vw,30px);
+    font-family: 'Hahmlet', serif;
+}
+
+
+.footer-sub{
+    /* max-width: 1520px; */
+}
+
+.tit-sub{
+    padding: 40rem 0 1.5rem;
+    transform: translateX(20%);
+    max-width: 1360px;
+}
