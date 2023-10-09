@@ -119,7 +119,7 @@ const showNum = dFn.qs('.showNum');
 // (2) 배열 숫자 데이터 만큼 이미지로 변환
 // map().join()
 const showScreen = () => 
-showNum.innerHTML = arrNumber.map(val=>`<img src="./images/num/num_0${val}.png" alt="숫자${val}이미지">`).join('');
+(showNum.innerHTML = arrNumber.map(val=>`<img src="./images/num/num_0${val}.png" alt="숫자${val}이미지">`).join(""));
 
 // 최초 출력
 showScreen();
@@ -136,13 +136,21 @@ dFn.addEvt(selBox,'change',function(){
 
     // 2. 정렬 분기 : 1 - 오름차순 / 2 - 내림차순
     if(optVal==1){  // 오름
-        // sort() 뺴기 연산처리 : 앞수-뒷수
-        arrNumber.sort((a,b)=>a-b);
+        // [sort()메서드 내부함수사용법]
+       // a > b 일때 true이면 1처리 -> 순서바꿈!
+    arrNumber.sort((a, b) => (a == b ? 0 : a > b ? 1 : -1));
+
+    // sort() 빼기연산처리 : 앞수-뒷수
+    // arrNumber.sort((a,b)=>a-b);
         
     } //// if //////
     else if(optVal==2){ // 내림
-        // sort() 뺴기 연산처리 : 뒷수-앞수
-        arrNumber.sort((a,b)=>b-a);
+        // [sort()메서드 내부함수사용법]
+        // a > b 일때 true이면 -1처리 -> 순서안바꿈!
+    arrNumber.sort((a, b) => (a == b ? 0 : a > b ? -1 : 1));
+
+    // sort() 빼기연산처리 : 뒷수-앞수
+    // arrNumber.sort((a,b)=>b-a);
 
     } //// else if ////////
 
@@ -159,7 +167,7 @@ dFn.addEvt(selBox,'change',function(){
     // (2) 배열 숫자 데이터 만큼 이미지로 변환
     // map().join()
     const showScreen2 = () => 
-    showNum2.innerHTML = arrString.map(val=>`<span>${val}</span>`).join('');
+    (showNum2.innerHTML = arrString.map((val)=>`<span>${val}</span>`).join(""));
     
     // 최초 출력
     showScreen2();
@@ -167,9 +175,9 @@ dFn.addEvt(selBox,'change',function(){
     // (3) 배열 숫자 데이터 만큼 이미지로 변환
     // 정렬 변경하기 (오름 내림차순)
     // (3-1) 대상 - #sel
-    const selBox2 = dFn.qs('#sel2');
+    const selBox2 = dFn.qs("#sel2");
     // (3-2) 이벤트 연결하기 : 이벤트 종류 - change
-    dFn.addEvt(selBox2,'change',function(){
+    dFn.addEvt(selBox2,"change",function(){
         // 1. 선택 option value값
         let optVal = this.value;
         console.log('숫자정렬변경',optVal);
@@ -241,11 +249,12 @@ const upCode = () => {
 
     // 반복 코드 만들기
     // 대상코드 : list1 배열
-    let hcode = list1.map(val=>`
-                <tr>
-                <th>${val.idx}</th>
-                <th>${val.tit}</th>
-                <th>${val.cont}</th>
+    let hcode = list1.map(
+        (val) =>`
+            <tr>
+                <td>${val.idx}</td>
+                <td>${val.tit}</td>
+                <td>${val.cont}</td>
             </tr>
     `);
 
