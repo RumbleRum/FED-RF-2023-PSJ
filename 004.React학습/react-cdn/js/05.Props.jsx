@@ -72,7 +72,7 @@ function AskMore(Props){ // props.num 배열데이터 순번값
     // 옵션 배열 변슈만들기
     const carInfo = [
         {color:"라이트불루",model:"2023년형",opt:{filter:"hue-rotate(0deg)"}},
-        {color:"녹차그린",model:"2023년형",opt:{filter:"hue-rotate(155deg)"},Transform:'rotateY(180deg)'}
+        {color:"녹차그린",model:"2023년형",opt:{filter:"hue-rotate(155deg)",transform:'rotateY(180deg)'}}
     ];
 
 
