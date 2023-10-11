@@ -6,19 +6,7 @@ html{
     font-size: 10px;
 }
 
-.inbox {    
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1360px;
-    margin: 0 auto;
-}
 
-.inbox::after,
-.group-part::after {
-    content: "";
-    display: block;
-    clear: both;
-}
 
 
 .col-1 {

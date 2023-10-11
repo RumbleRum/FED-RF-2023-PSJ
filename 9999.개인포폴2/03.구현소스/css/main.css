@@ -7,70 +7,7 @@
 
 /* 공사중표시 */
 body * {
-    /* outline: 2px dashed #ccc; */
-}
-body > div > * {
-    /* outline-color: red; */
-}
-
-.group-part-01{
-    position: relative;
-}
-
-.partbox {
-    box-sizing: border-box;
-    /* border: 2px dotted blue; */
-    height: 100%;
-}
-
-.blind{
-    display: none;
+    outline: 2px dashed blue;
 }
 
 
-.vidbox{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    filter: brightness(50%)
-}
-.vidbox video{
-    width: 100%;
-    height: 900px;
-    object-fit: cover;
-}
-
-.banner {
-    position: relative;
-   
-}
-.banner .partbox {
-    height: 880px;
-}
-
-
-#main {
-    background: url(../images/bg1.jpg) no-repeat center /cover;
-    background-color: #000;
-    position: relative;
-}
-
-.main .group-part-01 .partbox {
-    height: 735px;
-}
-
-.main .group-part-02 .partbox {
-    height: 800px;
-}
-
-.main .group-part-03 .partbox {
-    height: 905px;
-}
-
-.footer .group-part-04 .partbox {
-    height: 100px;
-}
-
-.footer .group-part-05 .partbox {
-    height: 50px;
-}
