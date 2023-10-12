@@ -10,13 +10,26 @@ body * {
     outline: 2px dashed blue;
 }
 
-.pg1{
-    position: relative;
+#main{
+    /* position: relative; */
 }
 
-.pg1 h1{
+.pg1 span{
     display: flex;
     font-size: 15vw;
     justify-content: center;
-    padding-top: 30%;
+    font-weight: bold;
+    position: relative;
+    transform: translateY(82%);
+}
+
+
+
+/* ep 페이지 하단 */
+.footer{
+    min-height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
 }
