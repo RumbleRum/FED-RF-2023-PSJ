@@ -10,4 +10,13 @@ body * {
     outline: 2px dashed blue;
 }
 
+.pg1{
+    position: relative;
+}
 
+.pg1 h1{
+    display: flex;
+    font-size: 15vw;
+    justify-content: center;
+    padding-top: 30%;
+}
