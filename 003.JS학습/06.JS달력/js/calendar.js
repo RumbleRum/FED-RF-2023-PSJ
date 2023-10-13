@@ -4,6 +4,8 @@
 const dFn = {
     qs : x => document.querySelector(x),
     qsa : x => document.querySelectorAll(x),
+    qsEl: (el, x) => el.querySelector(x),
+    qsaEl: (el, x) => el.querySelectorAll(x),
     addEvt : (ele,evt,fn) => 
             ele.addEventListener(evt,fn),
     cg : x => console.log(x),
@@ -177,9 +179,50 @@ function makeDallyeok(){
         // (2) 각 날짜 .date 요소에 링크 설정하기
         newDate.forEach(ele=>{
             dFn.addEvt(ele,'click',()=>{
-                console.log('나야나~!');
+                // 1. 년도 읽기
+                let nowY = yearTit.innerText;
+                // 2. 월 읽기
+                let nowM = monthTit.innerText;
+                // 3. 날짜읽기
+                let nowD = ele.innerText;
+                
+                // 4. 전달/다음달 구분하기
+                let isSpan = dFn.qsEl(ele,'span');
+                console.log(isSpan);
+                // span이 있으면 true 처리됨
+                if(isSpan){
+                    // span의 클래스가 'bm'/'am' 인지 구분하기
+                    let isAM = isSpan.classList.contains('am');
+                    if(isAM){ // 다음달 이므로 1더함
+                        nowM++;
+                        if(nowM==13){
+                            // 13월은 1월로 처리
+                            nowM = 1;  
+                            // 1월은 다음 년도로
+                            nowY++;
+                        }  /// if /////
+                    }//////// else ////////
+                    
+                    else{ // 'bm'일 경우 즉, 전달!
+                        nowM--;
+                        if(nowM==0){
+                            // 0월은 12월로 처리
+                            nowM = 12;
+                            // 12월은 전해로 처리
+                            nowY--;
+                        } //// if //////
+
+                    } ////else
+
+                } //// if ///////////////////////
+
+
+                console.log(`${nowY}-${dFn.addZero(nowM)}-${dFn.addZero(nowD)}`);
+
+
+
             }); //// click /////
-            
+
         }); //// forEach //////
 
 
