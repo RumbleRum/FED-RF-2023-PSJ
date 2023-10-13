@@ -88,3 +88,89 @@ ReactDOM.render(<Developer
     itit="어이? 어이가없네 쉬볼럼이"
     
     />,document.querySelector('#root2'));
+
+
+/********************************************** 
+    2. if문이 아닌 조건 표현하기
+    -> 조건식 && JSX표현식
+    조건이 true일때만 && 뒤의 JSX표현식이 출력됨!
+**********************************************/
+
+// 개발자의 취향을 알아보지!!
+
+
+// 2-1. 제목을 찍기 위한 타이틀 컴포넌트
+function Title(props){ // 컴포넌트 호출시 tit를 셋팅함
+    return <h1> 👨‍🔧개발자👩‍🔧가 좋아하는 {props.tit} </h1>;
+
+} //// Title //////////////////////////////
+
+// 음식리스트
+const foods = ["스파게티","짜파게티","냉면","짜장면","마라탕"];
+
+// 2-2. 반복 리스트를 위한 컴포넌트 ////////////////////////
+function FoodList(props){
+    return <li>개발자는 {props.fname} 졸아해!</li>;
+} ///////////FoodList ///////////////////////
+
+// 2-3. 개발자 선호 음식 리스트 출력 컴포넌트 //////////////////
+function WishList(props){ // wlist 속성에 담아서 보내준다!
+    // 위시리스트 담기
+    const myFood = props.wlist;
+    // 코드리턴
+    return(
+        <React.Fragment>
+            <title tit="음식" />
+            {/* 음식 위시리스트의 길이가 0보다 클때만 출력 */}
+
+            {
+            myFood.length > 0 &&
+            <div>
+                <h2>
+                👨‍🔧개발자👩‍🔧가 좋아하는 음식은 모두
+                    {myFood.length} 가지 입니다.
+                </h2>
+                <ul>
+                    {
+                        // 배열변수.map() 메서드 사용!
+                        // map(변수=>바로리턴 컴포넌트)
+                        // 리엑트 map()은 JS맵과 다름
+                        // 맵.join 하지 않으므로
+                        myFood.map(x=><FoodList fname={x} />)
+                    }
+                </ul>
+            </div>            
+            }
+            {/* 다른 경우의 출력은 별도의 JSX출력 중괄호 구역에 코딩한다! */}
+            {
+                 myFood.length == 0 &&
+                 <h2> 아직 개발자 음식쿠가 업뎃이 안됑썽 </h2>
+            }
+        </React.Fragment>
+    );
+} ////// WishList 컴포넌트 ///////////////////////////////
+
+// 컴포넌트 출력 ///////////////////
+ReactDOM.render(<WishList wlist={foods}/>,
+    document.querySelector('#root3'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
