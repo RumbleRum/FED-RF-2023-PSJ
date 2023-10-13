@@ -10,12 +10,12 @@
 
 // 1번 컴포넌트
 function MakeDev(){
-    return <h1>나는 걔발자야!</h1>;
+    return <h1>나는 개.발.자.!</h1>;
 };///// MakeDev ///////////////////
 
 // 2번 컴포넌트
 function LostDev(){
-    return <h1>계빨자가 뭐찡?</h1>;
+    return <h1>개발자?? 어이가없네 진실의방으로</h1>;
 };///// LostDev ///////////////////
 
 // 3번 컴포넌트  : 이미지 생성
@@ -66,7 +66,7 @@ function Developer(props){
 
 // 이미지경로 배열
 const devImg = [
-    "https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/HYAONH6EGJBKIU5CJWWF343MKE.jpg",
+    "https://www.spochoo.com/news/photo/202307/105961_212847_2541.png",
     "https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202208/24/BoiledMovie/20220824133926904mopw.png"
 ];
 
