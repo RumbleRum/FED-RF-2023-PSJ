@@ -217,8 +217,12 @@ function makeDallyeok(){
                 } //// if ///////////////////////
 
 
-                console.log(`${nowY}-${dFn.addZero(nowM)}-${dFn.addZero(nowD)}`);
-
+              // 날짜구성하기 : yyyy-mm-dd
+              let setDate = `${nowY}-${dFn.addZero(nowM)}-${dFn.addZero(nowD)}`;
+              // 요일셋팅하기
+              let setDay = new Date(setDate).getDay()
+              // 날짜 요일 출력
+              console.log(setDate+`(${week[setDay]})`);
 
 
             }); //// click /////
