@@ -14,15 +14,22 @@ body * {
     /* position: relative; */
 }
 
-.pg1 span{
+.pg1>ul>li>a{
     display: flex;
-    font-size: 15vw;
+    font-size: 14vw;
     justify-content: center;
     font-weight: bold;
     position: relative;
-    transform: translateY(82%);
+    transform: translateY(200%);
+    color: #fff;
+    line-height: 200px;
+    gap: 10px;
 }
 
+.col-3{
+    color: #fff;
+    font-size: 2vw;
+}
 
 
 /* ep 페이지 하단 */
