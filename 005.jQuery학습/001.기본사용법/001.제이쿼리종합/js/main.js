@@ -65,7 +65,7 @@ const msgTxt = [
     // 8번방
     `와~! 아늑하다! 옆방으로 가보자!`,
     // 9번방
-    "악! 씨발 좀비<br>새끼다~~~~",
+    "악! 좀비<br>새끼다~~~~",
 ];
 
 // console.log('대상',mi,room,btns,msg);
@@ -108,10 +108,10 @@ $('.mz').hide();
 // 2.버튼 셋팅/////////
 // 대상 : .btns button -> btns 변수
 
-btns.hide().first().show();
+// btns.hide().first().show();
 // 버튼들.숨겨.첫번째.보여줘
 
-// btns.hide().eq(4).show(); 별도선택가능
+btns.hide().eq(4).show();
 
 
 // 3. 미니언즈 공통기능 함수//////////////////
@@ -297,20 +297,27 @@ btns.first() // 첫번쨰버튼
                         // right값을 li width값 만큼 이동 (120%보정)
                         right: room.eq(7).width()*1.2 + 'px'
                     },1000,'easeOutBounce',
-                    ()=>{ // 물린후 대사
-                        msg.html(msgTxt[4][1])
-                        .css({left:"-64%"});
+                    ()=>{ 
+                        
+                        // 미니언즈 좀비 흑백 변경(1초후)
+                        setTimeout(()=>{
+                            mi.find('img')
+                            // 흑백변경 :  필터 (그레이 스케일)
+                            .css({filter:'grayscale(100%)'});
+                            // 물린후 대사
+                            msg.html(msgTxt[4][1])
+                            .css({left:"-84%"});
 
-                        // 미니언즈 좀비 이미지 변경(1초후)
+                        },1000); // setTimeout //////////////
+
+                        // 미니언즈 좀비 이미지 변경(2초후)
                         setTimeout(()=>{
                             mi.find('img').attr('src','images/mz1.png')
-                            .css({filter:'grayscale(100%)'});
-                            // 흑백변경 :  필터 (그레이 스케일)
 
                             // 다음버튼 보이기
                             showNextBtn(this);
 
-                        },1200); // setTimeout //////////////
+                        },2000); // setTimeout //////////////
                     }); //// animate //////////////////
                 }); /// fadeIn //////////////////////
 
@@ -321,7 +328,47 @@ btns.first() // 첫번쨰버튼
         actMini(this,4,fn);
         
 
-    }); /// '무서우니 윗층으로!' 버튼 끝 //////////////////
+    }) /// '무서우니 윗층으로!' 버튼 끝 //////////////////
+
+// 9. "치료주사방으로!" 버튼 클릭시 ///////////////////
+// 위의 버튼에서 이어짐! .next() - 세밀콜론 위에서 지워야 이어짐
+        .next() // 다섯 번쨰버튼
+        .click(function(){  
+
+        // 주사기 돌리기
+        let fn = () => { 
+            $('.inj')
+            .css({zIndex: "9999"})
+            .delay(800)
+            .animate({
+                rotate:"-150deg",
+            },500,"easeInOutQuart",
+            ()=>{ //주사기 회전 후 콜백함수
+                // 미니언즈 이미지 변경하기
+                // attr(속성명,값)-> 값설정하기
+                // attr(속성명) -> 값읽어오기
+                mi.find('img')
+                .attr('src','images/m2.png') // 이미지변경
+                .css({filter:"grayscale(0)"}); // 흑백에서 컬러로
+            }) ///////// animate //////////
+
+        // jquery.rotate.js 는
+        // jQuery animate메서드에 transform rotate를 사용할 수 있도록 
+        // 해주는 플러그인임! -> 제이쿼리 라이브러리 아래 위치
+        // [ 사용법(animate css설정에 씀)-> rotate:"각도deg" ]
+
+
+            // animate는 트랜스폼 적용안됨! 따라서 CSS로 처리!
+            // .css({
+            //     transform:"rotate(-150deg)",//반시계방향
+            //     transition:".5s .5s", //0.5초후 0.5초간 애니
+            //     zIndex: "9999" // 미니언즈보다 위
+            // })
+      
+        }; ///////// 콜백함수 ///////////////////////////////
+// 미니언즈 공통함수 호출
+actMini(this,2,fn);
+    }); /// '치료주사방으로!' 버튼 끝 //////////////////
 
 
 
