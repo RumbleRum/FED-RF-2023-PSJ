@@ -3,11 +3,6 @@
 // DOM 먀서드
 import dFn from './dom.js';
 
-// 부드러운 스크롤 모듈
-import { startSS, setPos } from "./smoothScroll23.js";
-
-// [1] 부드러운 스크롤 적용 //////////
-startSS();
 
 // [2] 상단/하단 공통 모듈넣기
 
@@ -15,7 +10,7 @@ startSS();
 const comArea = dFn.qsa('.common-area');
 
 
-console.log(tData, comArea);
+// console.log(tData, comArea);
 
 
 // 상단 , 하단 공통 데이터 불러오기
