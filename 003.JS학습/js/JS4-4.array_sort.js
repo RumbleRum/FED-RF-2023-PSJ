@@ -1,7 +1,7 @@
-// JS4-4. 배열의 정렬과 검색 JS 
+// JS4-4. 배열의 정렬과 검색 JS
 
 // DOM 메서드
-import dFn from './dom.js';
+import dFn from "./dom.js";
 
 // console.log(dFn);
 
@@ -137,16 +137,41 @@ import dFn from './dom.js';
 
             *************************************************
 
+                [ 객체를 배열로 변환하여 리스트 만들기 : 정렬시 필수! ]
 
+            1. 대상: 배열이 아닌 객체형식으로 되어 있는 데이터를
+                    리스트로 만들고 이를 배열정렬 메서드를 사용코자할때
+            
+            2. 변경방법:
+                (1) 객체의 속성(키)만 배열로 만들어준다!
+                Object 객체는 객체를 위한 인터페이스 제공 객체임!
+                -> Object.keys(객체)
+                : 하는일 - 객체의 속성을 모아 배열로 만들어준다!
+                -> 키배열을 만드는 이유는?
+                ->>> 키배열 === 값배열 왜????
+                -> 객체는 키를 통해 값을 부를 수 있기 때문이다!
+
+                (2) 변경확인 
+                    변경전 : {속성1:값1,속성2:값2}
+                    변경후 : [속성1,속성2]
+
+                (3) 속성을 값으로 하는 배열값으로 정렬을 변경할 수 있다
+                -> Object.keys(객체).sort()
+
+                (4) 객체값으로 구성되는 배열일 경우 아래와 같이 변환한다
+                -> 객체를 변환후 map으로 값을 다시 담아준다!
+                객체변수 = 객체
+                새변수 = Object.keys(객체변수).map(v=>객체변수[v])
+
+            3. 새로구성한 객체 변환 배열로 기존 배열 메서드를 사용하여
+                정렬, 검색 후 정렬 등을 수행한다!!
 
 *---------------------------------------------------------------------------------------*/
-
 
 // 숫자값 배열
 const arrNumber = [4, 5, 8, 10, 2, 1, 9, 3, 7, 6];
 // 문자값 배열
 const arrString = ["파", "타", "하", "가", "바", "사", "다", "라", "차"];
-
 
 // sort()는 기본 문자로 처리하므로 숫자는 내부함수로 뺴기연산 처리함!
 // console.log('숫자배열',arrNumber);
@@ -163,11 +188,13 @@ const arrString = ["파", "타", "하", "가", "바", "사", "다", "라", "차"
 // 1. 숫자로만 된 배열의 화면 뿌리기
 // map() 메서드로 배열값을 태그로 감싸서 출력하기
 // (1) 출력대상 : showNum
-const showNum = dFn.qs('.showNum');
+const showNum = dFn.qs(".showNum");
 // (2) 배열 숫자 데이터 만큼 이미지로 변환
 // map().join()
-const showScreen = () => 
-(showNum.innerHTML = arrNumber.map(val=>`<img src="./images/num/num_0${val}.png" alt="숫자${val}이미지">`).join(""));
+const showScreen = () =>
+    (showNum.innerHTML = arrNumber
+        .map((val) => `<img src="./images/num/num_0${val}.png" alt="숫자${val}이미지">`)
+        .join(""));
 
 // 최초 출력
 showScreen();
@@ -175,89 +202,85 @@ showScreen();
 // (3) 배열 숫자 데이터 만큼 이미지로 변환
 // 정렬 변경하기 (오름 내림차순)
 // (3-1) 대상 - #sel
-const selBox = dFn.qs('#sel');
+const selBox = dFn.qs("#sel");
 // (3-2) 이벤트 연결하기 : 이벤트 종류 - change
-dFn.addEvt(selBox,'change',function(){
+dFn.addEvt(selBox, "change", function () {
     // 1. 선택 option value값
     let optVal = this.value;
-    console.log('숫자정렬변경',optVal);
+    console.log("숫자정렬변경", optVal);
 
     // 2. 정렬 분기 : 1 - 오름차순 / 2 - 내림차순
-    if(optVal==1){  // 오름
+    if (optVal == 1) {
+        // 오름
         // [sort()메서드 내부함수사용법]
-       // a > b 일때 true이면 1처리 -> 순서바꿈!
-    arrNumber.sort((a, b) => (a == b ? 0 : a > b ? 1 : -1));
+        // a > b 일때 true이면 1처리 -> 순서바꿈!
+        arrNumber.sort((a, b) => (a == b ? 0 : a > b ? 1 : -1));
 
-    // sort() 빼기연산처리 : 앞수-뒷수
-    // arrNumber.sort((a,b)=>a-b);
-        
+        // sort() 빼기연산처리 : 앞수-뒷수
+        // arrNumber.sort((a,b)=>a-b);
     } //// if //////
-    else if(optVal==2){ // 내림
+    else if (optVal == 2) {
+        // 내림
         // [sort()메서드 내부함수사용법]
         // a > b 일때 true이면 -1처리 -> 순서안바꿈!
-    arrNumber.sort((a, b) => (a == b ? 0 : a > b ? -1 : 1));
+        arrNumber.sort((a, b) => (a == b ? 0 : a > b ? -1 : 1));
 
-    // sort() 빼기연산처리 : 뒷수-앞수
-    // arrNumber.sort((a,b)=>b-a);
-
+        // sort() 빼기연산처리 : 뒷수-앞수
+        // arrNumber.sort((a,b)=>b-a);
     } //// else if ////////
 
     // 화면 출력 -> 원본 배열의 정렬이 변경된 후 다시 출력
 
     showScreen();
-
 }); //// change 이벤트 //////////////////
-    
-    // 2. 문자 로만 된 배열의 화면 뿌리기
-    // map() 메서드로 배열값을 태그로 감싸서 출력하기
-    // (1) 출력대상 : showNum
-    const showNum2 = dFn.qs('.showNum2');
-    // (2) 배열 숫자 데이터 만큼 이미지로 변환
-    // map().join()
-    const showScreen2 = () => 
-    (showNum2.innerHTML = arrString.map((val)=>`<span>${val}</span>`).join(""));
-    
-    // 최초 출력
+
+// 2. 문자 로만 된 배열의 화면 뿌리기
+// map() 메서드로 배열값을 태그로 감싸서 출력하기
+// (1) 출력대상 : showNum
+const showNum2 = dFn.qs(".showNum2");
+// (2) 배열 숫자 데이터 만큼 이미지로 변환
+// map().join()
+const showScreen2 = () => (showNum2.innerHTML = arrString.map((val) => `<span>${val}</span>`).join(""));
+
+// 최초 출력
+showScreen2();
+
+// (3) 배열 숫자 데이터 만큼 이미지로 변환
+// 정렬 변경하기 (오름 내림차순)
+// (3-1) 대상 - #sel
+const selBox2 = dFn.qs("#sel2");
+// (3-2) 이벤트 연결하기 : 이벤트 종류 - change
+dFn.addEvt(selBox2, "change", function () {
+    // 1. 선택 option value값
+    let optVal = this.value;
+    console.log("숫자정렬변경", optVal);
+
+    // 2. 정렬 분기 : 1 - 오름차순 / 2 - 내림차순
+    if (optVal == 1) {
+        // 오름
+
+        // [sort() 매서드 내부함수 사용법]
+        // a > b 일때 true 이면 1로 처리 -> 순서 바꿈
+        arrString.sort((a, b) => (a == b ? 0 : a > b ? 1 : -1));
+
+        // 오름차순 기본 매서드 sort() 사용
+        // arrString.sort();
+    } //// if //////
+    else if (optVal == 2) {
+        // 내림
+
+        // [sort() 매서드 내부함수 사용법]
+        // a > b 일때 true 이면 -1로 처리 -> 순서 안바꿈
+        arrString.sort((a, b) => (a == b ? 0 : a > b ? -1 : 1));
+
+        // 내림차순 기본 매서드 reverse() 사용
+        // arrString.reverse();
+    } //// else if ////////
+
+    // 화면 출력 -> 원본 배열의 정렬이 변경된 후 다시 출력
+
     showScreen2();
-    
-    // (3) 배열 숫자 데이터 만큼 이미지로 변환
-    // 정렬 변경하기 (오름 내림차순)
-    // (3-1) 대상 - #sel
-    const selBox2 = dFn.qs("#sel2");
-    // (3-2) 이벤트 연결하기 : 이벤트 종류 - change
-    dFn.addEvt(selBox2,"change",function(){
-        // 1. 선택 option value값
-        let optVal = this.value;
-        console.log('숫자정렬변경',optVal);
-    
-        // 2. 정렬 분기 : 1 - 오름차순 / 2 - 내림차순
-        if(optVal==1){  // 오름
-
-            // [sort() 매서드 내부함수 사용법]
-            // a > b 일때 true 이면 1로 처리 -> 순서 바꿈
-            arrString.sort((a,b)=>a==b?0:a>b?1:-1);
-            
-            // 오름차순 기본 매서드 sort() 사용
-            // arrString.sort();
-            
-        } //// if //////
-        else if(optVal==2){ // 내림
-
-            // [sort() 매서드 내부함수 사용법]
-            // a > b 일때 true 이면 -1로 처리 -> 순서 안바꿈
-            arrString.sort((a,b)=>a==b?0:a>b?-1:1);
-
-            // 내림차순 기본 매서드 reverse() 사용
-            // arrString.reverse();
-    
-        } //// else if ////////
-    
-        // 화면 출력 -> 원본 배열의 정렬이 변경된 후 다시 출력
-    
-        showScreen2();
-
 }); //// change 이벤트 //////////////////
-
 
 /////////////////////////////////////////////////////////////////////////////////////////
 /////// 3. 객체 데이터 배열의 정렬 //////////////////////////////////////////////////////
@@ -285,29 +308,30 @@ const list1 = [
         tit: "이제 얼마나 남은거니?",
         cont: "음악프로그램에 출연 요청글도 써볼까요?",
     },
-
 ]; /////////////// list1 /////////////
 console.log(list1);
 
 // 대상 : .showList3
-const showList3 = dFn.qs('.showList3');
+const showList3 = dFn.qs(".showList3");
 
 // (2) html 코드 생성하여 출력하는 함수 만들기
 // upCode 함수를 공통으로 파라미터 처리함 /////////////
-const upCode = (data,exBox) => {  // data - 객체데이터 배열 , exBox - 출력할요소
+const upCode = (data, exBox) => {
+    // data - 객체데이터 배열 , exBox - 출력할요소
 
     // 반복 코드 만들기
     // 대상코드 : list1 배열
     let hcode = data.map(
-        (val) =>`
+        (val) => `
             <tr>
                 <td>${val.idx}</td>
                 <td>${val.tit}</td>
                 <td>${val.cont}</td>
             </tr>
-    `);
+    `
+    );
 
-    console.log('배열',hcode)
+    console.log("배열", hcode);
 
     // 테이블 생성코드 넣기
     exBox.innerHTML = `
@@ -320,86 +344,83 @@ const upCode = (data,exBox) => {  // data - 객체데이터 배열 , exBox - 출
                 </tr>
             </thead>
             <tbody>
-                ${hcode.join('')}
+                ${hcode.join("")}
             </tbody>
         </table>
     `;
-
-};/// upCode /////////////////
-
+}; /// upCode /////////////////
 
 // (3) 요소의 데이터 코드 넣기 함수호출 : 기본출력
-upCode(list1,showList3);
+upCode(list1, showList3);
 
 // (4) 정렬 변경 이벤트 발생시 실제 정렬 변경하기 /////
 // 이벤트 대상 : .sel3
-const sel3 = dFn.qs('.sel3');
+const sel3 = dFn.qs(".sel3");
 // 정렬 기준대상 : .cta3
-const cta3 = dFn.qs('.cta3');
+const cta3 = dFn.qs(".cta3");
 
 // sel3 이벤트 설정하기 //////
 // 데이터와 출력 타겟부터 설정후 정렬함수 소출
-dFn.addEvt(sel3,'change',()=>{
+dFn.addEvt(sel3, "change", () => {
     targetData = list1;
     targetEle = showList3;
 }); ///////////// change /////////////////////
-dFn.addEvt(sel3,'change',sortingFn);
+dFn.addEvt(sel3, "change", sortingFn);
+
+// 검색기준 선택박스 변경시 정렬선택 초기화하기 ////
+dFn.addEvt(dFn.qs(".cta3"), "change", () => {
+    dFn.qs(".sel3").value = "0";
+}); //// change ////////////////////////////////////
 
 // 정렬변경 함수의 데이터 및 출력요소 셋팅변수
 let targetData = list1;
 let targetEle = showList3;
 
 // 정렬 변경 함수 만들기
-function sortingFn(){
+function sortingFn() {
     // 선택값 담기  : 오른차순(1) , 내림차순(2)
     let optVal = this.value;
 
-    console.log('앞에누구?',this.previousElementSibling);
+    console.log("앞에누구?", this.previousElementSibling);
     // this -> 콤보박스 자신
     // 앞에있는 형제요소 선택 : this.previousElementSibling)
     // 뒤에있는 형제요소 선택 : this.nextElementSibling)
-    
+
     // 정렬 기준값  : idx , tot, cont(객체 데이터 배열의 속성명)
     // let cta = cta3.value;
     let cta = this.previousElementSibling.value;
-    
-    console.log('바꿔정렬',optVal,cta);
+
+    console.log("바꿔정렬", optVal, cta);
 
     // 분기하기
     // 대상 : list1
-    if(optVal==1){ //오름차순
-        targetData.sort((a,b)=>{
+    if (optVal == 1) {
+        //오름차순
+        targetData.sort((a, b) => {
             // a,b는 모두 객체 데이터
             // 따라서 내부 속성을 구체적으로 비교해야함
             // idx,tit,cont 세가지 중 하나로 비교
-           return a[cta]==b[cta]?0:a[cta]>b[cta]?1:-1;
+            return a[cta] == b[cta] ? 0 : a[cta] > b[cta] ? 1 : -1;
         });
-        
-    }/// if ////
-
-    else if(optVal==2){ //내림차순
-        targetData.sort((a,b)=>{
+    } /// if ////
+    else if (optVal == 2) {
+        //내림차순
+        targetData.sort((a, b) => {
             // a,b는 모두 객체 데이터
             // 따라서 내부 속성을 구체적으로 비교해야함
             // idx,tit,cont 세가지 중 하나로 비교
-            return a[cta]==b[cta]?0:a[cta]>b[cta]?-1:1;
+            return a[cta] == b[cta] ? 0 : a[cta] > b[cta] ? -1 : 1;
         });
-
-    }//// else if //////
-
+    } //// else if //////
 
     console.log(targetData);
 
-    // 리스트 코드 반영하기 : 대상 데이터 , 출력요소는 
+    // 리스트 코드 반영하기 : 대상 데이터 , 출력요소는
     // 호출시 설정된 것으로 셋팅된다
-    upCode(targetData,targetEle);
+    upCode(targetData, targetEle);
 
-
-
-    console.log('타겟데이터',targetData,'\n타겟요소',targetEle)
-
-}; //// sortingFn ///////////////////////////////////
-
+    console.log("타겟데이터", targetData, "\n타겟요소", targetEle);
+} //// sortingFn ///////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////// 배열의 검색 !! /////////////////////////////////////////////////
@@ -408,7 +429,7 @@ function sortingFn(){
 // 4. 객체데이터 검색 후 배열의 정렬 /////////////////////////////////////////////////////
 
 // 출력대상 : showList4
-const showList4 = dFn.qs('.showList4');
+const showList4 = dFn.qs(".showList4");
 console.log(showList4);
 
 // (1) 데이터 : 객체데이터 배열
@@ -433,128 +454,188 @@ const list2 = [
         tit: "올해는 다른 회사로 이직한다!",
         cont: "⚜️갈라콘 서포트에 많은 참여 부탁드립니다!",
     },
-]; /////////////// list2 /////////////                
-
+]; /////////////// list2 /////////////
 
 // 검색/정렬용 변수 -> 검색시 newList 변수 업데이트!
 let newList = list2;
 
 // (3) 리스트 초기호출!
 // 위의 upCode() 함수를 사용하여 페이지 찍기
-upCode(list2,showList4);
+upCode(list2, showList4);
 
 // (4) sel4 이벤트 설정하기 //////
-dFn.addEvt(sel4,'change',()=>{
+dFn.addEvt(sel4, "change", () => {
     // 정렬용 데이터는 원본 list2 쓰지않고 newList 사용!
     targetData = newList;
     targetEle = showList4;
 }); ///////////// change /////////////////////
-dFn.addEvt(sel4,'change',sortingFn);
+dFn.addEvt(sel4, "change", sortingFn);
 
 // (5) 검색기능 버튼 클릭 이벤트 설정하기 ////
 // (5-1) 이벤트대상 : .sbtn
-dFn.addEvt(dFn.qs('.sbtn'),'click',searchingFn);
+dFn.addEvt(dFn.qs(".sbtn"), "click", searchingFn);
 
 // (6) 검색 함수 만들기 ////////////////////////
-function searchingFn(){
+function searchingFn() {
     // 1.검색어 읽어오기
     // 대상 : .stxt
-    let stxt = dFn.qs('#stxt').value;
-    
+    let stxt = dFn.qs("#stxt").value;
+
     // 2.검색 대상항목 읽어오기
     // 대상 : .cta4
-    let cta = dFn.qs('.cta4').value;
-    
-    console.log('입력문자',stxt,'\n검색기준 ',cta);
-    
+    let cta = dFn.qs(".cta4").value;
+
+    console.log("입력문자", stxt, "\n검색기준 ", cta);
+
     // 3. 다중값 리턴 LIKE 검색 : 원본데이터 list2 로 검색
     // filter() + indexOf()
-    let res = list2.filter(v=>{
+    let res = list2.filter((v) => {
         // v[객체속성명] -> v[cta]
         // -> cta변수에 idx/tit/cont 중 하나 들어옴
         // indexOf(검색어) -> indexOf(stxt변수값)
-        // 숫자형 데이터일 경우 에러가 발생하므로 
+        // 숫자형 데이터일 경우 에러가 발생하므로
         // String(숫자데이터) -> 문자형변환!
-        if(String(v[cta]).indexOf(stxt)!=-1) return true;
+        if (String(v[cta]).indexOf(stxt) != -1) return true;
     }); ///// filter /////////////////
 
-    console.log('검색결과',res);
+    console.log("검색결과", res);
 
     // 4. 출력하기 : upCode()
-    upCode(res,showList4);
+    upCode(res, showList4);
 
-    // 5. 원본 데이터는 그대로 두고 새로운 변수를 선언하여 
+    // 5. 원본 데이터는 그대로 두고 새로운 변수를 선언하여
     // 그 변수의 값을 업데이트한다
     // 단, 그 변수 데이터는 정렬시에 사용하도록 한다!
     // -> newList변수
     newList = res;
-
-
-}; //////////////// searchingFn 함수 ////////////////////////
+} //////////////// searchingFn 함수 ////////////////////////
 
 // (7) 전체 리스트 돌아가기 버튼 클릭시 기능구현 ////////////////
-// 대상 : .fbtn 
-dFn.addEvt(dFn.qs('.fbtn'),'click',()=>{
+// 대상 : .fbtn
+dFn.addEvt(dFn.qs(".fbtn"), "click", () => {
     // 1. newList를 원본 list2 로 업데이트
     newList = list2;
-    upCode(newList,showList4);
+    upCode(newList, showList4);
 
     // 2. 검색 초기화
     initSearch();
-    
 }); //////// click ////////////////////////
 
 // 초기화함수 : 검색 선택박스 초기화
-function initSearch(){
+function initSearch() {
     // 1. 검색어 초기화
-    dFn.qs('#stxt').value = '';
-    
+    dFn.qs("#stxt").value = "";
+
     // 2. 검색 옵션기준 선택 초기화
-    dFn.qs('.cta4').value = 'idx';
-    
+    dFn.qs(".cta4").value = "idx";
+
     // 3. 정렬 초기화
-    dFn.qs('').value = '';
-    
-}; /////// initSearch ///////////////
+    dFn.qs(".sel4").value = "0";
+} /////// initSearch ///////////////
+
+
+// 검색기준 선택박스 변경시 정렬선택 초기화하기 ////
+dFn.addEvt(dFn.qs(".cta4"), "change", () => {
+    dFn.qs(".sel4").value = "0";
+}); //// change ////////////////////////////////////
 
 
 // 샘플 버튼으로 데이터를 검색한 결과를 콘솔에 찍어본다 //////////
-dFn.addEvt(dFn.qs('.sample'),'click',()=>{
-
+dFn.addEvt(dFn.qs(".sample"), "click", () => {
     // 1. find() 메서드 확인하기 : 데이터 정확히 일치해야함!
-    let res1 = list2.find(v=>{
-        if(v.tit=='당근마켓에 가자') return true;
+    let res1 = list2.find((v) => {
+        if (v.tit == "당근마켓에 가자") return true;
         // 데이터가 일치하면 배열에 값을 리턴
-
 
         // if(v.tit=='당근마켓에가자') return true;
         // 데이터가 완벽하게 일치하지 않으면 undefined 값을 리턴
-    }); 
-    
-    
+    });
+
     // 2. find() 메서드 LIKE 검색하기 : 데이터 일부로 찿음
     // indexOf() 결과가 -1이 아니면 내용이 있으므로 처리!
     // find() 의 특성상 처름 만나는 데이터 하나만 티런함
-    let res2 = list2.find(v=>{
-        if(v.tit.indexOf('다')!==-1) return true;
+    let res2 = list2.find((v) => {
+        if (v.tit.indexOf("다") !== -1) return true;
         // 데이터가 일치하면 배열에 값을 리턴
-    }); 
+    });
 
-    console.log("검색어:'다'\n결과",res2);
+    console.log("검색어:'다'\n결과", res2);
 
     // 3. filter() 메서드로 LIKE 검색하기
     // filter()는 해당 결과를 배열로 리턴함(여러개수집)
-    let res3 = list2.filter(v=>{
-        if(v.tit.indexOf('당근')!=-1) return true;
-        // 만약 검색결과가 없을경우 [](빈배열) 이 리턴됨!!(배열.length==0) 
+    let res3 = list2.filter((v) => {
+        if (v.tit.indexOf("당근") != -1) return true;
+        // 만약 검색결과가 없을경우 [](빈배열) 이 리턴됨!!(배열.length==0)
     });
-    console.log("검색어:'당근'\n결과",res3);
-
+    console.log("검색어:'당근'\n결과", res3);
 }); ////////// click/////////////////////////
 
 
 
+// [ 5. 객체원본 배열로 변환하기 ]
+// 1. 데이터 : 객체데이터
+const list3 = {
+    item1: {
+        idx: 45,
+        tit: "강남당근마켓에 가자",
+        cont: "다니엘 당근마켓이 정말로 싸고 좋다구~!",
+    },
+    item2: {
+        idx: 94,
+        tit: "나라점심에 뭐먹지?",
+        cont: "강남오스틴님 생일 서포트 안내",
+    },
+    item3: {
+        idx: 22,
+        tit: "다니엘 직돌이는 쉬고싶다~!",
+        cont: "마동석 활동정지에 대한 파생글 무통보 삭제 및 경고",
+    },
+    item4: {
+        idx: 111,
+        tit: "라면 올해는 다른 회사로 이직한다!",
+        cont: "나라 갈라콘 서포트에 많은 참여 부탁드립니다!",
+    },
+}; /////////////// list3 /////////////
 
+// (2) 객체데이터를 배열로 변경하기
+// 1단계 : 객체속성을 키배열로 변환하기
+// -> object.keys(객체) -> 속성값으로 구성된 배열!
+// let mykey = Object.keys(list3);
+// console.log('키배열',mykey);
+// console.log('키배열정렬',mykey.reverse());
+
+// 2단계 : 키배열을 객체의 값으로 대체하여 원하는 값배열 만들기
+// let myVal = mykey.map(v=>list3[v]);
+// console.log('값배열',myVal);
+
+// 1,2단계를 한번에 값배열로 만들기
+let newList3 = Object.keys(list3).map(v=>list3[v]);
+console.log('새로운값배열',newList3);
+
+// (3) 출력대상 선정 : .showList5
+const showList5 = dFn.qs('.showList5');
+
+// (4) 초기출력하기 : upCode()
+upCode(newList3,showList5);
+
+// (5) 정렬기능 이벤트 설정하기 : sortingFn()
+// 이벤트대상 : .sel5
+
+// 데이터 맵핑하기
+dFn.addEvt(dFn.qs('.sel5'),'change',()=>{
+    // 타겟 데이터 설정
+    targetData = newList3;
+    // 타겟 출력요소
+    targetEle = showList5;
+}); //////////// addEvt ///////
+
+// change 이벤트 연결설정
+dFn.addEvt(dFn.qs('.sel5'),'change',sortingFn);
+
+// 검색기준 선택박스 변경시 정렬선택 초기화하기 ////
+dFn.addEvt(dFn.qs(".cta5"), "change", () => {
+    dFn.qs(".sel5").value = "0";
+}); //// change ////////////////////////////////////
 
 
 
