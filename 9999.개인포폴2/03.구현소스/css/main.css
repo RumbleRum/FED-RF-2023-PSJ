@@ -40,3 +40,31 @@ body * {
     bottom: 0;
     z-index: 1;
 }
+
+.ep2{
+    background-color: #D8293A;
+}
+
+.pg2 h2{
+    display: flex;
+    font-size: 14vw;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    transform: translateY(200%);
+    color: #fff;
+    line-height: 100px;
+    height: 100px;
+}
+
+.pg2 span{
+    display: flex;
+    font-size: 14vw;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    transform: translateY(200%);
+    color: #fff;
+    line-height: 100px;
+    height: 200px;
+}
