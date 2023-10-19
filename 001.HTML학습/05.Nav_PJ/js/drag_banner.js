@@ -15,7 +15,7 @@ banBox.forEach((ele,idx)=>{
     if(idx==0){ // 첫번째 메인배너 셋업
       
       let hcode = '';
-      for(let i =0; i<13; i++){
+      for(let i=1; i<=13; i++){
         hcode += `
         <li>
             <img src="./images/img_nav06/ban${i}.png" alt="slide">
