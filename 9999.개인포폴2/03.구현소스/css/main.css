@@ -68,3 +68,20 @@ body * {
     line-height: 100px;
     height: 200px;
 }
+
+.pg2 p{
+    display: flex;
+    font-size: 1.1vw;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    transform: translateY(200%);
+    color: #fff;
+    line-height: 100px;
+    height: 150px;
+}
+
+.pg3 img{
+    width: 100%;
+    height: 100%;
+}
