@@ -47,7 +47,7 @@ body * {
 
 .pg2 h2{
     display: flex;
-    font-size: 14vw;
+    font-size: 10vw;
     justify-content: center;
     font-weight: bold;
     position: relative;
@@ -59,7 +59,7 @@ body * {
 
 .pg2 span{
     display: flex;
-    font-size: 14vw;
+    font-size: 10vw;
     justify-content: center;
     font-weight: bold;
     position: relative;
@@ -71,14 +71,15 @@ body * {
 
 .pg2 p{
     display: flex;
-    font-size: 1.1vw;
+    font-size: 1.3vw;
     justify-content: center;
     font-weight: bold;
     position: relative;
     transform: translateY(200%);
     color: #fff;
-    line-height: 100px;
-    height: 150px;
+    height: 200px;
+    text-align: center;
+    padding: 0 190px 0 190px;
 }
 
 .pg3 img{
