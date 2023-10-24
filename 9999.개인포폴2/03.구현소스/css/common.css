@@ -18,3 +18,85 @@
 /* font-family: 'Orbit', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Orbit&display=swap");
 /* font-family: 'Gugi', cursive; */
+
+
+/************** pg4 호텔설명 영역 **************/
+/* 파티션 박스 ul */
+.cont>ul{
+    /* 플렉스박스 */
+    display: flex;
+    /* 높이값을 보이는 화면기준 채우기 */
+    height: 100vh;
+}
+/* 파티션 박스 li */
+.cont>ul>li{
+    position: relative;
+    /* 부모자격 - 하위 img */
+
+    /* 플렉스 자식요소 등분할 설정 */
+    flex: 1;
+    /* 가로는 등분할, 세로는 100%채움! */
+
+    /* 커서 손가락모양 */
+    cursor: pointer;
+
+    /* 트랜지션: 속시이지 */
+    transition: all .4s ease-out;
+}
+/* 파티션 li박스 가상요소로 오버레이 효과주기 */
+.cont>ul>li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* 앱솔루트 사방채우기 */
+    background-color: #000;
+    opacity: 0.5;
+
+    /* 트랜지션: 속시이지 */
+    transition: all .4s ease-out;
+}
+
+/* 파티션 li에 마우스 오버시 */
+/* li넓어지기 */
+.cont>ul>li:hover{
+   flex: 1.4;
+   /*  flex 속성의 숫자는
+        1을 쓸 경우 등분할 되며
+        다른 숫자를 쓸때 기본 1로부터 
+        비교하여 배수로 생각하면 된다! */
+}
+/* 가상요소 암전 밝아지기 */
+.cont>ul>li:hover::before{
+    opacity: 0;
+}
+
+
+/* 각 파티션 박스에 배경 이미지 넣기 */
+.cont > ul > li:first-child {
+    background: url(../images/hotel/hilton1.jpeg) no-repeat center/cover;
+}
+.cont > ul > li:nth-child(2) {
+    background: url(../images/hotel/crockfords1.jpg) no-repeat center/cover;
+}
+.cont > ul > li:nth-child(3) {
+    background: url(../images/hotel/conrad1.jpg) no-repeat center/cover;
+}
+
+/* 타이틀 + 로고 이미지 공통 셋팅 */
+.cont>ul>li>img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(70%,250px);
+    /* 부모박스의 70%적용시 최대 250px한계설정 */
+}
+/* 로고만 셋팅변경 */
+.cont>ul>li>img:last-child{
+    top: 80%;
+    width: auto;
+}
