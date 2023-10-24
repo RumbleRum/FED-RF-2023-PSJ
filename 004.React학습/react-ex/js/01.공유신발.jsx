@@ -21,6 +21,9 @@ function MainComponent(){
     // 데이터가 0번째 즉 첫번째 배열순번 데이터를 불러올 순번값으로 셋팅한다!
     const [dataNum,setDataNum] = React.useState(0);
     
+    // 테스트 후크상태변수
+    const [test,setTest] = React.useState(0);
+    
     console.log('초기값',dataNum);
 
     // 가상돔에서 실제 돔에 반영 후 DOM에 구현할 JS코드는 어디에 넣어야되나?
@@ -39,7 +42,6 @@ function MainComponent(){
             // console.log('useEffect순수구욕 제이쿼리',
             //     $('.img-box'));
 
-                
             }); ////////////////////////////////////////////
 
 
@@ -48,6 +50,14 @@ function MainComponent(){
     React.useEffect(()=>{
         console.log('useEffect 빈배열 JS');             
     },[]); ////////////////////////////////////////////
+
+    // 의존성 배열옵션 useEffect
+    // -> 페이지 로딩후 >> 단 한번만 실행함 
+    React.useEffect(()=>{
+        console.log('useEffect 의존성 배열옵션');             
+    },[test]); ////////////////////////////////////////////
+    // 의존성이 다수일 경우 배열형태의 옵션에
+    // 콤마로 연결하여 등록해준다!
             
     // 랜더링 후 화면 출력전 상태
     React.useLayoutEffect(()=>{
