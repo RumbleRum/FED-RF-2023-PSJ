@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 /* gong.css - 공유신발 CSS */
-
+body{
+    overflow-y: scroll;
+}
 
 /* 대상박스 */
 #root {
