@@ -3,6 +3,7 @@
 /* gong.css - 공유신발 CSS */
 body{
     overflow-y: scroll;
+    background-color: lightskyblue;
 }
 
 /* 대상박스 */
@@ -47,4 +48,14 @@ body{
 /* 상품이미지 */
 .glist img {
     width: 120px;
+}
+
+.gwrap a{
+    color: #222;
+    text-decoration: none;
+    background-color: #fff;
+    transition: .4s;
+}
+.gwrap a:hover{
+    transform: scale(1.2);
 }
