@@ -71,7 +71,7 @@
 }
 /* 가상요소 암전 밝아지기 */
 .cont>ul>li:hover::before{
-    opacity: 0;
+    opacity: 0.5;
 }
 
 
@@ -92,11 +92,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(70%,250px);
+    width: min(70%,500px);
     /* 부모박스의 70%적용시 최대 250px한계설정 */
 }
 /* 로고만 셋팅변경 */
 .cont>ul>li>img:last-child{
-    top: 80%;
+    top: 60%;
     width: auto;
 }
