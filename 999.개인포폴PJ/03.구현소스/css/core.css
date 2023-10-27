@@ -9,7 +9,6 @@ html{
 .inbox {    
     display: flex;
     flex-wrap: wrap;
-    max-width: 1360px;
     margin: 0 auto;
 }
 
