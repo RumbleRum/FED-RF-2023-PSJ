@@ -7,12 +7,12 @@
 @import url(./common.css);
 
 /* 공사중표시 */
-body * {
-    /* outline: 2px dashed #ccc; */
-}
-body > div > * {
-    /* outline-color: red; */
-}
+/* body * {
+    outline: 2px dashed #ccc;
+} */
+/* body > div > * {
+    outline-color: red;
+} */
 
 
 /* 개별영역 박스 -> 확장형 박스
@@ -175,7 +175,7 @@ body > div > * {
 /* 도깨비 서브메뉴 */
 .dokebi-sub-menu{
     position: absolute;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     border-radius: 20px;
     width: 180px;
     background-color: #fff;
@@ -201,6 +201,7 @@ body > div > * {
 /*********** 방송편성소개파트 : .intro-part ***********/
 .main .intro-part .partbox {
     height: 455px;
+    padding: 10px;
 }
 /* 서브타이틀 */
 .intro-part .stit{
@@ -209,6 +210,7 @@ body > div > * {
 /* 하위제목+아이콘 박스 */
 .intro-desc{
     display: flex;
+    flex-wrap: wrap;
     font-size: 2.5rem;
 }
 .intro-desc h3{
@@ -351,9 +353,10 @@ body > div > * {
 }
 .clip-box ul {
     position: relative;
-    left: 0;
+    left: 0;/* 이동초기값 */
     display: flex;
     gap: 0 2%;
+    /* 트랜지션 */
     transition: left .4s ease-in-out;
 }
 
@@ -434,32 +437,29 @@ body > div > * {
     width: 100vw;
     height: 100vh;
     background-color: #000;
-    z-index: 99999;
+    color: #fff;
+    z-index: 999999;
     overflow: hidden;
     display: none;
-    color: #fff;
 }
-
 .sub-cont a{
     color: #fff;
 }
-
 /* 닫기버튼 */
 .cbtn{
-    background: none;
-    border: none;
-    font-size: 150px;
-    color: #fff;
-    cursor: pointer;
-
     position: absolute;
     top: 5%;
     right: 5%;
-}
 
+    background: none;
+    border: none;
+    font-size: 80px;
+    color: #fff;
+    cursor: pointer;
+}
 /* 서브 내부박스 */
 .sub-inbox{
-    outline: 3px dashed yellow;
+    outline: 2px dashed yellow;
     min-height: 100vh;
 }
 /* 제목박스 */
