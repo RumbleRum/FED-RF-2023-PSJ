@@ -1,5 +1,114 @@
 // 보그 PJ 회원가입 페이지 JS - member.js
 
+// 약관동의 html 코드 불러오기
+import { mcode } from "./data/mem_data.js";
+
+// console.log(mcode);
+// 약관동의 html 코드 넣기 
+
+$('#conf').html(mcode.conf)
+
+/********************************************* 
+    약관동의 전체 체크시 모든 체크박스 변경하기
+*********************************************/
+
+// 1. 대상선정 
+
+// 모두동의 체크박스 - #chk_all
+const chkAll = $('#chk_all');
+
+// 개별 체크박스 공통 - .chk
+const chkEach = $('.chk');
+
+// 2. 체크박스 변경 이벤트함수 만들기
+chkAll.change(function(){
+    // 1. 체크박스 체크여부확인
+    let isChk = $(this).prop('checked');
+    console.log(isChk);
+
+    // 2. 전체 체크박스가 체크상태 true 이면
+    // 개별 체크박스도 모두 true로 체크상태 변경
+    // false 이면 개별박스도 모두 false
+    chkEach.prop('checked', isChk);
+    // chkEach.attr('checked', isChk);
+    // for문 없이도 여러개의 체크박스를 
+    // 동시에 변경할 수 있음! 
+    // attr()도 동일하게 변경가능!(읽기만 안됨!)
+
+}); // change ///////////////////
+
+/********************************************* 
+    약관동의 개별 체크시 전체 체크박스 변경하기
+*********************************************/
+// 원리 : 개별체크박스가 모두 체크되면 전체체크하기
+// 대상 : .chk -> chkEach변수
+chkEach.change(function(){
+    // 1. 체크개수 알아오기 : length -> 개수 리턴!
+    let num = $('.chk:checked').length;
+    // console.log(num);
+    // 2. 체크개수가 3이면 전체 체크박스 체크하기
+    if(num==3) chkAll.prop('checked',true);
+    else chkAll.prop('checked',false);
+}); //// change ////////////////////
+
+/************************************************* 
+    동의 / 비동의 버튼 클릭시 처리하기
+*************************************************/
+// 대상: .YNbox button
+// 통과조건 : #termsService 와 #termsPrivacy 
+//  체크박스가 모두 체크되면 통과!
+
+$('.YNbox button').click(function(){
+    // 1. 버튼 구분하기 - is 동의버튼?
+    let isBtn = $(this).is('#btnY');
+    console.log('동의?',isBtn);
+
+    // 2. 동의 버튼일 경우 - 필수체크 확인후 회원가입 허가
+    if(isBtn){
+        if($('#termsService').prop('checked') && $('#termsPrivacy').prop('checked')){
+            alert('통과');
+        } //// if
+        else{
+            alert('모든항목에 체크하셈');
+        }///// else
+
+    }///// if ////////////
+    // 3. 비동의 버튼 클릭시 ////////
+    else{
+        alert('비동의 하였으므로 ㄲㅈ');
+        location.href = 'index.html';
+    } // else ///////////
+
+}); ///click/////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************** 
+    [ 속성값을 읽어오는 메서드 2가지 ]
+    attribute 단어의 메서드 : attr(속성명)
+    property 단어의 메서드 : prop(속성명)
+    -> 둘의 차이는 일반 속성값을 읽어올때는 차이가 없다!
+    체크박스의 checked 속성인 경우 true/false 를
+    리턴해주는 것은 prop() 메서드뿐임!
+
+    [ 속성값을 셋팅하는 메서드 2가지 ]
+    1. attr(속성명,값)
+    2. prop(속성명,값)
+*****************************************************/
+
+
 /********************************************** 
     [ 사용자 입력폼 유효성 검사 ]
     - 이벤트 종류 : blur(포커스가 빠질때 발생)
@@ -47,6 +156,10 @@ form.logF input[type=password]`)
       //메시지 출력하기
       $(this).siblings(".msg").text("필수입력!")
       .removeClass('on');
+
+    // [ 불통과시 pass값 변경 ]
+        pass = false;
+
     } //////// if //////
 
     /**************************************** 
@@ -60,6 +173,9 @@ form.logF input[type=password]`)
             $(this).siblings('.msg')
             .text('영문자로 시작하는 6~20글자 영문자/숫자')
             .removeClass('on');
+            // [ 불통과시 pass값 변경 ]
+                 pass = false;
+
         } //////// if ///////
         else{ // 통과시
             // 1. DB에 조회하여 같은 아이디가 있다면
@@ -85,6 +201,10 @@ form.logF input[type=password]`)
         if(!vReg(cv,cid)){ // 비밀번호검사 불통과시 들어감(!NOT)
             $(this).siblings('.msg')
             .text('시발노마 다시찍어');
+
+            // [ 불통과시 pass값 변경 ]
+                pass = false;
+
         } //////// if ///////
         else{ // 통과시            
             // 메시지 지우기
@@ -101,6 +221,11 @@ form.logF input[type=password]`)
         if(cv != $('#mpw').val()){ 
             $(this).siblings('.msg')
             .text('비밀번호가 틀려 시발아');
+
+            // [ 불통과시 pass값 변경 ]
+                pass = false;
+
+
         } //////// if ///////
         else{ // 통과시            
             // 메시지 지우기
@@ -257,6 +382,10 @@ const resEml = comp => { // comp - 이메일주소
         eml1.siblings('.msg')
         .text('조까시발 다시써')
         .removeClass('on');
+
+        // [ 불통과시 pass값 변경 ]
+            pass = false;
+
     } //// else : 불통과시 ////////////////////////////
 
 };/// resEml //////////////////////////
