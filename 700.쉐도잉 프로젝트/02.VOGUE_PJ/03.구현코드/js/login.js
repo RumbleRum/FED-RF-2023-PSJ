@@ -13,9 +13,10 @@ $(()=>{////////// JQB
      // 이벤트 대상: #sbtn
     // 이벤트 종류: click
     $('#sbtn').click(function(e){
+
+        // 기본이동 서브밋 막기!
         e.preventDefault();
 
-    
     // 공백데이터 처리함수
     const groSpace = x => x.replace(/\s/g,'');
 
