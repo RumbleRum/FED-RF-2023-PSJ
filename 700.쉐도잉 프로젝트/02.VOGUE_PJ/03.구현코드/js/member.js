@@ -66,11 +66,16 @@ $('.YNbox button').click(function(){
     // 2. 동의 버튼일 경우 - 필수체크 확인후 회원가입 허가
     if(isBtn){
         if($('#termsService').prop('checked') && $('#termsPrivacy').prop('checked')){
-            alert('통과');
-        } //// if
+            // alert('통과');
+            // 동의 / 비동의 박스 스윽 사라지기
+            $('#conf').fadeOut(300,()=>{
+                // 사라진 후 회원가입 박스 스윽 나타나기
+                $('.scont').fadeIn(300);
+            }); // fadeOut ///////////////////////////
+        } //// if //
         else{
             alert('모든항목에 체크하셈');
-        }///// else
+        }///// else //
 
     }///// if ////////////
     // 3. 비동의 버튼 클릭시 ////////
@@ -187,6 +192,8 @@ form.logF input[type=password]`)
             $(this).siblings('.msg')
             .text('굳 잘했다')
             .addClass('on');
+            // -> 비동기 통신 Ajax로 서버쪽에 아이디 중복검사 필요함
+
         } ////// else //////
 
    } /////////////// else if : 아이디검사 ///////
@@ -455,6 +462,21 @@ $('#btnj').click(e=>{
     // 최종 통과여부
     console.log('통과여부',pass);
 
+    // 4. 검사결과 에 따라 메시지보이기
+    if(pass){
+        alert('회원가입을 축하한다 호구새끼야!!');
+        // 원래는 POST 방식으로 DB에 회원가입 정보를
+        // 전송하여 입력후 DB처리 완료시 성공메시지나
+        // 로그인 페이지로 넘겨준다!
+
+        // 로그인 페이지로 리디렉션!
+        // location.href = 'login.html';
+        // 입력데이터 히스토리 지우는 replace()로 이동한다
+        location.replace('login.html');
+    }  /// if /////// 통과시
+    else{
+        alert('입력을 수정하세요 시발^^');
+    } //// else 불통과시 //////////////
 
 }); //// click //////////////
 
