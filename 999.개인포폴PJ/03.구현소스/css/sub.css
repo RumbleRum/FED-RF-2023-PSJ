@@ -126,7 +126,7 @@ ol {
     display: grid;
     max-width: 1360px;
     margin: 0 auto;
-    outline: 2px dashed pink;
+    /* outline: 2px dashed pink; */
 
     grid-template-columns: repeat(3,1fr);
     grid-column-gap: min(1vw,30px);

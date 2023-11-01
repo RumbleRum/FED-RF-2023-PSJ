@@ -108,3 +108,20 @@ body * {
     height: 100%;
     width: 100%;
 }
+
+.pg6 img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+
+.ep7{
+    min-width: 200vh;
+    padding: 150px 0px 150px 150px;
+}
+
+.pg7 img{
+    height: 100%;
+    width: 40%;
+}
