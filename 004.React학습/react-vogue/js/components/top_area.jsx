@@ -9,7 +9,9 @@ import { makeLink } from ".linksys2.js";
 export default function TopArea(props) {
     // 컴포넌트 요소 랜더링 직전 호출구역
     // -> 컴포넌트는 모두 만들어진 후 화면뿌리기 직전(가랜더랭)
-    React.useLayoutEffect(makeLink);
+    React.useEffect(makeLink,[]);
+    // useEffect(함수,[]) -> 뒤에 의존성 변수 구역이 비여있으면 
+    // 본컴포넌트가 처음 실행될때 한번만 싱행한다
 
     // GNB용 메뉴 배열변수
     const gnbText = ["FASHION", "BEAUTY", "LIVING", "PEOPLE", "VIDEO", "RUNWAY", "TIME & GEM", "SHOPPING"];
