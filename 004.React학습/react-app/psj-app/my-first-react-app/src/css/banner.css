@@ -11,7 +11,16 @@
     padding: 25px;
     color: #fff;
     text-shadow: 0 0 3px #000;
+
+    padding-left: 10vw;
+    text-align: left;
+    width: 30%;
 }
+
+.bantit button{
+    margin-top: 20px;
+}
+
 /* 배너슬라이드 */
 .slider{
     position: relative;
@@ -38,8 +47,10 @@
 .banner button:hover{
     background-color: #0074e8;
 }
-.banimg{
+.banner img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* 이동버튼 */
