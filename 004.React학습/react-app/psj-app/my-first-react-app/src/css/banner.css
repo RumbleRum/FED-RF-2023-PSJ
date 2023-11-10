@@ -29,9 +29,11 @@
 .banner button{
     border-radius: 20px;
     padding: 10px;
-    background-color: transparent;
+    /* background-color: transparent; */
     color: #fff;
     border: 1px solid #fff;
+    background-color: rgba(10, 10, 10, 0.445);
+
 }
 .banner button:hover{
     background-color: #0074e8;

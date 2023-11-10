@@ -10,11 +10,11 @@ import { FooterArea } from './dc/layout/FooterArea';
 function App(){
   // 상단메뉴 클릭시 메인컨텐츠 변경을 위해
   // 후크관리 변수를 생성한다!
-  const [menu,setMenu] = useState('main')
+  const [menu, setMenu] = useState('main')
 
   // 메뉴 업데이트 함수
   const chgMenu = (txt) => {
-    console.log('메뉴 업데이트!',txt);
+    console.log('메뉴 업데이트!', txt);
     // 상태관리 변수 변경 
     setMenu(txt);
   }; ////////// chgMenu //////////////////
