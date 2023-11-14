@@ -1,6 +1,6 @@
 // 뉴스 페이지 메인 컨텐츠
 
-import { Banner } from "./Banner";
+import { Banner } from "../modules/Banner";
 
 export function News(){
     return(
