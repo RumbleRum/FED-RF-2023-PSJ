@@ -1,29 +1,35 @@
-// 메인페이지 JS 
+// 메인페이지 JS
 
-import React, { useState } from 'react';
-import ReactDOM, { createRoot } from 'react-dom/client';
-import { TopArea } from './layout/TopArea';
-import { MainArea } from './layout/MainArea';
-import { FooterArea } from './layout/FooterArea';
+import React, { useState } from "react";
+import ReactDOM, { createRoot } from "react-dom/client";
+import { TopArea } from "./layout/TopArea";
+import { MainArea } from "./layout/MainArea";
+import { FooterArea } from "./layout/FooterArea";
 
 // 페이지 공통 CSS
-import './css/common.css';
+import "./css/common.css";
 
 // 최상위 Root 컴포넌트 /////////////////////
-function App(){
-  
-  // 후크상태변수 설정 : 메뉴페이지 변경
-   const [pgName,setPgName] = useState('main');
+function App() {
+    // 후크상태변수 설정 : 메뉴페이지 변경
+    const [pgName, setPgName] = useState("main");
 
-  //  페이지 변경 상태변수 업데이트 함수
-  const chgPgName = (txt) => {
-    setPgName(txt);
-  }; ////// chgPgName ///////////////
+    //  페이지 변경 상태변수 업데이트 함수
+    const chgPgName = (txt) => {
+        setPgName(txt);
+    }; ////// chgPgName ///////////////
 
-    return(
-      <>
-        <TopArea />
-        <button onClick={()=>chgPgName('main')}>
+    return (
+        <>
+            <TopArea cat={pgName} />
+            <MainArea page={pgName} />
+            <FooterArea />
+        </>
+    );
+} // app ////////////////////////////////////////////////////
+
+/* 
+ <button onClick={()=>chgPgName('main')}>
           메인페이지
         </button>
         <button onClick={()=>chgPgName('men')}>
@@ -35,16 +41,8 @@ function App(){
         <button onClick={()=>chgPgName('style')}>
           스타일페이지
         </button>
-        <MainArea page={pgName} />
-        <FooterArea />
-       
-      </>
-    )
-
-
-} // app ////////////////////////////////////////////////////
+*/
 
 // 출력하기
-const root = createRoot(document.querySelector('#root'));
-root.render(<App />)
-
+const root = createRoot(document.querySelector("#root"));
+root.render(<App />);
