@@ -23,7 +23,7 @@ export function Main(){
 
             {/* 비디호 소개 컴포넌트 
             cat - 페이지 분류명 / cls - 클래스명(on,off) */}
-            <VidIntro cat="main" cls="off" />
+            <VidIntro cat="main" cls="on" />
 
         </>
     )

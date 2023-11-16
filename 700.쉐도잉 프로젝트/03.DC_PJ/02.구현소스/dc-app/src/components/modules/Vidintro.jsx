@@ -5,6 +5,7 @@ import { vidIntroData } from "../data/vidintro";
 
 // 비디오소개 CSS 부 ㄹ러오기
 import "../../css/vidintro.css";
+import { data } from "jquery";
 
 
 // 구조정의:
@@ -17,6 +18,21 @@ export function VidIntro(props) {
 
     // 선택데이터 : 페이지 분류명으로 선택
     const selData = vidIntroData[props.cat];
+
+    // 링크생성 함수 : desc 데이터 / sum 데이터에서 처리
+    const linkCode = (data) => {
+        
+        return(
+        <>
+             {data.split('*')[0]}
+             <a href={selData.link[1]} target='_blank'>
+                 {selData.link[0]}
+             </a>
+             {data.split('*')[1]}
+        </>  
+        );
+
+    }; //////////// linkCode /////////////////////
 
 
     return (
@@ -33,10 +49,26 @@ export function VidIntro(props) {
                     <h3>{selData.stit}</h3>
                     {/* 큰제목 */}
                     <h2>{selData.btit}</h2>
-                    {/* 요약소개 */}
+                    {/* 요약소개(링크포함) : sum */}
                     <p>{selData.sum}</p>
-                    {/* 설명(링크포함) */}
-                    <p>{selData.desc}</p>
+                    {/* 설명(링크포함) : desc */}
+                    <p>
+                        {/* 특수문자(*)여부에 따라 처리
+                        indexOf(문자열) -> 없으면  -1리턴 */}
+                        {
+                            selData.desc.indexOf('*') == -1 ? 
+                            selData.desc : linkCode(selData.desc)
+                        }
+                    </p>
+                    {/* 설명(링크포함) : sum */}
+                    <p>
+                        {/* 특수문자(*)여부에 따라 처리
+                        indexOf(문자열) -> 없으면  -1리턴 */}
+                        {
+                            selData.sum.indexOf('*') == -1 ? 
+                            selData.sum : linkCode(selData.sum)
+                        }
+                    </p>
                 </div>
             </div>
         </section>
