@@ -2,6 +2,7 @@
 
 import { Banner } from "../modules/Banner";
 import { SecIntro } from "../modules/SecIntro";
+import { VidIntro } from "../modules/vidintro";
 
 export function Main(){
     // cat 속성으로 메뉴분류 전달
