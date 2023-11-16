@@ -55,7 +55,7 @@ export function TopArea() {
             {/* 검색,회원가입,로그인 링크 */}
              <li style={{marginLeft:'auto'}}>
               {/* 검색기능 링크 - 클릭시 검색창 보이기 */}
-              <a href="#" onClick="">
+              <a href="#">
                 <FontAwesomeIcon icon={faSearch} />
               </a>
              </li>
@@ -68,7 +68,7 @@ export function TopArea() {
              </li>
           </ul>
           {/* 햄버걸 버튼 모바일 */}
-          <button className="hambtn" onClick=""></button>
+          <button className="hambtn"></button>
         </nav>
       </header>
     </>
