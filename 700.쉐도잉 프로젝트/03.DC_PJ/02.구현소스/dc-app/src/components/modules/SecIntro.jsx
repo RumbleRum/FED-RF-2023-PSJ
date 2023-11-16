@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 export function SecIntro(){
 
+    
     // 선택 데이터
     const selData = secIntroData;
 
