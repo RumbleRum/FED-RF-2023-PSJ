@@ -1,39 +1,52 @@
-// 메인페이지 컨텐츠 컴포넌트 
+// 메인 페이지 컨텐츠 컴포넌트
 
 import { useEffect } from "react";
 import { Banner } from "../modules/Banner";
 
-// 자동 스크롤 JS 가져오기
+// 자동스크롤 JS 불러오기
 import { autoScroll } from "../func/jquery-autoScroll";
-
-// 드래그 배너 JS 불러오기
+// 드래그배너 JS 불러오기
 import { dragBanner } from "../func/drag_banner";
+import { FashionIntro } from "../modules/FashionIntro";
 
-export function MainCont(){
+export function MainCont() {
+  // 메인 페이지일때만 자동스크롤 기능 적용함!
+  useEffect(() => {
+    // 랜더링 후 한번만 적용!
+    // console.log("랜더링OK!");
+    
+    //자동스크롤 호출
+    autoScroll();
 
-    // 메인 페이지 일때만 자동스크롤 기능 적용함!
-    useEffect(()=>{ // 랜더링 후 한번만 적용
-        // console.log('응응아아');
-        // 자동스크롤 호출
-        autoScroll();
+    //드래그배너 호출
+    dragBanner();
+    
+  }, []); /////// useEffect ///////////
 
-        // 드래그배너 호출
-        dragBanner();
+  return (
+    <>
+      {/* 1. 배너 페이지 */}
+      <section id="ban" className="page" style={{ background: "lightblue" }}>
+        <Banner />
+      </section>
 
-    },[]); /////// useEffect ////////////////////
+      {/* 2. 남성패션 페이지 */}
+      <section className="page">
+        <FashionIntro cat="men" />
+      </section>
 
-        return(
-            <>
-            {/* 배너페이지 */}
-                <section id="ban" className="page" style={{background:'lightblue'}}>
-                    <Banner />
-                </section>
-                <section className="page" style={{background:'lightgreen'}}></section>
-                <section className="page" style={{background:'coral'}}></section>
-                <section className="page" style={{background:'lightpink'}}></section>
-                <section className="page" style={{background:'aqua'}}></section>
-            </>
+      {/* 3. 여성패션 페이지 */}
+      <section className="page">
+        <FashionIntro cat="women" />
+      </section>
+      
+      {/* 4. 스타일패션 페이지 */}
+      <section className="page">
+        <FashionIntro cat="style" />
+      </section>
 
-        );
-
-} /// maincont //////////////////////////////
+      {/* 5. 하단 공통영역 */}
+      <section className="page" style={{ background: "lightpink" }}></section>
+    </>
+  );
+} //////// MainCont 컴포넌트 ///////
