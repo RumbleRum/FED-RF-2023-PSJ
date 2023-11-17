@@ -2,6 +2,7 @@
 
 import { Banner } from "../modules/Banner";
 import { SecIntro } from "../modules/SecIntro";
+import { VidSwipe } from "../modules/VidSwipe";
 import { VidIntro } from "../modules/vidintro";
 
 export function Main(){
@@ -25,6 +26,8 @@ export function Main(){
             cat - 페이지 분류명 / cls - 클래스명(on,off) */}
             <VidIntro cat="main" cls="on" />
 
+            {/* 비디오 스와이프 컴포넌트*/}
+            <VidSwipe />
         </>
     )
 
