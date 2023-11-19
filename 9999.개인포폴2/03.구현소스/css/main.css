@@ -10,28 +10,6 @@ body * {
     outline: 2px dashed blue;
 }
 
-#main{
-    /* position: relative; */
-}
-
-.pg1>ul>li>a{
-    display: flex;
-    font-size: 14vw;
-    justify-content: center;
-    font-weight: bold;
-    position: relative;
-    transform: translateY(200%);
-    color: #fff;
-    line-height: 200px;
-    gap: 10px;
-}
-
-.col-3{
-    color: #fff;
-    font-size: 2vw;
-}
-
-
 /* ep 페이지 하단 */
 .footer{
     min-height: 100px;
@@ -41,8 +19,28 @@ body * {
     z-index: 1;
 }
 
+.pg1>ul>li>a{
+    /* display: flex;
+    font-size: 14vw;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    transform: translateY(200%);
+    color: #fff;
+    line-height: 200px;
+    gap: 10px; */
+}
+
+.col-3{
+    color: #fff;
+    font-size: 2vw;
+}
+
+
 .ep1{
     background-color: #000;
+    box-sizing: border-box;
+    
 }
 
 
