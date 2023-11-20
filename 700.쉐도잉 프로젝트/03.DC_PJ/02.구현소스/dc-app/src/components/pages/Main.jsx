@@ -3,7 +3,7 @@
 import { Banner } from "../modules/Banner";
 import { SecIntro } from "../modules/SecIntro";
 import { VidSwipe } from "../modules/VidSwipe";
-import { VidIntro } from "../modules/vidintro";
+import { VidIntro } from "../modules/Vidintro";
 
 export function Main(){
     // cat 속성으로 메뉴분류 전달
@@ -27,7 +27,7 @@ export function Main(){
             <VidIntro cat="main" cls="on" />
 
             {/* 비디오 스와이프 컴포넌트*/}
-            <VidSwipe />
+            <VidSwipe tit="LATEST TRAILERS, CLIPS & MORE" />
         </>
     )
 
