@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/* 리셋,공통 외부 CSS 합치기(merging) */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+/* 공사중표시 */
+body * {
+    outline: 2px dashed blue;
+}
+
+body > div > * {
+    outline-color: red;
+}
+
+.inbox {
+    /* width: 100vh; */
+    height: 100%;
+    margin: 0 auto;
+}
+.inbox::after,
+.group-part::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.partbox {
+    /* float: left; */
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    /* height: 100%; */
+}
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+/* 숨길 박스 */
+.col-none{display: none;}
+/* 보일 박스 */
+.col-block{display: block;}
+
+
+#header {
+    background-color: #333ff3;
+    position: sticky;
+    z-index: 99999;
+    top: 0;
+}
+
+.header .partbox {
+    height: 1vh;
+}
+
+#main {
+    background-color: #000;
+}
+.main .ep1 .partbox {
+    height: 20.5vh;
+}
+.main .ep2 .partbox {
+    height: 24vh;
+}
+.main .ep3 .partbox {
+    height: 220px;
+}
+.main .ep4 .partbox {
+    height: 280px;
+}
+.main .ep5 .partbox {
+    height: 240px;
+}
