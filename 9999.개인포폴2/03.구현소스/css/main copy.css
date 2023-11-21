@@ -65,12 +65,14 @@ body > div > * {
 .main .ep2 .partbox {
     height: 24vh;
 }
-.main .ep3 .partbox {
-    height: 220px;
+.main .ep3{
+    overflow: hidden;
+    min-height: 100vh;
+    max-width: 100vw;
 }
 .main .ep4 .partbox {
     height: 280px;
 }
 .main .ep5 .partbox {
-    height: 240px;
+    height: 50vh;
 }

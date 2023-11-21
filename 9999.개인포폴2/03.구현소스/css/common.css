@@ -74,7 +74,7 @@
 
 .ep2-1{
     font-size: 10.5vw;
-    color: #fff;
+    color: rgb(241, 220, 191);
 }
 
 .ep2 .flex-box{
@@ -82,8 +82,78 @@
 }
 
 .ep2-2{
-    
+    color: #fff;
+    font-size: 15px;
+    line-height: 60px;
 }
+
+.ep3>img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.ep5 .flex-box{
+    background-color: #D8293A;
+}
+
+.ep5-1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 11.5vw;
+    color: rgb(241, 220, 191);
+}
+
+.ep5-1 img{
+    width: 44%;
+    /* height: 100%; */
+    object-fit: fill;
+}
+
+.ep5-2{
+    font-size: 4vw;
+    color: rgb(241, 220, 191);
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ep5-3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 9.5vw;
+    color: rgb(241, 220, 191);
+}
+
+.ep5-3-img img{
+    transform: translateY(50%);
+    width: 100%;
+    /* height: 100%; */
+    object-fit: fill;
+
+}
+
+.ep5-4{
+    font-size: 3vw;
+    color: rgb(241, 220, 191);
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
 
 
 
