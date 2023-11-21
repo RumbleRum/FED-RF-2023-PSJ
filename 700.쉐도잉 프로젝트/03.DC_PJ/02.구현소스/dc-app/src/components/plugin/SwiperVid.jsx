@@ -26,10 +26,10 @@ import { swVidData } from "../data/swiper_vid";
 // 사용할 스와이퍼 모듈을 불러온다(여기서는 페이지네이션, 네비게이션 , 자동넘김 사용)
 import { Navigation } from "swiper/modules";
 
-export function SwiperVid() {
+export function SwiperVid(props) {
 
-    // 선택 데이터 : 여기서는 그대로 가져옴
-    const selData = swVidData;
+    // 선택 데이터 : 카테고리에 해당하는 데이터를 가져옴!
+    const selData = swVidData[props.cat];
 
     // 비디오 보이기 함수 //
     const showVid = (src , tit) => {
