@@ -1,9 +1,9 @@
 // DC.com GNB메뉴 데이터
 export const menu = [
-    {
-        txt:"Home",
-        link:"/",
-    },
+    // {
+    //     txt:"Home",
+    //     link:"/",
+    // },
     {
         txt:"CHARACTERS",
         link:"/character",
@@ -14,15 +14,15 @@ export const menu = [
         sub:[
             {
                 txt: "LATEST COMICS",
-                link: "/co1",
+                link: "/comics",
             },
             {
                 txt: "DC UNIVERSE INFINITE",
-                link: "/co2",
+                link: "/comics",
             },
             {
                 txt: "ALL COMICS SERIES",
-                link: "/co3",
+                link: "/comics",
             },
         ],
     },
@@ -32,17 +32,17 @@ export const menu = [
         sub:[
             {
                 txt: "DC MOVIES",
-                link: "/mv",
+                link: "/movies",
             },
             {
                 txt: "DC SERIES",
-                link: "/mv",
+                link: "/series",
             },
             {
                 txt: "DC ON HBO MAX",
-                link: "/mv",
+                link: "/movies",
             },
-        ],
+        ]
     },
     {
         txt:"GAMES",
