@@ -147,6 +147,80 @@
     align-items: center;
 }
 
+.ep6>img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.food{
+    padding-left: 60px;
+}
+
+.food img{
+    position: absolute;
+    width: 30%;
+    transform: translateY(7%);
+}
+
+
+.ep7 .flex-box{
+    background-color: rgb(250, 250, 250);
+   
+}
+
+.ep7-2{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-size: 12vw;
+    color: rgba(141, 116, 83, 0.904);
+}
+
+.aa img{
+    width: 14%;
+    padding-right: 1vw;
+}
+
+.bb img{
+    width: 15%;
+    padding-left: 1vw;
+}
+
+
+.food2 img{
+    position: absolute;
+    width: 50%;
+    transform: translateY(10%);
+}
+
+
+.ep8 .flex-box{
+    background-color: rgb(250, 250, 250);
+   
+}
+
+.ep8-2{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-size: 12vw;
+    color: rgba(141, 116, 83, 0.904);
+}
+
+.cc img{
+    width: 14%;
+    padding-right: 1vw;
+}
+
+
+
+
+
 
 
 

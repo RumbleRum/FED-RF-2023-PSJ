@@ -76,3 +76,20 @@ body > div > * {
 .main .ep5 .partbox {
     height: 50vh;
 }
+
+.main .ep6{
+    overflow: hidden;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.main .ep7 .partbox {
+    height: 22.5vh;
+
+}
+.main .ep8 .partbox {
+    height: 22.5vh;
+}
+.main .ep9 .partbox {
+    height: 100vh;
+}
