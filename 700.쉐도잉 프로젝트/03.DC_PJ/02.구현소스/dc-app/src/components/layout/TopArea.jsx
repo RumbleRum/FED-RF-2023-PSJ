@@ -1,8 +1,11 @@
 // 상단영역 컴포넌트
 // GNB 데이터
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Logo } from "../modules/Logo";
 import { menu } from "../data/gnb";
+
+// 제이쿼리
+import $ from 'jquery';
 
 // 폰트어썸 불러오기
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +22,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   -> 여기서는 MainArea 컴포넌트에 출력!
 *******************************************************/
 export function TopArea() {
+
+  // 라우터 이동메서드 함수
+  const goNav = useNavigate();
+
+
+  // 검색관련 함수들 ////////////////////////////
+  // 검색창 보이기 함수
+    const showSearch = () => {
+        // 1. 검색창 보이기
+        $('.searchingGnb').show();
+        // 2. 입력창에 포커스보내기
+        $('#schinGnb').focus();
+    }; //// showSearch ////////////////
+
+  // 입력창에 엔떠끼를 누르면 검색함수 호출!
+    const enterKey = e => {
+      // console.log(e.key);
+      // 엔터키는 'Enter' 문자열을 리턴함!
+      if(e.key === 'Enter') goSearch();
+    }; ////////// 엔터키 ///////////
+
+  // 검섹 페이지로 검섹어와 함꼐 이동하기
+    const goSearch = () => {
+      console.log('나는검쌕');
+      // 라우터 이동함수로 이동하기
+      goNav('/schpage',{state:{keyword:''}});
+
+    }; ////////// goSearch //////////////
+
+
+  // 리턴코드 /////////////////////////////////////
   return (
     <>
       {/* 1.상단영역 */}
@@ -58,8 +92,25 @@ export function TopArea() {
             ))}
             {/* 3. 검색,회원가입,로그인 링크 */}
             <li style={{marginLeft:'auto'}}>
+              {/* 검색입력박스 */}
+              <div className="searchingGnb">
+              {/* 검색버튼 돋보기 아이콘  */}
+              <FontAwesomeIcon 
+              icon={faSearch} 
+              className="schbtnGnb"
+              title="Open search"
+              />
+              {/* 압력창 */}
+              <input 
+                id="schinGnb"
+                type="text"
+                placeholder="너네가 뭘 할수 있는데?!"
+                onKeyUp={enterKey}
+                />
+              </div>
+              
               {/* 검색기능링크 - 클릭시 검색창보이기 */}
-              <a href="#">
+              <a href="#" onClick={showSearch}>
               <FontAwesomeIcon icon={faSearch} />
               </a>
             </li>
