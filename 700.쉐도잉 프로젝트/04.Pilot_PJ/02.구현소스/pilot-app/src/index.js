@@ -63,7 +63,7 @@ function App(){
 
   // 리턴코드 //////////////////////////
   return(
-      <pCon.Provider value={{chgPgName}}>
+      <pCon.Provider value={{chgPgName,pgName}}>
         <TopArea cat={pgName} />        
         <MainArea page={pgName} />
         <FooterArea />
