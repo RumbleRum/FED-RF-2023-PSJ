@@ -1,19 +1,28 @@
 // 공통패션 서브페이지 컨텐츠 컴포넌트
 
-import { useEffect } from "react"
+import { useContext, useEffect } from "react"
 
 // 공통 서브 CSS 불러오기
 import "../css/fashion.css";
 import { SwiperApp } from "../plugin/SwiperApp";
 
+// 켄텍스트 API
+import { pCon } from '../modules/PilotContext';
 
+// 제이쿼리
+import $ from 'jquery';
 
 export function Fashion(props){
     // props.cat - 서브 카테고리명
 
+    const myCon = useContext(pCon);
+
     useEffect(()=>{
-        document.querySelector('html').style.overflow = 'visible';
-        document.querySelector('body').style.overflow = 'visible';
+        // 스크롤바 생성하기
+        $('html,body').css({overflow:'visible'});
+
+        // 로고 클릭시 페이지 이동 : 
+        $("#logo a").click(()=>myCon.chgPgName('main'));
 
     },[]); //////////// useEffect /////////////////
 
