@@ -56,6 +56,115 @@ body > div > * {
     height: 1vh;
 }
 
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.cont>ul{
+    display: flex;
+    /* 높이값을 보이는 화면기준 채우기 */
+    height: 100vh;
+}
+/* 파티션 박스 li */
+.cont>ul>li{
+    position: relative;
+    flex: 1;
+    cursor: pointer;
+    transition: all .4s ease-out;
+}
+
+.cont>ul>li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+
+    transition: all .4s ease-out;
+}
+.cont>ul>li:hover{
+   flex: 1.4;
+
+}
+/* 가상요소 암전 밝아지기 */
+.cont>ul>li:hover::before{
+    opacity: 0.5;
+}
+
+.cont > ul > li:first-child {
+    background: url(../images/hotel/hilton1.jpeg) no-repeat center/cover;
+}
+.cont > ul > li:nth-child(2) {
+    background: url(../images/hotel/crockfords1.jpg) no-repeat center/cover;
+}
+.cont > ul > li:nth-child(3) {
+    background: url(../images/hotel/conrad1.jpg) no-repeat center/cover;
+}
+
+.cont>ul>li>img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(70%,500px);
+    /* 부모박스의 70%적용시 최대 250px한계설정 */
+}
+
+.cont>ul>li>img:last-child{
+    top: 60%;
+    width: auto;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* 변수셋팅 */
+:root {
+    --mover-size: 50px;
+  }
+  
+  /* 따라다니는 원 */
+  .mover {
+    position: absolute;
+    /* position: fixed; -> JS에서 clientY사용 */
+    top: 0;
+    left: 0;
+    width: var(--mover-size);
+    height: var(--mover-size);
+    border-radius: 50%;
+    background-color: aqua;
+  
+    /* 자기자신요소는 이벤트가 무시되게 셋팅해야
+      아래쪽 요소를 만질 수 있음 */
+    pointer-events: none;
+  
+    mix-blend-mode: exclusion;
+    /* 
+          [mix-blend-mode 속성]
+          - 겹치는 색상처리 블랜딩 모드속성
+          - 겹치는 요소의 색상을 섞어서
+          디스플레이 처리함
+          - 밝은색섞기(screen계열)
+          - 어두운색섞기(darken계열)
+      */
+  
+    /* 트랜지션 : 이징은 ease-out */
+    transition: 0.4s ease-out;
+  
+    /* 처음에 안보임 */
+    opacity: 0;
+  }
+
+
+
+/* //////////////////////////////////////////////////////////////////////////// */
+
 #main {
     background-color: #000;
 }
