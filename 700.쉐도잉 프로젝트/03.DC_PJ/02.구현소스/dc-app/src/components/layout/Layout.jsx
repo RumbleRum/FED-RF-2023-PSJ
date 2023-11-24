@@ -19,12 +19,11 @@ export function Layout(){
   // 라우터 이동객체설정
   const goNav = useNavigate();
 
-  // 라우터 이동함수
-  const chgPage = (txt) => goNav(txt); 
+  // 라우터 이동함수 : pgName = 페이지 이름 / param = 전달값
+  const chgPage = (pgName,param) => goNav(pgName,param); 
 
   // [컨텍스트 API 공유값 설정]
   // 1. chgPage 함수 : 라우터 이동기능
-  // 2. 
 
 
     // 리턴코드 ///////////////////////////////
