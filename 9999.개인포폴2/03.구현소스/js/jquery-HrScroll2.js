@@ -21,8 +21,8 @@ $(".wrap").on("wheel", () => {
   let dir = event.wheelDelta;
 
   // 2. 방향에 따른 값 증감
-  if (dir < 0) wNum += 50;
-  else wNum -= 50;
+  if (dir < 0) wNum += 80;
+  else wNum -= 80;
 
   // 3. 한계값 지정
   if (wNum < 0) wNum = 0;
