@@ -14,6 +14,12 @@ body > div > * {
     outline-color: red;
 }
 
+html,
+body {
+    /* overflow: hidden; */
+}
+
+
 .inbox {
     /* width: 100vh; */
     height: 100%;
