@@ -28,6 +28,13 @@
     border-right: 2px solid #fff;
 }
 
+.t1 h1{
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
 .t2{
     display: flex;
     align-items: center;
@@ -35,15 +42,25 @@
 }
 
 
-.t1 h1{
-    font-size: 20px;
-    color: #fff;
-}
-
 .t2 h1{
     font-size: 15px;
     color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
+
+.t2 h1:after{
+    display:block;
+   content: '';
+   border-bottom: solid 2px #fff;
+   transform: scaleX(0);
+   transition: transform .3s ease-in-out; 
+}
+
+.t2 h1:hover:after {
+    transform: scaleX(1);
+ }
+
 
 .ep1-1{
     height: 25vh;
