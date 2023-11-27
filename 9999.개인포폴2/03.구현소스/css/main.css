@@ -15,15 +15,16 @@ body > div > * {
 }
 
 html,
-body {
-    /* overflow: hidden; */
+body,.wrap {
+    overflow: hidden;
 }
-
-
+#main{
+    display: flex;
+}
 .inbox {
-    /* width: 100vh; */
-    height: 100%;
-    margin: 0 auto;
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
 }
 .inbox::after,
 .group-part::after {
@@ -53,7 +54,10 @@ body {
 
 #header {
     background-color: #333ff3;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     z-index: 99999;
     top: 0;
 }
@@ -62,6 +66,10 @@ body {
     height: 1vh;
 }
 
+#header a{
+    color: #fff;
+    text-decoration: none;
+}
 
 
 
