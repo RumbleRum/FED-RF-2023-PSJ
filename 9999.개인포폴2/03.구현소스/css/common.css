@@ -291,6 +291,34 @@
 }
 
 
+/* ep9-2 흘러가는 글자 ///////////////////////////// */
+
+#slider {
+    bottom: 180px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    max-width: 1360px;
+    height: 60px;
+}
+
+.image-box {
+    width: 3000px;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    animation: banner-ani 100s linear infinite;
+}
+
+@keyframes banner-ani {
+    100% {
+        transform: translate(calc(-100px * 10), 0);
+    }
+}
+
+
+/* ///////////////////////////// */
+
 
 
 
