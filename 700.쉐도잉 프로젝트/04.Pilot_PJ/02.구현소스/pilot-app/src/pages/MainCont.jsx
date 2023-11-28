@@ -5,6 +5,7 @@ import { Banner } from "../modules/Banner";
 
 // 자동스크롤 JS 불러오기
 // import { autoScroll } from "../func/jquery-autoScroll";
+
 // 드래그배너 JS 불러오기
 import { dragBanner } from "../func/drag_banner";
 import { FashionIntro } from "../modules/FashionIntro";
