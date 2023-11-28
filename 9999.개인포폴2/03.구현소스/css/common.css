@@ -19,59 +19,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Orbit&display=swap");
 /* font-family: 'Gugi', cursive; */
 
-
-.t1{
+.t1 {
     display: flex;
     align-items: center;
     justify-content: center;
     border-right: 2px solid #fff;
 }
 
-.t1 img{
+.t1 img {
     width: 120%;
     color: #fff;
     cursor: pointer;
 }
 
-
-.t2{
+.t2 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.t2 h1{
+.t2 h1 {
     font-size: 15px;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
 }
 
-.t2 h1:after{
-    display:block;
-   content: '';
-   border-bottom: solid 2px #fff;
-   transform: scaleX(0);
-   transition: transform .3s ease-in-out; 
+.t2 h1:after {
+    display: block;
+    content: "";
+    border-bottom: solid 2px #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 .t2 h1:hover:after {
     transform: scaleX(1);
- }
+}
 
 
-.ep1-1{
+
+.video-box video{
+    position: absolute;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+
+.ep1-1 {
     height: 25vh;
 }
 
-.ep1-2{
+.ep1-2 {
     gap: 10px;
     font-size: 12.5vw;
     color: #fff;
 }
 
-.ep1-3{
+.ep1-3 {
     font-size: 1.5vw;
     color: rgb(241, 220, 191);
     font-weight: bold;
@@ -80,40 +85,41 @@
     justify-content: center;
 }
 
-.ep1-4{
+.ep1-4 {
     font-size: 13px;
     color: #fff;
     display: flex;
     justify-content: center;
-    align-items: flex-end
+    align-items: flex-end;
 }
 
-.ep2-1{
-    font-size: 10.5vw;
+.ep2-1 {
+    position: relative;
+    font-size: 12vw;
     color: rgb(241, 220, 191);
 }
 
-.ep2 .flex-box{
-    background-color: #D8293A;
+.ep2 .flex-box {
+    background-color: #d8293a;
 }
 
-.ep2-2{
+.ep2-2 {
     color: #fff;
     font-size: 15px;
-    line-height: 60px;
+    line-height: 30px;
 }
 
-.ep3>img{
+.ep3 > img {
     width: 100%;
     height: 100%;
     object-fit: fill;
 }
 
-.ep5 .flex-box{
-    background-color: #D8293A;
+.ep5 .flex-box {
+    background-color: #d8293a;
 }
 
-.ep5-1{
+.ep5-1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -122,22 +128,22 @@
     color: rgb(241, 220, 191);
 }
 
-.ep5-1 img{
+.ep5-1 img {
     width: 44%;
     /* height: 100%; */
     object-fit: fill;
 }
 
-.ep5-2{
+.ep5-2 {
     font-size: 4vw;
     color: rgb(241, 220, 191);
-    
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.ep5-3{
+.ep5-3 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -146,46 +152,43 @@
     color: rgb(241, 220, 191);
 }
 
-.ep5-3-img img{
+.ep5-3-img img {
     transform: translateY(50%);
     width: 100%;
     /* height: 100%; */
     object-fit: fill;
-
 }
 
-.ep5-4{
+.ep5-4 {
     font-size: 2.8vw;
     color: rgb(241, 220, 191);
-    
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.ep6>img{
+.ep6 > img {
     width: 100%;
     height: 100%;
     object-fit: fill;
 }
 
-.food{
+.food {
     padding-left: 60px;
 }
 
-.food img{
+.food img {
     position: absolute;
     width: 30%;
     transform: translateY(7%);
 }
 
-
-.ep7 .flex-box{
+.ep7 .flex-box {
     background-color: rgb(250, 250, 250);
-   
 }
 
-.ep7-2{
+.ep7-2 {
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -195,30 +198,27 @@
     color: rgba(141, 116, 83, 0.904);
 }
 
-.aa img{
+.aa img {
     width: 14%;
     padding-right: 1vw;
 }
 
-.bb img{
+.bb img {
     width: 15%;
     padding-left: 1vw;
 }
 
-
-.food2 img{
+.food2 img {
     position: absolute;
     width: 50%;
     transform: translateY(10%);
 }
 
-
-.ep8 .flex-box{
+.ep8 .flex-box {
     background-color: rgb(250, 250, 250);
-   
 }
 
-.ep8-2{
+.ep8-2 {
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -228,52 +228,49 @@
     color: rgba(141, 116, 83, 0.904);
 }
 
-.cc img{
+.cc img {
     width: 14%;
     padding-right: 1vw;
 }
 
-
-.ep9 .flex-box{
-    background-color: #D8293A;
+.ep9 .flex-box {
+    background-color: #d8293a;
 }
 
-.sul-box>ul>li>h1{
+.sul-box > ul > li > h1 {
     color: rgb(241, 220, 191);
     font-size: 0.8vw;
     position: relative;
     top: 60px;
-}    
+}
 
-.sul-box>ul>li>h2{
+.sul-box > ul > li > h2 {
     color: rgb(241, 220, 191);
     font-size: 5vw;
     position: relative;
     top: 200px;
 }
 
-
-.sul-box>ul>li>p{
+.sul-box > ul > li > p {
     color: rgb(241, 220, 191);
     font-size: 1vw;
     font-weight: bold;
     position: relative;
     line-height: 20px;
     top: 230px;
-}   
+}
 
-
-.ep9-2 img{
+.ep9-2 img {
     width: 100%;
     height: 100%;
 }
 
-.sul-box2 ul{
+.sul-box2 ul {
     display: flex;
     justify-content: space-evenly;
 }
 
-.sul-box2 ul>li>a{
+.sul-box2 ul > li > a {
     display: block;
     font-size: 20px;
     color: rgb(241, 220, 191);
@@ -283,12 +280,11 @@
     border-bottom: #fff 1px solid;
 }
 
-.sul-box2 ul>li:hover>a{
+.sul-box2 ul > li:hover > a {
     font-weight: bold;
     /* color: blue; */
     border-bottom: #fff 4px solid;
 }
-
 
 /* ep9-2 흘러가는 글자 ///////////////////////////// */
 
@@ -316,14 +312,3 @@
 }
 
 /* ///////////////////////////// */
-
-
-
-
-
-
-
-
-
-
-
