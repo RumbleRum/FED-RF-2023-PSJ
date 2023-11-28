@@ -31,6 +31,14 @@ export function Searching(props) {
   // 1- 상단검색 허용 , 0 - 상단 검색 불허용
   // useRef 변수 사용은 변수명.current
 
+  // 폰트어썸을 참조하는 테스트용 참조변수
+  const xx = useRef(null);
+  useEffect(()=>{
+      console.log(xx);
+      // 테듀리 디자인 줘
+      xx.current.style.border = '5px solid orange';
+  }); // useEffect //////
+
 
   // 검색어 업데이트 함수 /////
   const chgKword = txt => setKword(txt);
@@ -105,6 +113,7 @@ export function Searching(props) {
               className="schbtn"
               title="Open search"
               onClick={schList}
+              ref={xx}
             />
             {/* 입력창 */}
             <input
