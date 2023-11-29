@@ -19,6 +19,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Orbit&display=swap");
 /* font-family: 'Gugi', cursive; */
 
+
+
+/* 상단영역 //////////////////////////////////////////////// */
 .t1 {
     display: flex;
     align-items: center;
@@ -32,6 +35,10 @@
     cursor: pointer;
 }
 
+.hom{
+    width: 100px;
+}
+
 .t2 {
     display: flex;
     align-items: center;
@@ -39,7 +46,7 @@
 }
 
 .t2 h1 {
-    font-size: 15px;
+    font-size: 0.8vw;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -56,6 +63,14 @@
 .t2 h1:hover:after {
     transform: scaleX(1);
 }
+
+.br{
+    border-right: 2px solid #fff;
+}
+
+
+
+/* 메인영역 //////////////////////////////////////////////// */
 
 
 
@@ -95,7 +110,7 @@
 
 .ep2-1 {
     position: relative;
-    font-size: 12vw;
+    font-size: 12.5vw;
     color: rgb(241, 220, 191);
 }
 
@@ -109,10 +124,8 @@
     line-height: 30px;
 }
 
-.ep3 > img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+.ep3 {
+    background: url(../images/Entrance_Resorts_World_Las_Vegas.jpg) no-repeat center/cover;
 }
 
 .ep5 .flex-box {
@@ -168,10 +181,8 @@
     align-items: center;
 }
 
-.ep6 > img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+.ep6 {
+    background: url(../images/concert.jpg) no-repeat center/cover;
 }
 
 .food {
@@ -262,7 +273,7 @@
 
 .ep9-2 img {
     width: 100%;
-    height: 100%;
+    height: 95%;
 }
 
 .sul-box2 ul {

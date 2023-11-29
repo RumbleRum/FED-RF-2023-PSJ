@@ -7,7 +7,7 @@
 
 /* 공사중표시 */
 body * {
-    /* outline: 2px dashed blue; */
+    outline: 2px dashed blue;
 }
 
 body > div > * {
@@ -63,7 +63,7 @@ body,.wrap {
 }
 
 .header .partbox {
-    height: 1vh;
+    height: 3vh;
 }
 
 #header a{
@@ -179,7 +179,6 @@ body,.wrap {
     height: 25vh;
 }
 .main .ep3{
-    overflow: hidden;
     min-height: 100vh;
     max-width: 100vw;
 }
@@ -191,7 +190,6 @@ body,.wrap {
 }
 
 .main .ep6{
-    overflow: hidden;
     min-height: 100vh;
     max-width: 100vw;
 }
