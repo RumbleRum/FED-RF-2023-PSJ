@@ -1,7 +1,7 @@
 // 코믹스 페이지 메인 컨텐츠
 
 import { Banner } from "../modules/Banner";
-import { VidIntro } from "../modules/vidintro";
+import { VidIntro } from "../modules/Vidintro";
 
 export function Comics(){
     return(
