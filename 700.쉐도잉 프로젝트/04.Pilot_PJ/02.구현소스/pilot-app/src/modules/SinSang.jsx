@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { sinsangData } from "../data/sinsang";
 
 import $ from 'jquery';
+import { useRef } from "react";
 
 export function SinSang({cat,chgItemFn}) {
   // props.cat - 카테고리 분류명
@@ -87,27 +88,28 @@ function addComma(x) {
 
   // 신상품 리스트 이동함수 사용변수 ///
   // 위치값변수(left값)
-  let lpos = 0;
+  let lpos = useRef(0);
   // 재귀호출 상태값(1-호출,0-멈춤)
   let callSts = 1;
   
 
   // 신상품 리스트 이동함수 //////
+  // 
   const flowList = (ele) => { // ele-움직일대상
     // console.log(ele);
     // 대상의 left값을 1씩 감소함
-    lpos--;
+    lpos.current--;
     
     // 이미지박스 한개가 나가면 잘라서 맨뒤로 보냄
-    if(lpos < -300){
+    if(lpos.current < -300){
       // 위치값 초기화!(-301일때 0으로 변경!)
-      lpos = 0;
+      lpos.current = 0;
       // 첫번째 li 맨뒤로 이동
       ele.append(ele.find('li').first());
     } ///// if //////
     
     // 적용함
-    ele.css({left:lpos+'px'})
+    ele.css({left:lpos.current+'px'})
 
     // 재귀호출
     if(callSts)
@@ -122,7 +124,7 @@ function addComma(x) {
   }; /////////
 
 
-  // 랜더링 후 실행구역 //////
+  // 랜더링 후 한번만 실행구역 //////
   useEffect(()=>{
     // 대상선정: .flist
 
@@ -130,7 +132,7 @@ function addComma(x) {
     flowList($('.flist'))
 
 
-  }); ////////// useEffect ////////
+  },[]); ////////// useEffect ////////
 
 
 
