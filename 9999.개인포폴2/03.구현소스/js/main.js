@@ -24,7 +24,7 @@ const domFn = {
 
 // 버튼 입력후 바뀌는 함수 ////////////////////
 
-const btn = domFn.qsa('.sul-box2 a');
+const btn = domFn.qsa('.sul-box2 button');
 
 const mapImg = domFn.qs('.ep9-2 img');
 
@@ -32,11 +32,12 @@ btn.forEach((ele,idx)=>{
 
   domFn.addEvt(ele,'click',(e)=>{
     e.preventDefault();
-    mapImg.src = `../03.구현소스/images/map/dfood${idx+1}.jpeg`;
+    mapImg.src = `../03.구현소스/images/map/dfood${idx+1}.jpg`;
   });
   
  
 }); //// btn ///////////////////////////
+
 
 
 

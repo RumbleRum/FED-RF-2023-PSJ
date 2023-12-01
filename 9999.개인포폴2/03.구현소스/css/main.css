@@ -79,7 +79,7 @@ body,.wrap {
 .cont>ul{
     display: flex;
     /* 높이값을 보이는 화면기준 채우기 */
-    height: 100vh;
+    height:100vh;
 }
 /* 파티션 박스 li */
 .cont>ul>li{
@@ -126,12 +126,12 @@ body,.wrap {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(70%,500px);
+    width: min(60%,1000px);
     /* 부모박스의 70%적용시 최대 250px한계설정 */
 }
 
 .cont>ul>li>img:last-child{
-    top: 60%;
+    top: 50%;
     width: auto;
 }
 
