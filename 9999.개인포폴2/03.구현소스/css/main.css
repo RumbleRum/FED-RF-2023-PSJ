@@ -86,7 +86,7 @@ body,.wrap {
     position: relative;
     flex: 1;
     cursor: pointer;
-    transition: all .4s ease-out;
+    transition: all 1s ease-out;
 }
 
 .cont>ul>li::before{
@@ -102,12 +102,12 @@ body,.wrap {
 
     transition: all .4s ease-out;
 }
-.cont>ul>li:hover{
-   flex: 1.4;
+.cont>ul>li:active{
+   flex: 2.2;
 
 }
 /* 가상요소 암전 밝아지기 */
-.cont>ul>li:hover::before{
+.cont>ul>li:active::before{
     opacity: 0.5;
 }
 

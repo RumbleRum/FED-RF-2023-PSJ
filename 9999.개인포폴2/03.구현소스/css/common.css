@@ -276,12 +276,12 @@
     height: 95%;
 }
 
-.sul-box2 {
+.sul-box2 ul {
     display: flex;
     justify-content: space-evenly;
 }
 
-.sul-box2 button {
+.sul-box2 a{
     display: block;
     font-size: 20px;
     color: rgb(241, 220, 191);

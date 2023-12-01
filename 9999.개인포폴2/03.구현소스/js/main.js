@@ -1,5 +1,6 @@
 ////////////////// 포폴 JS 영역 ////////////////////////////
 
+
 // DOM 함수 객체 //////////////
 const domFn = {
   // 요소선택함수 ////////
@@ -18,6 +19,13 @@ const domFn = {
     getOT: (ele) => ele.offsetTop,
 
 }; /////// domFn 객체 /////////////
+
+const door = $(".cont li");
+
+door.click((e) => {
+  e.toggleClass(door);
+});
+
 
 
 
