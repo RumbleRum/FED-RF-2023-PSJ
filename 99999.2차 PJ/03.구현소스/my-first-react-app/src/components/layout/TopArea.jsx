@@ -2,14 +2,16 @@
 // GNB 데이터
 
 
+
 export function TopArea(){
     return(
       <>
+      <div className="wrap">
             <div id="header">
               <header className="header gnb">
                   <div className="flex-box">
                       <div className="t1 partbox col-1">
-                            <img src="../../../public/images/Expedia New 2023.png" alt="로고"/>
+                            <img src="../../../public/images/Expedia New 2023.png" alt=""/>
                       </div>
                       <div className="t2 partbox col-1 hom">
                           <h1><a href="#">
@@ -30,6 +32,7 @@ export function TopArea(){
                   </div>
               </header>
           </div>
+        </div>  
       </>
     )
 }

@@ -1,4 +1,4 @@
-@charset "utf-8";
+/* @charset "utf-8"; */
 
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap");
@@ -125,7 +125,7 @@
 }
 
 .ep3 {
-    background: url(../images/Entrance_Resorts_World_Las_Vegas.jpg) no-repeat center/cover;
+    background: url(../../public/images/Entrance_Resorts_World_Las_Vegas.jpg) no-repeat center/cover;
 }
 
 .ep5 .flex-box {
@@ -182,7 +182,7 @@
 }
 
 .ep6 {
-    background: url(../images/concert.jpg) no-repeat center/cover;
+    background: url(../../public/images/concert.jpg) no-repeat center/cover;
 }
 
 .food {

@@ -1,9 +1,10 @@
-@charset "utf-8";
+
 
 /* 리셋,공통 외부 CSS 합치기(merging) */
 @import url(./reset.css);
 @import url(./core.css);
 @import url(./common.css);
+
 
 /* 공사중표시 */
 body * {
@@ -112,13 +113,13 @@ body,.wrap {
 }
 
 .cont > ul > li:first-child {
-    background: url(../images/hotel/hilton1.jpeg) no-repeat center/cover;
+    background: url(../../public/images/hotel/hilton1.jpeg) no-repeat center/cover;
 }
 .cont > ul > li:nth-child(2) {
-    background: url(../images/hotel/crockfords1.jpg) no-repeat center/cover;
+    background: url(../../public/images/hotel/crockfords1.jpg) no-repeat center/cover;
 }
 .cont > ul > li:nth-child(3) {
-    background: url(../images/hotel/conrad1.jpg) no-repeat center/cover;
+    background: url(../../public/images/hotel/conrad1.jpg) no-repeat center/cover;
 }
 
 .cont>ul>li>img{
@@ -204,3 +205,4 @@ body,.wrap {
 .main .ep9 .partbox {
     height: 100vh;
 }
+
