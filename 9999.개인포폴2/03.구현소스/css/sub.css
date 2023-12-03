@@ -152,10 +152,117 @@
     
 }
 
-
-
 .ep3-2 {
-    padding-left: 0;
     background: url(../images/sub/ssub3.png) no-repeat center/cover;
 }
 
+
+.ep4-2 {
+    background: url(../images/sub/ssub4.png) no-repeat center/cover;
+}
+
+.ep4{
+    background-color: #fff;
+}
+
+
+.ep4-1 h1{
+    padding: 15px;
+    display: flex;
+    font-size: 8vw;
+    font-weight: bold;
+    line-height: 100px;
+    padding-top: 50px;
+}
+
+.ep4-1 h2{
+    padding: 15px;
+    display: flex;
+    font-size: 3vw;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+.ep4-1 span{
+    display: flex;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #000;
+    line-height: 40px;   
+    padding-left: 15px;
+}
+
+.ep5{
+    background-color: #000;
+}
+
+.ep5-1 h1{
+    padding: 15px;
+    display: flex;
+    font-size: 11vw;
+    font-weight: bold;
+    line-height: 100px;
+    padding-top: 30px;
+    color: rgb(241, 220, 191);
+    justify-content: center;
+    letter-spacing: 1px;
+    word-spacing: -35px
+}
+
+
+.ep5-2 img{
+    position: relative;
+    height: 400px;
+    width: 850px;
+    display: flex;
+    transform: scale(0.95);
+    transition: .4s ease-in-out;
+    padding-left: 20px;
+}
+
+.ep5-2-2 img{
+    padding-left: 20px;
+    position: relative;
+    height: 400px;
+    width: 850px;
+    display: flex;
+    transform: scale(0.95);
+    transition: .4s ease-in-out;
+}
+.ep5-2 img:hover{
+    transform: scale(1);
+}
+.ep5-2-2 img:hover{
+    transform: scale(1);
+}
+
+
+
+.ep5-3 {
+    background: url(../images/hotel/conrad.png) no-repeat bottom;
+}
+.ep5-3-3 {
+    background: url(../images/hotel/hilton.png) no-repeat bottom;
+}
+
+.ep5-4{
+    padding: 15px;
+    display: flex;
+    font-size: 12vw;
+    font-weight: bold;
+    line-height: 100px;
+    padding-top: 150px;
+    color: rgb(241, 220, 191);
+    justify-content: center;
+    letter-spacing: 1px;
+    word-spacing: -25px;
+    align-items: flex-end;
+}
+
+.ep6-4 {
+    font-size: 13px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

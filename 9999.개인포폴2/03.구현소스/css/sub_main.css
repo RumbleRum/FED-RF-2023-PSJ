@@ -118,7 +118,19 @@ body{
     height: 100vh;
 }
 .main .ep3 .partbox {
-    height: 70vh;
+    height: 100vh;
 }
+.main .ep3-11 .partbox {
+    height: 100vh;
+}
+
+.main .ep4 .partbox {
+    height: 90vh;
+}
+
+.main .ep5 .partbox {
+    height: 30vh;
+}
+
 
 

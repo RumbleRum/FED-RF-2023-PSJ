@@ -3,7 +3,7 @@
 import { Banner } from "../modules/Banner";
 import { CatList } from "../modules/CatList";
 import { SecIntro } from "../modules/SecIntro";
-import { VidIntro } from "../modules/Vidintro";
+import { VidIntro } from "../modules/vidintro";
 import { VidSwipe } from "../modules/VidSwipe";
 
 export function Main(){

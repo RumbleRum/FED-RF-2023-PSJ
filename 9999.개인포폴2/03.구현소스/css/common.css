@@ -281,7 +281,7 @@
     justify-content: space-evenly;
 }
 
-.sul-box2 ul > li > a {
+.sul-box2 a{
     display: block;
     font-size: 20px;
     color: rgb(241, 220, 191);
