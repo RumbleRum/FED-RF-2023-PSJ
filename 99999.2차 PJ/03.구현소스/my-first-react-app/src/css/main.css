@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/* 리셋,공통 외부 CSS 합치기(merging) */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+/* 공사중표시 */
+body * {
+    outline: 2px dashed blue;
+}
+
+body > div > * {
+    outline-color: red;
+}
+
+html,
+body,.wrap {
+    overflow: hidden;
+}
+#main{
+    display: flex;
+}
+.inbox {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.inbox::after,
+.group-part::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.partbox {
+    /* float: left; */
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    /* height: 100%; */
+}
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+/* 숨길 박스 */
+.col-none{display: none;}
+/* 보일 박스 */
+.col-block{display: block;}
+
+
+#header {
+    /* background-color: #333ff3; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 99999;
+    top: 0;
+}
+
+.header .partbox {
+    height: 3vh;
+}
+
+#header a{
+    color: #fff3d8;
+    text-decoration: none;
+}
+
+
+
+/* 열리는 가구 //////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.cont>ul{
+    display: flex;
+    /* 높이값을 보이는 화면기준 채우기 */
+    height:100vh;
+}
+/* 파티션 박스 li */
+.cont>ul>li{
+    position: relative;
+    flex: 1;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.cont>ul>li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+
+    transition: all .4s ease-out;
+}
+.cont>ul>li:active{
+   flex: 2.2;
+
+}
+/* 가상요소 암전 밝아지기 */
+.cont>ul>li:active::before{
+    opacity: 0.5;
+}
+
+.cont > ul > li:first-child {
+    background: url(../images/hotel/hilton1.jpeg) no-repeat center/cover;
+}
+.cont > ul > li:nth-child(2) {
+    background: url(../images/hotel/crockfords1.jpg) no-repeat center/cover;
+}
+.cont > ul > li:nth-child(3) {
+    background: url(../images/hotel/conrad1.jpg) no-repeat center/cover;
+}
+
+.cont>ul>li>img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(60%,1000px);
+    /* 부모박스의 70%적용시 최대 250px한계설정 */
+}
+
+.cont>ul>li>img:last-child{
+    top: 50%;
+    width: auto;
+}
+
+/* 원 포인터 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* 변수셋팅 */
+:root {
+    --mover-size: 50px;
+  }
+  
+  /* 따라다니는 원 */
+  .mover {
+    position: absolute;
+    /* position: fixed; -> JS에서 clientY사용 */
+    top: 0;
+    left: 0;
+    width: var(--mover-size);
+    height: var(--mover-size);
+    border-radius: 50%;
+    background-color: aqua;
+  
+    pointer-events: none;
+  
+    mix-blend-mode: exclusion;
+
+    /* 트랜지션 : 이징은 ease-out */
+    transition: 0.3s ease-out;
+  
+    /* 처음에 안보임 */
+    opacity: 0;
+  }
+
+
+
+/* //////////////////////////////////////////////////////////////////////////// */
+
+#main {
+    background-color: #000;
+}
+.main .ep1 .partbox {
+    height: 22.5vh;
+}
+.main .ep2 .partbox {
+    height: 25vh;
+}
+.main .ep3{
+    min-height: 100vh;
+    max-width: 100vw;
+}
+.main .ep4 .partbox {
+    height: 280px;
+}
+.main .ep5 .partbox {
+    height: 50vh;
+}
+
+.main .ep6{
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.main .ep7 .partbox {
+    height: 22.5vh;
+
+}
+.main .ep8 .partbox {
+    height: 22.5vh;
+}
+.main .ep9 .partbox {
+    height: 100vh;
+}

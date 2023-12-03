@@ -20,13 +20,6 @@ const domFn = {
 
 }; /////// domFn 객체 /////////////
 
-const door = $(".cont li");
-
-door.click((e) => {
-  e.toggleClass(door);
-});
-
-
 
 
 

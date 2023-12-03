@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* 리셋,공통 외부 CSS 합치기(merging) */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./sub.css);
+
+/* 공사중표시 */
+body * {
+    /* outline: 2px dashed blue; */
+}
+
+body > div > * {
+    /* outline-color: red; */
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+#main{
+    /* display: flex; */
+}
+.inbox {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.inbox::after,
+.group-part::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.partbox {
+    /* float: left; */
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    /* height: 100%; */
+}
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+/* 숨길 박스 */
+.col-none{display: none;}
+/* 보일 박스 */
+.col-block{display: block;}
+
+
+#header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 99999;
+    top: 0;
+}
+
+.header .partbox {
+    height: 3vh;
+}
+
+#header a{
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+
+/* 원 포인터 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* 변수셋팅 */
+:root {
+    --mover-size: 50px;
+  }
+  
+  /* 따라다니는 원 */
+  .mover {
+    position: absolute;
+    /* position: fixed; -> JS에서 clientY사용 */
+    top: 0;
+    left: 0;
+    width: var(--mover-size);
+    height: var(--mover-size);
+    border-radius: 50%;
+    background-color: aqua;
+  
+    pointer-events: none;
+  
+    mix-blend-mode: exclusion;
+
+    /* 트랜지션 : 이징은 ease-out */
+    transition: 0.3s ease-out;
+  
+    /* 처음에 안보임 */
+    opacity: 0;
+  }
+
+
+
+/* //////////////////////////////////////////////////////////////////////////// */
+
+#main {
+    background-color: #000;
+}
+.main .ep1 .partbox {
+    height: 25vh;
+}
+.main .ep2 .partbox {
+    height: 100vh;
+}
+.main .ep3 .partbox {
+    height: 100vh;
+}
+.main .ep3-11 .partbox {
+    height: 100vh;
+}
+
+.main .ep4 .partbox {
+    height: 90vh;
+}
+
+.main .ep5 .partbox {
+    height: 30vh;
+}
+
+
+
