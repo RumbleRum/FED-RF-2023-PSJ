@@ -53,6 +53,7 @@ body,.wrap {
 .col-block{display: block;}
 
 
+
 #header {
     /* background-color: #333ff3; */
     position: fixed;
@@ -103,12 +104,12 @@ body,.wrap {
 
     transition: all .4s ease-out;
 }
-.cont>ul>li:active{
+.cont>ul>li.on{
    flex: 2.2;
 
 }
 /* 가상요소 암전 밝아지기 */
-.cont>ul>li:active::before{
+.cont>ul>li.on::before{
     opacity: 0.5;
 }
 
@@ -127,8 +128,24 @@ body,.wrap {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(60%,1000px);
+    width: min(30%,1000px);
     /* 부모박스의 70%적용시 최대 250px한계설정 */
+}
+.cont>ul>li>h2{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3vw;
+    white-space: nowrap;
+}
+.hdn{
+    opacity: 0;
+    transition: 1s;
+}
+.on .hdn{
+    opacity: 1;
 }
 
 .cont>ul>li>img:last-child{
@@ -170,9 +187,9 @@ body,.wrap {
 
 /* //////////////////////////////////////////////////////////////////////////// */
 
-#main {
+/* #main {
     background-color: #000;
-}
+} */
 .main .ep1 .partbox {
     height: 22.5vh;
 }

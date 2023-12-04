@@ -6,7 +6,6 @@
 export function TopArea(){
     return(
       <>
-      <div className="wrap">
             <div id="header">
               <header className="header gnb">
                   <div className="flex-box">
@@ -32,7 +31,6 @@ export function TopArea(){
                   </div>
               </header>
           </div>
-        </div>  
       </>
     )
 }

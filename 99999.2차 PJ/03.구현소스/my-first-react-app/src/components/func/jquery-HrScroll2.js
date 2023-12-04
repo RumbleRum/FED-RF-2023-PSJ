@@ -1,5 +1,9 @@
 // 제이쿼리로 구현한 가로방향 스크롤 JS : jquery-HrScroll2.js
 
+// 제이쿼리
+import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
+
 // 전체 마우스휠 이벤트를 정지시킴
 // overflow:hidden 설정을 html,body에 했으므로
 // 스크롤이 되지 않는다!(휠 이벤트는 발생하지만 작동은 하지않는다!)
@@ -12,13 +16,14 @@ let winW = $(window).width();
 
 // 마지막 한계값
 let limit = winW * 9 - winW;
-console.log("이동한계값", limit);
+// console.log("이동한계값", limit);
 
 // 이벤트대상 - .wrap
 // 이벤트종류 - wheel
-$(".wrap").on("wheel", () => {
+export const wheelFn = (e) => {
   // 1. 휠 방향
-  let dir = event.wheelDelta;
+  let dir = e.wheelDelta;
+  // console.log(dir, wNum);
 
   // 2. 방향에 따른 값 증감
   if (dir < 0) wNum += 80;
@@ -28,9 +33,8 @@ $(".wrap").on("wheel", () => {
   if (wNum < 0) wNum = 0;
   else if (wNum > limit) wNum = limit;
 
-
   // 4. 실제 가로스크롤 이동 애니메이션 주기
-  $(".wrap")
+  $(e.currentTarget)
     .stop()
     .animate(
       {
@@ -39,7 +43,7 @@ $(".wrap").on("wheel", () => {
       2500,
       "easeOutQuint"
     );
-}); ///////////////////// wheel 이벤트 함수 ///////////////////////////
+}; ///////////////////// wheel 이벤트 함수 ///////////////////////////
 
 $(".gnb a").click((e) => {
   let txt = $(e.currentTarget).text();
