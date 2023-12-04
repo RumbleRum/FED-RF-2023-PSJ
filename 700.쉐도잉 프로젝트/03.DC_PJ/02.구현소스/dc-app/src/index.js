@@ -5,7 +5,7 @@ import "./css/index.css";
 
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom"
+import { HashRouter, Route, Routes} from "react-router-dom"
 import { Layout } from "./components/layout/Layout";
 import { Main } from "./components/pages/Main";
 import { Character } from "./components/pages/Charactor";
@@ -58,6 +58,7 @@ export default function App() {
     // basename={process.env.PUBLIC_URL}
     // package.json 의 homepage 속성값을 읽어옴
     // <BrowserRouter >
+    // basename을 안써도 HashRouter 는 홈페이지 속성값을 자동으로 가져옴 !!
     <HashRouter>
       {/* <BrowserRouter> */}
       <Routes>
