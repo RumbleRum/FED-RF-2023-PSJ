@@ -64,7 +64,7 @@ export function MainArea9() {
               <img src="./images/map/dfood1.jpg" alt="식사1" />
               <div id="slider">
                 <div className="image-box">
-                  {spArr.map((v, i) => (
+                  {spArr.map((v, i) => ( 
                     <div key={i}>
                       <img src={"./images/slide/"+v+".png"} />
                     </div>

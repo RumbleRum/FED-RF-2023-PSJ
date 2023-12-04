@@ -1,9 +1,13 @@
-// 상단영역 컴포넌트
+// 서브 페이지상단영역 컴포넌트
 // GNB 데이터
 
+// 서브 CSS 경로
+import "../../css/sub_main.css";
+import "../../css/sub.css";
 
- //////////////// 상단영역 //////////////////////////////////////
-export function TopArea(){
+
+///////// 서브 상단 영역 //////////////////////////////
+export function SubTopArea(){
     return(
       <>
             <div id="header">

@@ -84,6 +84,7 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    filter: brightness(80%);
 }
 
 .first-bx{
@@ -184,7 +185,7 @@
 
 .ep5-4 {
     font-size: 2.8vw;
-    color: rgb(241, 220, 191);
+    color: rgb(233, 212, 183);
 
     display: flex;
     justify-content: flex-end;
@@ -195,64 +196,60 @@
     background: url(../../public/images/concert.jpg) no-repeat center/cover;
 }
 
-.food {
-    padding-left: 60px;
-}
-
-.food img {
-    position: absolute;
-    width: 30%;
-    transform: translateY(7%);
-}
-
 .ep7 .flex-box {
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(255, 255, 255);
 }
 
-.ep7-2 {
+.ep7-1 img{
+    padding-left: 60px;
+    width: 88%;
+    display: flex;
+    transform: translateY(2%);
+}
+
+.ep7-2 a{
     position: relative;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-
     font-size: 10vw;
+    font-weight: bold;
     color: rgba(141, 116, 83, 0.904);
+    /* top: 50px; */
+    line-height: 200px;
 }
 
-.aa img {
-    width: 14%;
-    padding-right: 1vw;
+.ep7-2 img{
+    width: 28%;
+    padding: 10px;
 }
 
-.bb img {
-    width: 15%;
-    padding-left: 1vw;
+
+
+.ep8-1 img{
+    padding-left: 60px;
+    width: 88%;
+    display: flex;
+    transform: translateY(2%);
 }
 
-.food2 img {
-    position: absolute;
-    width: 50%;
-    transform: translateY(10%);
-}
-
-.ep8 .flex-box {
-    background-color: rgb(250, 250, 250);
-}
-
-.ep8-2 {
+.ep8-2 a{
     position: relative;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
+    justify-content: flex-start;
     font-size: 10vw;
+    font-weight: bold;
     color: rgba(141, 116, 83, 0.904);
+    /* top: 50px; */
+    line-height: 200px;
 }
 
-.cc img {
-    width: 14%;
-    padding-right: 1vw;
+.ep8-2 img{
+    width: 28%;
+    padding: 10px;
 }
+
+
+
 
 .ep9 .flex-box {
     background-color: #d8293a;

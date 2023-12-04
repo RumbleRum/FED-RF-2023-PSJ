@@ -8,24 +8,27 @@ export function MainArea8() {
 
   return (
     <>
-      <section className="main inbox">
+    <section className="main inbox">
         <div className="ep ep8">
           <div className="flex-box">
-            <div className="food2">
-              <img src="./images/food2.jpg" alt="" />
+            <div className="partbox col-5 ep8-1">
+              <img src="./images/food2.jpg" alt="음식" />
             </div>
-            <div className="partbox col-12 ep8-2">
-              <h1>Of</h1>
-            </div>
-            <div className="partbox col-12 ep8-2 cc">
-              <img src="./images/fd3.jpg" alt="" />
-              <h1>The</h1>
-            </div>
-            <div className="partbox col-12 ep8-2">
-              <h1>Culinary</h1>
-            </div>
-            <div className="partbox col-12 ep8-2 bb">
-              <h1>Arts</h1>
+            <div className="partbox col-7 ep8-2">
+              <ul>
+                <li>
+                  <a><h1>Of</h1></a>
+                </li>
+                <li>
+                  <a><img src="./images/fd3.jpg" alt="" />The</a>
+                </li>
+                <li>
+                <a>Culinary</a>
+                </li>
+                <li>
+                <a>Arts</a> 
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -33,3 +36,5 @@ export function MainArea8() {
     </>
   );
 } ///////// MainArea 컴포넌트 ////////////
+
+    

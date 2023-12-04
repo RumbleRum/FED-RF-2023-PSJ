@@ -2,8 +2,6 @@
 
 import { useEffect } from "react";
 
-import { myFn } from "../func/my";
-
 
 // 제이쿼리
 import $ from 'jquery';
@@ -16,10 +14,17 @@ export function MainArea4() {
   // cat 속성으로 메뉴분류 전달
 
 useEffect(()=>{
-    myFn();
+   
+ const myFn = () => {
+  $('.cont ul li').click((e)=>{
+      $(e.currentTarget).toggleClass('on')
+      .siblings().removeClass('on');
+  })
 
-
+}
+myFn();
 },[])
+
 
 // 리턴 코드 //////////////////////////
   return (

@@ -31,13 +31,13 @@ export function MainArea1() {
             <div className=" col-3 ep1-3">
               <h2>CONRAD</h2>
             </div>
-            <div className="partbox col-3 ep1-4">
+            <div className="partbox col-4 ep1-4">
               <h1>
                 © 2023 Expedia, Inc., an expedia group company. All Rights
                 Reserved
               </h1>
             </div>
-            <div className="partbox col-5 ep1-4">
+            <div className="partbox col-4 ep1-4">
               <h1></h1>
             </div>
             <div className="partbox col-1 ep1-4">
