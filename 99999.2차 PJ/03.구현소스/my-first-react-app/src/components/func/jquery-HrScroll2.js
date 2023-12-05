@@ -10,6 +10,7 @@ import "jquery-ui-dist/jquery-ui";
 
 // 휠 이동수치 변수
 let wNum = 0;
+const initWnum = () => wNum = 0;
 
 // 화면크기
 let winW = $(window).width();
@@ -20,7 +21,7 @@ let limit = winW * 9 - winW;
 
 // 이벤트대상 - .wrap
 // 이벤트종류 - wheel
-export const wheelFn = (e) => {
+const wheelFn = (e) => {
   // 1. 휠 방향
   let dir = e.wheelDelta;
   // console.log(dir, wNum);
@@ -59,3 +60,5 @@ $(".gnb a").click((e) => {
     wNum = 0;
   }
 });
+
+export {initWnum,wheelFn}

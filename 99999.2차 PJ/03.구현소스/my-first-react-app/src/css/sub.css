@@ -22,39 +22,39 @@
 
 /* 상단영역 //////////////////////////////////////////////// */
 
-.t1 {
+ .t11 {
     display: flex;
     align-items: center;
     justify-content: center;
     border-right: 2px solid #000;
 }
 
-.t1 img {
+ .t11 img {
     width: 120%;
     color: #fff;
     cursor: pointer;
     
 }
 
-.hom{
+ .hom2{
     width: 100px;
 }
 
 
-.t2 {
+ .t22 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.t2 h1 {
+ .t22 h1 {
     font-size: 0.8vw;
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-.t2 h1:after {
+ .t22 h1:after {
     display: block;
     content: "";
     border-bottom: solid 2px #000;
@@ -62,11 +62,11 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.t2 h1:hover:after {
+ .t22 h1:hover:after {
     transform: scaleX(1);
 }
 
-.br{
+ .br2{
     border-right: 2px solid #000;
 }
 
@@ -74,23 +74,23 @@
 /* 메인영역 //////////////////////////////////////////////// */
 
 
-.ep1{
+ .ap1{
     background: url(../../public/images/sub/thum.jpg) no-repeat center/cover;
 }
 
 
-.ep1-1 {
+ .ap1-1 {
     height: 25vh;
 }
 
-.ep1-2 {
+ .ap1-2 {
     gap: 10px;
-    font-size: 12.5vw;
+    font-size: 15.5vw;
     color: #fff;
 }
 
-.ep1-3 {
-    font-size: 1.5vw;
+ .ap1-3 {
+    font-size: 2.5vw;
     color: rgb(241, 220, 191);
     font-weight: bold;
     display: flex;
@@ -98,27 +98,27 @@
     justify-content: center;
 }
 
-.ep1-4 {
-    font-size: 13px;
+ .ap1-4 {
+    font-size: 15px;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-.ep2 .flex-box {
+ .ap2 .flex-box {
     background-color: #fff;
 }
 
-.ep2-1 h1{
+ .ap2-1 h1{
     display: flex;
-    font-size: 1vw;
+    font-size: 2vw;
     color: #000;
     padding-left: 15px;
     font-weight: bold;
 }
 
-.ep2-1 span{
+ .ap2-1 span{
     display: flex;
     font-size: 8vw;
     font-weight: bold;
@@ -127,21 +127,21 @@
     padding-left: 15px;
 }
 
-.ep2-1 img{
+ .ap2-1 img{
     position: relative;
     width: 45%;
     display: flex;
     top: 55px;
 }
-.ep2-2 {
+ .ap2-2 {
     background: url(../../public/images/sub/ssub2.jpg) no-repeat center/cover;
 }
 
-.ep3{
+ .ap3{
     background-color: #fff;
 }
 
-.ep3-1 h1{
+ .ap3-1 h1{
     flex-wrap: wrap;
     padding: 15px;
     display: flex;
@@ -152,21 +152,21 @@
     
 }
 
-.ep3-2 {
+ .ap3-2 {
     background: url(../../public/images/sub/ssub3.png) no-repeat center/cover;
 }
 
 
-.ep4-2 {
+ .ap4-2 {
     background: url(../../public/images/sub/ssub4.png) no-repeat center/cover;
 }
 
-.ep4{
+ .ap4{
     background-color: #fff;
 }
 
 
-.ep4-1 h1{
+ .ap4-1 h1{
     padding: 15px;
     display: flex;
     font-size: 8vw;
@@ -175,7 +175,7 @@
     padding-top: 50px;
 }
 
-.ep4-1 h2{
+ .ap4-1 h2{
     padding: 15px;
     display: flex;
     font-size: 3vw;
@@ -183,7 +183,7 @@
     padding-top: 50px;
 }
 
-.ep4-1 span{
+ .ap4-1 span{
     display: flex;
     font-size: 1vw;
     font-weight: bold;
@@ -192,11 +192,13 @@
     padding-left: 15px;
 }
 
-.ep5{
-    background-color: #000;
+ .ap5{
+    /* height: 100vh; */
+    background-color: #0e0f47;
 }
 
-.ep5-1 h1{
+ .ap5-1 h1{
+    margin-top: 10px;
     padding: 15px;
     display: flex;
     font-size: 11vw;
@@ -210,7 +212,7 @@
 }
 
 
-.ep5-2 img{
+ .ap5-2 img{
     position: relative;
     height: 400px;
     width: 850px;
@@ -220,7 +222,7 @@
     padding-left: 20px;
 }
 
-.ep5-2-2 img{
+ .ap5-2-2 img{
     padding-left: 20px;
     position: relative;
     height: 400px;
@@ -229,23 +231,23 @@
     transform: scale(0.95);
     transition: .4s ease-in-out;
 }
-.ep5-2 img:hover{
+ .ap5-2 img:hover{
     transform: scale(1);
 }
-.ep5-2-2 img:hover{
+ .ap5-2-2 img:hover{
     transform: scale(1);
 }
 
 
 
-.ep5-3 {
+ .ap5-3 {
     background: url(../../public/images/hotel/conrad.png) no-repeat bottom;
 }
-.ep5-3-3 {
+ .ap5-3-3 {
     background: url(../../public/images/hotel/hilton.png) no-repeat bottom;
 }
 
-.ep5-4{
+ .ap5-4{
     padding: 15px;
     display: flex;
     font-size: 12vw;
@@ -259,7 +261,8 @@
     align-items: flex-end;
 }
 
-.ep6-4 {
+ .ap6-4 {
+    height: 1vh;
     font-size: 13px;
     color: #fff;
     display: flex;
