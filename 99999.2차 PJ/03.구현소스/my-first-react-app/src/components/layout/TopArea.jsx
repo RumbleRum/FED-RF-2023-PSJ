@@ -10,36 +10,36 @@ import { useEffect } from 'react';
  //////////////// 상단영역 //////////////////////////////////////
 export function TopArea(){
 
-    // useEffect(() => {     
-    // $(document.querySelectorAll).ready(function() {
-    //     const xOffset = 10;
-    //     const yOffset = 30;
+    useEffect(() => {     
+    $(document.querySelectorAll).ready(function() {
+        const xOffset = 10;
+        const yOffset = 30;
 
-    // $(document.querySelectorAll).on( "mouseover", "nail" ,function (e) {
+    $(document.querySelectorAll).on( "mouseover", "nail" ,function (e) {
         
-    //     let prev = $({className:"tr"});
-    //     let Img = $({src:$(this).attr("./images/sub/thum.jpg")});
-    //     prev.append(Img);
-    //     $("body").append(prev);
+        let prev = $({className:"tr"});
+        let Img = $({src:$(this).attr("./images/sub/thum.jpg")});
+        prev.append(Img);
+        $("body").append(prev);
 
-    //     $(".tr")
-    //      .css("top",(e.pageY - xOffset) +"px")
-    //      .css("left",(e.pageX - yOffset) +"px")
-    //      .fadeIn("fast");
-    //     }); // 마우스 오버시
+        $(".tr")
+         .css("top",(e.pageY - xOffset) +"px")
+         .css("left",(e.pageX - yOffset) +"px")
+         .fadeIn("fast");
+        }); // 마우스 오버시
 
-    //     $(document.querySelectorAll).on( "mouseover", "nail" ,function (e) {
-    //     $(".tr")
-    //         .css("top",(e.pageY - xOffset) + "px")
-    //         .css("left",(e.pageX - yOffset) + "px")
-    //     });
+        $(document.querySelectorAll).on( "mouseover", "nail" ,function (e) {
+        $(".tr")
+            .css("top",(e.pageY - xOffset) + "px")
+            .css("left",(e.pageX - yOffset) + "px")
+        });
 
-    //     $(document.querySelector).on( "mouseover", "nail" ,function () {
-    //         $(".tr").remove();
-    //     });
-    // });  /////  미리보기 함수
+        $(document.querySelector).on( "mouseover", "nail" ,function () {
+            $(".tr").remove();
+        });
+    });  /////  미리보기 함수
         
-    // },[]);
+    },[]);
 
 
     return(
@@ -69,10 +69,10 @@ export function TopArea(){
                   </div>
               </header>
           </div>
-{/* 
+
           <div className="nail">
             <img src="./images/sub/thum.jpg" alt="썸네일" />
-          </div> */}
+          </div>
       </>
     )
 }
