@@ -26,8 +26,8 @@ export const wheelFn = (e) => {
   // console.log(dir, wNum);
 
   // 2. 방향에 따른 값 증감
-  if (dir < 0) wNum += 80;
-  else wNum -= 80;
+  if (dir < 0) wNum += 300;
+  else wNum -= 300;
 
   // 3. 한계값 지정
   if (wNum < 0) wNum = 0;

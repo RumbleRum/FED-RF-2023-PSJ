@@ -140,6 +140,12 @@ body,.wrap {
     font-size: 3vw;
     white-space: nowrap;
 }
+
+.cont>ul>li>img:last-child{
+    top: 50%;
+    width: auto;
+}
+
 .hdn{
     opacity: 0;
     transition: 1s;
@@ -148,10 +154,36 @@ body,.wrap {
     opacity: 1;
 }
 
-.cont>ul>li>img:last-child{
-    top: 50%;
-    width: auto;
+.sp1{
+    opacity: 0;
+    transition: 1s;
 }
+.sp2{
+    opacity: 0;
+    transition: 1s;
+}
+.sp3{
+    opacity: 0;
+    transition: 1s;
+}
+
+.on .sp1{
+    opacity: 1;
+}
+.on .sp2{
+    opacity: 1;
+}
+.on .sp3{
+    opacity: 1;
+}
+
+
+.hdn1{
+    display: flex;
+    font-size: 10px;
+}
+
+
 
 /* 원 포인터 //////////////////////////////////////////////////////////////////////////////////////////////// */
 

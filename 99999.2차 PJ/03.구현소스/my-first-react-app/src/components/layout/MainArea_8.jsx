@@ -12,7 +12,7 @@ export function MainArea8() {
         <div className="ep ep8">
           <div className="flex-box">
             <div className="partbox col-5 ep8-1">
-              <img src="./images/food2.jpg" alt="음식" />
+              <img src="./images/food3.jpg" alt="음식" />
             </div>
             <div className="partbox col-7 ep8-2">
               <ul>

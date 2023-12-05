@@ -75,7 +75,7 @@
 
 
 .ep1{
-    background: url(../images/sub/482096b0-6af4-4ca4-98ce-c3e52f4f6028_RWLV_CROCKFORDS_HERO_1.jpg) no-repeat center/cover;
+    background: url(../../public/images/sub/thum.jpg) no-repeat center/cover;
 }
 
 
@@ -134,7 +134,7 @@
     top: 55px;
 }
 .ep2-2 {
-    background: url(../images/sub/ssub2.jpg) no-repeat center/cover;
+    background: url(../../public/images/sub/ssub2.jpg) no-repeat center/cover;
 }
 
 .ep3{
@@ -153,12 +153,12 @@
 }
 
 .ep3-2 {
-    background: url(../images/sub/ssub3.png) no-repeat center/cover;
+    background: url(../../public/images/sub/ssub3.png) no-repeat center/cover;
 }
 
 
 .ep4-2 {
-    background: url(../images/sub/ssub4.png) no-repeat center/cover;
+    background: url(../../public/images/sub/ssub4.png) no-repeat center/cover;
 }
 
 .ep4{
@@ -239,10 +239,10 @@
 
 
 .ep5-3 {
-    background: url(../images/hotel/conrad.png) no-repeat bottom;
+    background: url(../../public/images/hotel/conrad.png) no-repeat bottom;
 }
 .ep5-3-3 {
-    background: url(../images/hotel/hilton.png) no-repeat bottom;
+    background: url(../../public/images/hotel/hilton.png) no-repeat bottom;
 }
 
 .ep5-4{
