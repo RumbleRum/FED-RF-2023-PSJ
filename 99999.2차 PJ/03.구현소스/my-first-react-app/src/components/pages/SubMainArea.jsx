@@ -64,6 +64,7 @@ export function SubMainArea(){
                                 <span><br /><br />OFFERING ARGUABLY THE BEST VIEWS IN LAS VEGAS,</span>
                                 <span>EXPERIENCE A NEW STANDARD FOR LUXURY OVERLOOKING</span>
                                 <span>THE WORLD-FAMOUS STRIP.</span>
+                                <img src="./images/sub/htt1.jpg" alt="축배" />
                             </div>
                         <div className="partbox col-6 ap4-2"></div>
                       </div>

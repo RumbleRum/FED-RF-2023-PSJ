@@ -44,7 +44,7 @@ export function TopArea({chgPg}) {
 
   return (
     <>
-      <div id="header">
+      <div id="header1">
         <header className="header gnb">
           <div className="flex-box">
             <div className="t1 partbox col-1">
