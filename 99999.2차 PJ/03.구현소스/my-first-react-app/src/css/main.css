@@ -68,6 +68,18 @@ body,
   height: 3vh;
 }
 
+
+.lgo h1{
+  font-size: 1.3vw;
+  color: #fff;
+  top: -1px;
+}
+
+.lgo img{
+  width: 16%;
+  padding-right: 7px;
+}
+
 #header1 a {
   color: #fff3d8;
   text-decoration: none;

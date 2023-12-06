@@ -47,8 +47,9 @@ export function TopArea({chgPg}) {
       <div id="header1">
         <header className="header gnb">
           <div className="flex-box">
-            <div className="t1 partbox col-1">
-              <img src="./images/Expedia New 2023.png" alt="로교" />
+            <div className="t1 partbox col-1 lgo">
+              <img src="./images/mainlogo1.png" alt="로고" />
+              <h1>Expedia</h1>
             </div>
             <div className="t2 partbox col-1 hom">
               <h1>
