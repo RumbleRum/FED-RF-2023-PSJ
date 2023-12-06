@@ -143,14 +143,14 @@ body,
 }
 
 .cont > ul > li:first-child {
-  background: url(../../public/images/hotel/ht1.jpg) no-repeat center/cover;
+  background: url(../../public/images/hotel/hilton1.jpeg) no-repeat center/cover;
 }
 .cont > ul > li:nth-child(2) {
-  background: url(../../public/images/hotel/ht2.jpg) no-repeat
+  background: url(../../public/images/hotel/crockfords1.jpg) no-repeat
     center/cover;
 }
 .cont > ul > li:nth-child(3) {
-  background: url(../../public/images/hotel/ht3.jpg) no-repeat center/cover;
+  background: url(../../public/images/hotel/conrad1.jpg) no-repeat center/cover;
 }
 
 .cont > ul > li > img {
@@ -216,7 +216,7 @@ body,
   display: flex;
   font-size: 1.4vw;
 }
-.cont .htxt3 {
+.cont .htxt {
   display: flex;
   font-size: 1.4vw;
 }
