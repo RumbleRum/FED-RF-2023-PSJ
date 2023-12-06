@@ -143,14 +143,14 @@ body,
 }
 
 .cont > ul > li:first-child {
-  background: url(../../public/images/hotel/hilton1.jpeg) no-repeat center/cover;
+  background: url(../../public/images/hotel/ht1.jpg) no-repeat center/cover;
 }
 .cont > ul > li:nth-child(2) {
-  background: url(../../public/images/hotel/crockfords1.jpg) no-repeat
+  background: url(../../public/images/hotel/ht2.jpg) no-repeat
     center/cover;
 }
 .cont > ul > li:nth-child(3) {
-  background: url(../../public/images/hotel/conrad1.jpg) no-repeat center/cover;
+  background: url(../../public/images/hotel/ht3.jpg) no-repeat center/cover;
 }
 
 .cont > ul > li > img {
@@ -158,7 +158,7 @@ body,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(30%, 1000px);
+  width: min(30%,70%);
   /* 부모박스의 70%적용시 최대 250px한계설정 */
 }
 .cont > ul > li > h2 {
@@ -207,11 +207,25 @@ body,
   opacity: 1;
 }
 
-.hdn1 {
+
+.cont .htxt1 {
   display: flex;
-  font-size: 10px;
+  font-size: 1.4vw;
+}
+.cont .htxt2 {
+  display: flex;
+  font-size: 1.4vw;
+}
+.cont .htxt3 {
+  display: flex;
+  font-size: 1.4vw;
 }
 
+
+
+/* //////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////// */
 
 /* #main {
     background-color: #000;

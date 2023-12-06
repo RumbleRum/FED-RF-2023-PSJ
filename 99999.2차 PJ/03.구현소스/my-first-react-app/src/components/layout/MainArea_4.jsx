@@ -36,7 +36,7 @@ export function MainArea4() {
                                     attentive service,
                                     <br /> the well recognized name in hospitality awaits.
                                 </h2>
-                                <img className="sp1" src="./images/hotel/ht1.jpg" alt="" />
+                                {/* <img className="sp1" src="./images/hotel/ht1.jpg" alt="" /> */}
                             </li>
                             <li>
                                 <img src="./images/hotel/crockfords.png" alt="크록포드" />
@@ -45,7 +45,7 @@ export function MainArea4() {
                                 guests at Crockfords find the ultimate in Las Vegas luxury.<br /> 
                                 Part of LXR Hotels & Resorts, expect unrivalled service.
                                 </h2>
-                                <img className="sp2" src="./images/hotel/ht2.jpg" alt="" />
+                                {/* <img className="sp2" src="./images/hotel/ht2.jpg" alt="" /> */}
                             </li>
                             <li>
                                 <img src="./images/hotel/conrad.png" alt="콘라드" />
@@ -53,7 +53,7 @@ export function MainArea4() {
                                  With luxe amenities, curated art, and bold design,<br />
                                  the world’s largest Conrad serves up stirring <br />
                                  views of the Strip and captures the spirit of travel.</h2>
-                                <img className="sp3" src="./images/hotel/ht3.jpg" alt="" />
+                                {/* <img className="sp3" src="./images/hotel/ht3.jpg" alt="" /> */}
                             </li>
                         </ul>
                     </div>
