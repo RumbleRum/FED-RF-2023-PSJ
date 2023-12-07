@@ -10,7 +10,7 @@ import "jquery-ui-dist/jquery-ui";
 // import './css/main.css';
 
 export function MainArea4() {
-    // cat 속성으로 메뉴분류 전달
+    
 
     useEffect(() => {
         const myFn = () => {

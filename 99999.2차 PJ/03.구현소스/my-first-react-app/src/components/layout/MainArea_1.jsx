@@ -1,10 +1,16 @@
 // MainArea 컴포넌트
 
+import { useEffect } from "react";
+
 // 메인 css
 // import './css/main.css';
 
 export function MainArea1() {
-  // cat 속성으로 메뉴분류 전달
+  
+      useEffect(()=>{
+
+      }); 
+
 
   return (
     <>
@@ -14,7 +20,7 @@ export function MainArea1() {
           <div className="flex-box">
             <div className="col-12 ep1-1"></div>
             <div className="partbox col-12 ep1-2">
-              <h1>This is</h1>
+              <h1 className="ani-text">This is</h1>
             </div>
             <div className="partbox col-12 ep1-2">
               <h1>Our World</h1>
