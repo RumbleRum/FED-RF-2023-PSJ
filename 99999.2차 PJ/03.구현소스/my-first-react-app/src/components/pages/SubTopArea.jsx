@@ -1,14 +1,32 @@
 // 서브 페이지상단영역 컴포넌트
 // GNB 데이터
 
+import { useLayoutEffect } from "react"
+import $ from 'jquery';
 
 
 
 ///////// 서브 상단 영역 //////////////////////////////
 export function SubTopArea({chgPg}){
+
+
+    useLayoutEffect(()=>{
+
+        $('.ap1').css({
+            background:"#000 url(./images/sub/thum.jpg) no-repeat top/100%"
+        })
+
+        $('.sub-header').css({top:'-60px'})
+        .delay(1000).animate({top:'0'},600);
+
+
+        $('.move-txt')
+        .delay(1000).animate({top:'200px',opacity:1},1000);
+    });
+
     return(
       <>
-            <div id="header">
+            <div id="header" className="sub-header">
               <header className="header gnb">
                   <div className="flex-box">
                       <div className="t11 partbox col-1">

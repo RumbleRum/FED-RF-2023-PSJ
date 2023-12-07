@@ -19,13 +19,8 @@
 }
 
 
- #main{
-    /* display: flex; */
-}
  .inbox1 {
-    flex-shrink: 0;
     width: 100vw;
-    height: 148vh;
 }
 .inbox::after,
  .group-part::after {
@@ -53,10 +48,10 @@
  .col-block{display: block;}
 
 
-#header {
+#header.sub-header {
     background-color: #fff;
     position: fixed;
-    top: 0;
+    top: -60px;
     left: 0;
     width: 100vw;
     z-index: 99999;
@@ -78,11 +73,9 @@
  #main {
     background-color: #000;
 }
- .main .ap1 .partbox {
-    height: 40vh;
-}
  .main .ap2 .partbox {
     height: 140vh;
+    padding-top: 100px;
 }
  .main .ap3 .partbox {
     height: 150vh;

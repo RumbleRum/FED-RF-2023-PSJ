@@ -73,9 +73,16 @@
 
 /* 메인영역 //////////////////////////////////////////////// */
 
+.move-txt{
+    position: relative;
+    top: 400px;
+    opacity: 0;
+}
 
- .ap1{
-    background: url(../../public/images/sub/thum.jpg) no-repeat center/cover;
+
+.ap1{
+     aspect-ratio: 2/1.25;
+    background: url(../../public/images/sub/thum.jpg) no-repeat top/100%;
 }
 
 
@@ -93,9 +100,8 @@
     font-size: 2.5vw;
     color: rgb(241, 220, 191);
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 150px;
+
 }
 
  .ap1-4 {

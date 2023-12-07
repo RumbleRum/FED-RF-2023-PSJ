@@ -11,7 +11,7 @@ export function SubMainArea(){
                         <div className="flex-box">
                             <div className="col-12 ap1-1"></div>
                             <div className="partbox col-12 ap1-2"></div>
-                            <div className="partbox col-12 ap1-2">
+                            <div className="partbox col-12 ap1-2 move-txt">
                                 <h1>Crockfords</h1>
                             </div>
                             <div className="partbox col-12 ap1-3">

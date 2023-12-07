@@ -4,9 +4,9 @@
 @import url(./common.css);
 
 /* 공사중표시 */
-body * {
+/* body * {
   outline: 2px dashed blue;
-}
+} */
 
 body > div > * {
   outline-color: red;
@@ -89,21 +89,31 @@ body,
   /* 부모자격 */
 }
 #header1 h1 .nail {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    z-index: 999;
-    opacity: 0;
-    transition: .4s;
+  position: fixed;
+  width: 150px;
+  z-index: 999;
+  opacity: 0;
+  transition: .4s;
+}
+#header1 .gnb .flex-box>div:nth-child(4) h1 .nail{
+  margin-left: -45px;
+}
+#header1 .gnb .flex-box>div:nth-child(5) h1 .nail{
+  margin-left: -25px;
+}
+#header1 .gnb .flex-box>div:nth-child(6) h1 .nail{
+  margin-left: -40px;
+}
+
+#header1 h1.on .nail {
+  opacity: 1;
 }
 #header1 h1 .nail img{
     width: 100%;
 }
 #header1 h1 a:hover+.nail{
     opacity: 1;
-    top: 40px;
+    margin-top: 20px;
 }
 
 /* 열리는 가구 //////////////////////////////////////////////////////////////////////////////////////// */
