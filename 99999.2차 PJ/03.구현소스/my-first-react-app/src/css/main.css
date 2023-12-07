@@ -140,37 +140,61 @@ body,
   bottom: 0;
   right: 0;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0.6;
 
   transition: all 0.4s ease-out;
 }
 .cont > ul > li.on {
-  flex: 2.2;
+  flex: 4;
 }
 /* 가상요소 암전 밝아지기 */
-.cont > ul > li.on::before {
-  opacity: 0.5;
-}
+/* .cont > ul > li.on::before {
+  /* opacity: 0.3; */
+/* } */ 
 
 .cont > ul > li:first-child {
-  background: url(../../public/images/hotel/hilton1.jpeg) no-repeat center/cover;
+  background: url(../../public/images/hotel/hilton1.jpeg) no-repeat left/cover;
 }
 .cont > ul > li:nth-child(2) {
-  background: url(../../public/images/hotel/crockfords1.jpg) no-repeat
-    center/cover;
+  background: url(../../public/images/hotel/crockfords1.jpg) no-repeat left/cover;
 }
 .cont > ul > li:nth-child(3) {
-  background: url(../../public/images/hotel/conrad1.jpg) no-repeat center/cover;
+  background: url(../../public/images/hotel/conrad1.jpg) no-repeat left/cover;
 }
 
-.cont > ul > li > img {
+.cont > ul > li > a{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+
+.cont > ul > li > .pc1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(30%,70%);
-  /* 부모박스의 70%적용시 최대 250px한계설정 */
+  /* width: min(20%,40%); */
 }
+
+.cont > ul > li > .pc2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 10%; */
+}
+
+.cont > ul > li > .pc3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 40% */
+}
+
+
 .cont > ul > li > h2 {
   position: absolute;
   top: 70%;
@@ -192,19 +216,32 @@ body,
 }
 .on .hdn {
   opacity: 1;
+  
 }
 
 .sp1 {
   opacity: 0;
   transition: 1s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 25%;
+  height: 55%;
 }
 .sp2 {
   opacity: 0;
   transition: 1s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 20%;
+  height: 55%;
 }
 .sp3 {
   opacity: 0;
   transition: 1s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 22%;
+  height: 55%;
 }
 
 .on .sp1 {
@@ -220,15 +257,19 @@ body,
 
 .cont .htxt1 {
   display: flex;
-  font-size: 1.4vw;
+  font-size: 1vw;
+  right: 40%
 }
+
 .cont .htxt2 {
   display: flex;
-  font-size: 1.4vw;
+  font-size: 1vw;
+  right: 26%
 }
-.cont .htxt {
+.cont .htxt3 {
   display: flex;
-  font-size: 1.4vw;
+  font-size: 1vw;
+  right: 32%
 }
 
 
