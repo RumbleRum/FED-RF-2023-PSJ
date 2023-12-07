@@ -67,7 +67,10 @@
     text-decoration: none;
 }
 
-
+.fam2{
+    padding-left: 20px;
+    cursor: pointer;
+  }
 
 
  #main {

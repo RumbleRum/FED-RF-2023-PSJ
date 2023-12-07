@@ -6,6 +6,9 @@ import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 import { useEffect } from "react";
 
+import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 //////////////// 상단영역 //////////////////////////////////////
 export function TopArea({ chgPg }) {
   useEffect(() => {
@@ -81,8 +84,8 @@ export function TopArea({ chgPg }) {
             </div>
             <div className="t2 partbox col-1 hom">
               <h1>
+                <FontAwesomeIcon icon={faHouseChimney} />
                 <a href="#" onClick={goSub}>
-                  <i className="fa-solid fa-house"></i>
                   Home
                 </a>
               </h1>
@@ -94,7 +97,7 @@ export function TopArea({ chgPg }) {
                   HILTON
                 </a>
                 <div className="nail">
-                  <img src="./images/sub/thum.jpg" alt="썸네일" />
+                  <img src="./images/sub/thum2.jpg" alt="썸네일" />
                 </div>
               </h1>
             </div>
@@ -112,7 +115,7 @@ export function TopArea({ chgPg }) {
               <h1>
                 <a href="#" onClick={goSub}>CONRAD</a>
                 <div className="nail">
-                  <img src="./images/sub/thum.jpg" alt="썸네일" />
+                  <img src="./images/sub/thum3.jpg" alt="썸네일" />
                 </div>
               </h1>
             </div>

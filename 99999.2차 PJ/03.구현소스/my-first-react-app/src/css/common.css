@@ -36,7 +36,11 @@
 }
 
 .hom{
-    width: 100px;
+    width: 120px;
+}
+
+.hom a{
+    padding: 5px;
 }
 
 .t2 {
@@ -46,7 +50,7 @@
 }
 
 .t2 h1 {
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -97,14 +101,19 @@
 }
 
 .ep1-2 {
+    position: relative;
     gap: 10px;
     font-size: 12.5vw;
     color: #fff;
+    top: 70px;
 }
 
 .ep1-3 {
-    font-size: 1.5vw;
-    color: rgb(241, 220, 191);
+    position: relative;
+    top: 150px;
+
+    font-size: 2vw;
+    color: rgb(228, 201, 163);
     font-weight: bold;
     display: flex;
     align-items: center;

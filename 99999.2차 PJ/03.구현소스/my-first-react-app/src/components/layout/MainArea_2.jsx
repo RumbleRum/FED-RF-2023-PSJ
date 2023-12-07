@@ -16,7 +16,7 @@ export function MainArea2() {
             </div>
             <div className="partbox col-12 video1">
               <video width="45%" height="auto" autoPlay loop muted>
-                <source src="./images/videoplayback2.mp4" type="video/mp4" />
+                <source src="./images/videoplayback.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="partbox col-12 ep2-1">
