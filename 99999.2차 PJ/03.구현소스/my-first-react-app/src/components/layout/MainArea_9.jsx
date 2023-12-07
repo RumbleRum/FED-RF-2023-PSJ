@@ -1,7 +1,11 @@
 // MainArea 컴포넌트
 
-// 메인 css
-// import './css/main.css';
+import { useEffect } from "react";
+
+// 제이쿼리
+import $ from 'jquery';
+import 'jquery-ui-dist/jquery-ui';
+
 
 export function MainArea9() {
   // cat 속성으로 메뉴분류 전달
@@ -18,6 +22,32 @@ export function MainArea9() {
     "casual_dining_logo_5",
     "casual_dining_logo_2",
   ];
+
+  useEffect(()=>{
+  
+    $('#imageLink1').on('click',function(e){
+      e.preventDefault();
+      changeImage('./images/map/dfood1.jpg');
+    });
+    $('#imageLink2').on('click',function(e){
+      e.preventDefault();
+      changeImage('./images/map/dfood2.jpg');
+    });
+    $('#imageLink3').on('click',function(e){
+      e.preventDefault();
+      changeImage('./images/map/dfood3.jpg');
+    });
+
+    function changeImage(newImage){
+      $('#myImage').fadeOut(400,function(){
+        $(this).attr('src',newImage).fadeIn(400);
+      });
+      $('#slider').fadeOut(400,function(){
+        $(this).attr('src',newImage).fadeIn(400);
+      });
+    }
+});
+
 
   return (
     <>
@@ -49,19 +79,19 @@ export function MainArea9() {
                 '
                 <ul>
                   <li>
-                    <a href="#">CASUAL DINING</a>
+                    <a href="#" id="imageLink1">CASUAL DINING</a>
                   </li>
                   <li>
-                    <a href="#">FINE DINING</a>
+                    <a href="#" id="imageLink2">FINE DINING</a>
                   </li>
                   <li>
-                    <a href="#">FAMOUS FOODS</a>
+                    <a href="#" id="imageLink3">FAMOUS FOODS</a>
                   </li>
                 </ul>
               </nav>
             </div>
             <div className="partbox col-5 ep9-2">
-              <img src="./images/map/dfood1.jpg" alt="식사1" />
+              <img id="myImage" src="./images/map/dfood1.jpg" alt="식사" />
               <div id="slider">
                 <div className="image-box">
                   {spArr.map((v, i) => ( 
