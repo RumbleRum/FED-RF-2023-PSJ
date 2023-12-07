@@ -92,6 +92,22 @@
 }
 
 
+
+
+.js-reveal {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 1s ease-in,
+        transform 1s ease-out;
+}
+
+.js-reveal--hidden {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+
+
 .ep1-1 {
     height: 25vh;
 }

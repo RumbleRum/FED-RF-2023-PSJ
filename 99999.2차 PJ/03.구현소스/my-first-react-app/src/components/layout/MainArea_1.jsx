@@ -1,10 +1,18 @@
 // MainArea 컴포넌트
 
-// 메인 css
-// import './css/main.css';
+import { useEffect } from "react";
+import { ScrollReveal } from "../func/jquery.scroll-reveal";
+
+
+// 제이쿼리
+import $ from 'jquery';
+import 'jquery-ui-dist/jquery-ui';
 
 export function MainArea1() {
-  // cat 속성으로 메뉴분류 전달
+ 
+  useEffect((e)=>{
+        ScrollReveal(e);
+  });
 
   return (
     <>
@@ -14,22 +22,22 @@ export function MainArea1() {
           <div className="flex-box">
             <div className="col-12 ep1-1"></div>
             <div className="partbox col-12 ep1-2">
-              <h1>This is</h1>
+              <h1 className="js-reveal">This is</h1>
             </div>
             <div className="partbox col-12 ep1-2">
-              <h1>Our World</h1>
+              <h1 className="js-reveal">Our World</h1>
             </div>
             <div className=" col-3 ep1-3">
-              <h2>A JOURNEY BY:</h2>
+              <h2 className="js-reveal">A JOURNEY BY:</h2>
             </div>
             <div className=" col-3 ep1-3">
-              <h2>HILTON</h2>
+              <h2 className="js-reveal">HILTON</h2>
             </div>
             <div className=" col-3 ep1-3">
-              <h2>CROCKFORDS</h2>
+              <h2 className="js-reveal">CROCKFORDS</h2>
             </div>
             <div className=" col-3 ep1-3">
-              <h2>CONRAD</h2>
+              <h2 className="js-reveal">CONRAD</h2>
             </div>
             <div className="partbox col-4 ep1-4">
               <h1>
