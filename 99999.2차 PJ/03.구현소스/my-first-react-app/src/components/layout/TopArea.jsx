@@ -39,12 +39,10 @@ export function TopArea({ chgPg }) {
     // });  /////  미리보기 함수
   }, []);
 
-  // 서브 페이지 이동함수 ////
   const goSub = (e) => {
     let tg = e.currentTarget;
     let txt = tg.innerText;
     console.log(txt);
-    // 서브페이지일 경우
     if (txt === "HILTON"||txt==="CROCKFORDS"||txt==="CONRAD") {
       $(tg)
         .siblings(".nail")
@@ -69,9 +67,9 @@ export function TopArea({ chgPg }) {
         .addClass("on");
     }
 
-    // 메인페이지일 경우
+    // 홈버튼클릭
     if (txt === "Home") chgPg("main");
-  }; //////////// goSub 함수 ///////////////////
+  }; 
 
   return (
     <>
