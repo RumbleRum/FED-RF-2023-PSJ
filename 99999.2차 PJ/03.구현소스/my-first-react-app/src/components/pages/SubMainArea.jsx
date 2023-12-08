@@ -72,10 +72,10 @@ export function SubMainArea() {
                             <span>
                                 <br />
                                 <br />
-                                OFFERING ARGUABLY THE BEST VIEWS IN LAS VEGAS,
+                                OFFERING ARGUABLY THE BEST VIEWS IN LAS VEGAS
                             </span>
-                            <span>EXPERIENCE A NEW STANDARD FOR LUXURY OVERLOOKING</span>
-                            <span>THE WORLD-FAMOUS STRIP.</span>
+                            <span>라스베가스의 최고에 전망이 보이는 객실내부는</span>
+                            <span>고객님들에게 최고의 경험을 선사할 것입니다.</span>
                             <img src="./images/sub/htt1.jpg" alt="축배" />
                         </div>
                         <div className="partbox col-6 ap4-2"></div>

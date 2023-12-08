@@ -111,6 +111,7 @@
     font-size: 12.5vw;
     color: #fff;
     top: 70px;
+    
 }
 
 .ep1-3 {
@@ -123,6 +124,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .ep1-4 {
@@ -131,6 +133,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .ep2-1 {
@@ -148,6 +151,8 @@
     font-size: 1vw;
     font-weight: bold;
     line-height: 40px;
+
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .ep3 {
@@ -177,9 +182,11 @@
     font-size: 4vw;
     color: rgb(241, 220, 191);
 
+    line-height: 90px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .ep5-3 {
@@ -205,6 +212,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .ep6 {
@@ -290,11 +298,12 @@
 
 .sul-box > ul > li > p {
     color: rgb(241, 220, 191);
-    font-size: 1vw;
+    font-size: 1.05vw;
     font-weight: bold;
     position: relative;
-    line-height: 28px;
+    line-height: 35px;
     top: 300px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .ep9-2 img {

@@ -16,11 +16,11 @@ export function SubTopArea({chgPg}){
         })
 
         $('.sub-header').css({top:'-60px'})
-        .delay(1000).animate({top:'0'},600);
+        .delay(2000).animate({top:'0'},1500);
 
 
         $('.move-txt')
-        .delay(1000).animate({top:'200px',opacity:1},1000);
+        .delay(1500).animate({top:'200px',opacity:1},1500);
     });
 
     return(
