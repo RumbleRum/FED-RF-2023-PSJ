@@ -8,7 +8,7 @@ export function MainArea7() {
 
   return (
     <>
-      <section className="main inbox">
+      <section className="main inbox fdtip">
         <div className="ep ep7">
           <div className="flex-box">
             <div className="partbox col-5 ep7-1">

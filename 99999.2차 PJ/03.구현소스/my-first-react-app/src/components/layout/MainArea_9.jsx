@@ -40,10 +40,10 @@ export function MainArea9() {
 
     function changeImage(newImage){
       $('#myImage').fadeOut(400,function(){
-        $(this).attr('src',newImage).fadeIn(400);
+        $(this).attr('src',newImage).fadeIn(300);
       });
       $('#slider').fadeOut(400,function(){
-        $(this).attr('src',newImage).fadeIn(400);
+        $(this).attr('src',newImage).fadeIn(300);
       });
     }
 });
@@ -64,13 +64,22 @@ export function MainArea9() {
                     </h1>
                   </li>
                   <li>
-                    <h2>CASUAL DINING</h2>
+                    <h2>RESTAURANT DINING</h2>
                     <p>
-                      Kick back and enjoy a bite at the chilled eateries
-                      peppered throughout Resorts <br />
-                      World Las Vegas. Poolside dining? A Nashville sports bar?
-                      How about a social <br />
-                      gaming bar? We’ve got your cravings covered.
+                    라스베가스 리조트의 레스토랑에서의 식사는 환상적입니다
+                    <br />
+                    최고급 식재료와 세계 각국의 40가지 이상의 요리들을 맛보실수 있으며
+                    <br />
+                    럭셔리하고 분위기있는 식사를 위한 레스토랑 내부와 인테리어는 물론
+                    <br />
+                    식사와 함께 오케스트라 밴드와 함께하는 잊지못할 특별한 추억까지
+                    <br />
+                    라스베가스 리조트는 고객에게 완벽한 식사를 제공합니다
+
+                    
+
+
+
                     </p>
                   </li>
                 </ul>

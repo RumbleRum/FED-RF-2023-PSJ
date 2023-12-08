@@ -88,8 +88,13 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    filter: brightness(80%);
+    filter: brightness(50%);
 }
+
+.video{
+    position: relative;
+}
+
 
 .first-bx{
     position: relative;
@@ -140,8 +145,9 @@
 
 .ep2-2 {
     color: #fff;
-    font-size: 15px;
-    line-height: 30px;
+    font-size: 1vw;
+    font-weight: bold;
+    line-height: 40px;
 }
 
 .ep3 {
@@ -205,8 +211,12 @@
     background: url(../../public/images/concert.jpg) no-repeat center/cover;
 }
 
-.ep7 .flex-box {
-    background-color: rgb(255, 255, 255);
+.fdtip{
+    background-color: rgb(243, 211, 211);
+}
+
+.ep7 {
+    /* background-color: #fff; */
 }
 
 .ep7-1 img{
@@ -222,7 +232,7 @@
     justify-content: flex-end;
     font-size: 10vw;
     font-weight: bold;
-    color: rgba(141, 116, 83, 0.904);
+    color: rgba(78, 68, 55, 0.904);
     /* top: 50px; */
     line-height: 200px;
 }
@@ -266,9 +276,9 @@
 
 .sul-box > ul > li > h1 {
     color: rgb(241, 220, 191);
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     position: relative;
-    top: 60px;
+    top: 80px;
 }
 
 .sul-box > ul > li > h2 {
@@ -283,8 +293,8 @@
     font-size: 1vw;
     font-weight: bold;
     position: relative;
-    line-height: 20px;
-    top: 230px;
+    line-height: 28px;
+    top: 300px;
 }
 
 .ep9-2 img {
@@ -299,12 +309,15 @@
 
 .sul-box2 a{
     display: block;
-    font-size: 20px;
+    font-size: 1.3vw;
+    font-weight: bold;
+    text-decoration: none;
+
     color: rgb(241, 220, 191);
     position: relative;
-    top: 550px;
-    line-height: 50px;
-    border-bottom: #fff 1px solid;
+    top: 400px;
+    line-height: 30px;
+    border-bottom: #fff 2px solid;
 }
 
 .sul-box2 ul > li:hover > a {
@@ -329,7 +342,7 @@
     height: 100%;
     display: flex;
     flex-wrap: nowrap;
-    animation: banner-ani 100s linear infinite;
+    animation: banner-ani 280s linear infinite;
 }
 
 @keyframes banner-ani {
