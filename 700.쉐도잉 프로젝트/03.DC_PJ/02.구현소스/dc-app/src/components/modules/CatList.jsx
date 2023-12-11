@@ -25,7 +25,7 @@ export function CatList(props){
            <section className="cat-swbox">
                 {/* 1. 모듈타이틀 */}
                 <h2 className="tit">
-                    WHO'S WHO: THE JUSTICE LEAGUE
+                WHO'S WHO: THE JUSTICE LEAGUE
                 </h2>
                 {/* 2. 스와이퍼 컴포넌트 */}
                 <SwiperCat />

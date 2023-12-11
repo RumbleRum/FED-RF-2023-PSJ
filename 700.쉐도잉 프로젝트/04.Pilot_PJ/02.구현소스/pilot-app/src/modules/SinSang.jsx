@@ -1,17 +1,15 @@
 // 신상품 컴포넌트 ////////
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 // 신상품 데이터 가져오기
 import { sinsangData } from "../data/sinsang";
 
 import $ from 'jquery';
-import { useRef } from "react";
 
 export function SinSang({cat,chgItemFn}) {
-  // props.cat - 카테고리 분류명
-  // props.chgItemFn - 선택상품정보 변경부모함수
-
+  // cat - 카테고리 분류명
+  // chgItemFn - 선택상품정보변경 부모함수
 
   // 선택데이터 : 해당카테고리 상품데이터만 가져온다!
   const selData = sinsangData[cat];
@@ -30,9 +28,10 @@ export function SinSang({cat,chgItemFn}) {
         onMouseLeave={removeInfo}
         >
           <a href="#" 
-            onClick={(e)=>{
+          onClick={(e)=>{
             e.preventDefault();
-            chgItemFn('m'+(x+1))}}>
+            chgItemFn('m'+(x+1))
+            }}>
             <img
               src={"./images/goods/" + cat + "/m" + (x + 1) + ".png"}
               alt="신상품"
@@ -47,6 +46,7 @@ export function SinSang({cat,chgItemFn}) {
 
   // 상품에 오버시 상품정보를 보여주는 함수 /////
   const showInfo = (e) => {
+    e.preventDefault();
     // 대상
     const tg = $(e.currentTarget);
     // 1. 이벤트가 발생한 li의 class읽어오기(상품정보객체의 키)
@@ -70,31 +70,35 @@ export function SinSang({cat,chgItemFn}) {
     .animate({
       top: '110%',
       opacity: 1,
+      zIndex: 1,
     },300)
 
   }; /////////// showInfo함수 ///////////////
 
-  //정규식함수(숫자 세자리마다 콤마해주는 기능)
+  
+//정규식함수(숫자 세자리마다 콤마해주는 기능)
 function addComma(x) {
   return x.toString()
   .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 
+
   // 정보박스 지우기 함수 
   const removeInfo = (e) => {
+    e.preventDefault();
     $(e.currentTarget).find('.ibox').remove();
   };
 
   // 신상품 리스트 이동함수 사용변수 ///
-  // 위치값변수(left값)
+  // 위치값변수(left값) -> 리랜더링시 기존값을 유지하도록
+  // ->  useRef를 사용한다!! -> 변수명.current로 사용!
   let lpos = useRef(0);
   // 재귀호출 상태값(1-호출,0-멈춤)
   let callSts = 1;
   
 
   // 신상품 리스트 이동함수 //////
-  // 
   const flowList = (ele) => { // ele-움직일대상
     // console.log(ele);
     // 대상의 left값을 1씩 감소함
@@ -124,12 +128,11 @@ function addComma(x) {
   }; /////////
 
 
-  // 랜더링 후 한번만 실행구역 //////
+  // 랜더링 후  한번만 실행구역 //////
   useEffect(()=>{
     // 대상선정: .flist
-
     // 신상리스트이동함수 호출!
-    flowList($('.flist'))
+    flowList($('.flist'));
 
 
   },[]); ////////// useEffect ////////

@@ -1,4 +1,4 @@
-// 캐릭터 페이지 메인 컨텐츠
+// 캐릭터페이지 메인컨텐츠
 
 import { Banner } from "../modules/Banner";
 import { CatList } from "../modules/CatList";
@@ -6,12 +6,12 @@ import { CatList } from "../modules/CatList";
 export function Character(){
     return(
         <>
-            {/* 배너 컴포넌트 */}
+            {/* 1. 배너 컴포넌트 */}
             <Banner category="CHARACTERS" />
-
-            {/* 캐릭터 리스트 컴포넌트 */}
-            <CatList/>
+            {/* 2.  */}
+            {/* 3. 캐릭터 리스트 컴포넌트 */}
+            <CatList />
         </>
-    );
+    )
 
-} ///////// Character //////////////////////////
+} ////////////  Character 컴포넌트 ///////////

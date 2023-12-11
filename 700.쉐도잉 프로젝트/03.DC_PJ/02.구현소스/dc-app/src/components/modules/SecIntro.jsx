@@ -1,10 +1,10 @@
 // DC.com 섹션소개 컴포넌트 : SecIntro
 
 // 섹션소개모듈 데이터 가져오기
-import { secIntroData } from "../data/secintro";
+import { secIntroData } from "../data/sec_intro";
 
 // 섹션소개모듈용 CSS 불러오기
-import "../../css/secintro.css"
+import "../../css/sec_intro.css"
 
 // 컨텍스트 API를 사용하는 컴포넌트 파일에서 불러옴!
 import { dcCon } from "./dcContext";
@@ -41,7 +41,7 @@ export function SecIntro(){
                     {/* 1. 이미지박스 */}
                     <div className="imbx">
                         <img 
-                            src={v.isrc} 
+                            src={process.env.PUBLIC_URL+v.isrc} 
                             alt={v.tit.split('^')[0]} />
                     </div>
                     {/* 2. 타이틀박스 */}

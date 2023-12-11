@@ -1,4 +1,4 @@
-// 뉴스 페이지 메인 컨텐츠
+// 뉴스페이지 메인컨텐츠
 
 import { Banner } from "../modules/Banner";
 
@@ -7,6 +7,6 @@ export function News(){
         <>
             <Banner category="NEWS" />
         </>
-    );
+    )
 
-} ///////// Main //////////////////////////
+} ////////////  News 컴포넌트 ///////////

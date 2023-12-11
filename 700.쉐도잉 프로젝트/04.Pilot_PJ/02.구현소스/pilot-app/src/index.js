@@ -50,20 +50,20 @@ function App(){
       // pause() 메서드 : 동영상 정지 메서드
 
     }); //////// click ////////
-    // 랜더링구역 한번만 실행 : 옵션[]
+    
+    // 랜더링구역 한번만 실행 : 옵션 []
   },[]); ////////// useEffect //////////////
 
-  // 처음 로딩시 스크롤 상단이동 /////
+  // 처음 로딩시 스크롤 상단이동 //////
   useLayoutEffect(()=>{
     window.scrollTo(0,0);
-  }); //useLayoutEffect ///////
-
+  }); ///// useLayoutEffect //////////
 
 
 
   // 리턴코드 //////////////////////////
   return(
-      <pCon.Provider value={{chgPgName,pgName}}>
+      <pCon.Provider value={{pgName,chgPgName}}>
         <TopArea cat={pgName} />        
         <MainArea page={pgName} />
         <FooterArea />

@@ -1,4 +1,4 @@
-/* 메인배너용 CSS - ban.css */
+/* 메인배너용 CSS - banner.css */
 .banner{
     position: relative;
     overflow: hidden;
@@ -9,18 +9,16 @@
     bottom: 0;
     left: 0;
     padding: 25px;
+    padding-left: 10vw;
     color: #fff;
     text-shadow: 0 0 3px #000;
 
-    padding-left: 10vw;
     text-align: left;
     width: 30%;
 }
-
 .bantit button{
     margin-top: 20px;
 }
-
 /* 배너슬라이드 */
 .slider{
     position: relative;
@@ -38,11 +36,10 @@
 .banner button{
     border-radius: 20px;
     padding: 10px;
-    /* background-color: transparent; */
+    background-color: transparent;
     color: #fff;
-    border: 1px solid #fff;
-    background-color: rgba(10, 10, 10, 0.445);
-
+    border: 1px solid #fff;    
+    background-color: rgb(0 0 0 / .5);
 }
 .banner button:hover{
     background-color: #0074e8;

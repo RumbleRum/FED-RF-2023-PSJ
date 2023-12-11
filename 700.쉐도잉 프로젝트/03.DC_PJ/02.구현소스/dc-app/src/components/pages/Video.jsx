@@ -1,15 +1,14 @@
-// 비디오 페이지 메인 컨텐츠
-
-import { VidIntro } from "../modules/vidintro";
+// 비디오페이지 메인컨텐츠
 
 // import { isrc } from "../data/imgSrc";
+import { VidIntro } from "../modules/VidIntro";
 
 
 export function Video(){
     return(
-        <>
-        <VidIntro cat="VIDEO" cls="on" />
+        <>            
+            <VidIntro cat="VIDEO" cls="on" />
         </>
-    );
+    )
 
-} ///////// Main //////////////////////////
+} ////////////  Video 컴포넌트 ///////////

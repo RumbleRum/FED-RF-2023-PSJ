@@ -90,7 +90,7 @@ input:focus{
 .chkbx input[type=checkbox]{
     display: none;
 }
-/* 체크박스 대신 라벨로 디자인 노출 */
+/* 체크박스 대신 label로 디자인 노출 */
 .chklb{
     float: right;
     display: block;
