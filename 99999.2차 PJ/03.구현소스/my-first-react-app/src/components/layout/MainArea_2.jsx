@@ -19,6 +19,12 @@ export function MainArea2() {
                             <h1>Las Vegas</h1>
                         </div>
                         <div className="partbox col-12 video1">
+                            <div className="circle">
+                                PLAY WITH
+                                <br />▶
+                                <br />
+                                VIDEO
+                            </div>
                             <video id="myVideo" width="45%" height="auto" loop autoPlay muted>
                                 <source src="./images/videoplayback.mp4" type="video/mp4" />
                             </video>
