@@ -1,7 +1,7 @@
 /* 장바구니 리스트 CSS */
 
 /* 전체부모박스 */
-#cartlist{
+#cartlist {
     position: fixed;
     top: 0px;
     right: -60%;
@@ -26,8 +26,7 @@
     display: none;
 }
 
-
-#cartlist table{
+#cartlist table {
     width: 90%;
     margin: 50px auto;
     font-size: 14px;
@@ -35,27 +34,27 @@
     border-bottom: 2px solid rgb(34, 34, 34);
     border-collapse: collapse;
 }
-#cartlist caption{
+#cartlist caption {
     padding: 20px 0px;
     text-decoration: underline wavy;
     font-size: 30px;
 }
-#cartlist th{
+#cartlist th {
     padding: 15px 0px;
     background-color: rgb(229, 229, 229);
     font-size: 16px;
 }
-#cartlist td{
+#cartlist td {
     padding: 10px 0px;
     border-top: 1px solid rgb(85, 85, 85);
     text-align: center;
 }
-#cartlist td img{
+#cartlist td img {
     width: 50px;
 }
 
 /* 카트버튼 이미지 */
-#mycart{
+#mycart {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -67,25 +66,37 @@
     font-size: 20px;
     font-weight: bold;
     color: hotpink;
-  }
-  
-  /* 카트박스 사이드 이동상태 */
-  #mycart.on{
+}
+
+/* 카트박스 사이드 이동상태 */
+#mycart.on {
     position: fixed;
     top: 50%;
     left: calc(100% - 70px);
     transform: translate(0, -50%);
-    transition: .4s ease-in 2s;
+    transition: 0.4s ease-in 2s;
     background-color: lightblue;
     border-radius: 10px 0 0 10px;
     padding: 10px;
-  }
-  /* 원본 이미지 크기 */
-  #mycart img{
+}
+/* 원본 이미지 크기 */
+#mycart img {
     width: 370px;
-  }
-  /* 변경된 이미지 크기 */
-  #mycart.on img{
+}
+/* 변경된 이미지 크기 */
+#mycart.on img {
     width: 50px;
-    transition: .4s ease-in 2s;
-  }
+    transition: 0.4s ease-in 2s;
+}
+
+#mycart .cntBx {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+    opacity: 0;
+}
+#mycart .cntBx {
+    transition: 0.4s 3s;
+    opacity: 1;
+}
