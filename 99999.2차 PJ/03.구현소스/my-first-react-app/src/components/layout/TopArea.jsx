@@ -6,37 +6,14 @@ import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 import { useEffect } from "react";
 
+import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //////////////// 상단영역 //////////////////////////////////////
 export function TopArea({ chgPg }) {
   useEffect(() => {
-    // $(".gnb .tr a").mouseover((e) => {
-    //   console.log(333, e.currentTarget);
-    // });
-    // $(document.querySelectorAll).ready(function() {
-    //     const xOffset = 10;
-    //     const yOffset = 30;
-    // $(document.querySelectorAll).on( "mouseover", "nail" ,function (e) {
-    //     let prev = $({className:"tr"});
-    //     let Img = $({src:$(this).attr("./images/sub/thum.jpg")});
-    //     prev.append(Img);
-    //     $("body").append(prev);
-    //     $(".tr")
-    //      .css("top",(e.pageY - xOffset) +"px")
-    //      .css("left",(e.pageX - yOffset) +"px")
-    //      .fadeIn("fast");
-    //     }); // 마우스 오버시
-    //     $(document.querySelectorAll).on( "mouseover", "nail" ,function (e) {
-    //     $(".tr")
-    //         .css("top",(e.pageY - xOffset) + "px")
-    //         .css("left",(e.pageX - yOffset) + "px")
-    //     });
-    //     $(document.querySelector).on( "mouseover", "nail" ,function () {
-    //         $(".tr").remove();
-    //     });
-    // });  /////  미리보기 함수
+    
   }, []);
 
   const goSub = (e) => {
@@ -88,7 +65,12 @@ export function TopArea({ chgPg }) {
                 </a>
               </h1>
             </div>
-            <div className="partbox col-7"></div>
+            <div className="partbox col-7">
+            <FontAwesomeIcon 
+            className="plane"
+            icon={faPlane} 
+            />
+            </div>
             <div className="t2 partbox col-1 br tr">
               <h1>
                 <a href="#" onClick={goSub}>

@@ -73,6 +73,25 @@
 }
 
 
+.plane{
+    font-size: 1.5vw;
+    color: #fff;
+    position: relative;
+    left: 550px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.plane::after{
+    display: block;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
 
 /* 메인영역 //////////////////////////////////////////////// */
 
