@@ -163,44 +163,48 @@ export function Board() {
                         <td>
                             {
                                 // 리스트모드 (L)
-                                bdMode === 'L' &&
-                            <button>
-                                <a href="#">Write</a>
-                            </button>
+                                bdMode === "L" && (
+                                    <button>
+                                        <a href="#">Write</a>
+                                    </button>
+                                )
                             }
                             {
                                 // 글쓰기모드 (C)
-                                bdMode === 'C' &&
-                                <>
-                            <button>
-                                <a href="#">Submit</a>
-                            </button>
-                            <button>
-                                <a href="#">List</a>
-                            </button>
-                                </>
+                                bdMode === "C" && (
+                                    <>
+                                        <button>
+                                            <a href="#">Submit</a>
+                                        </button>
+                                        <button>
+                                            <a href="#">List</a>
+                                        </button>
+                                    </>
+                                )
                             }
                             {
                                 // 읽기모드 (R)
-                                bdMode === 'R' &&
-                            <button>
-                                <a href="#">List</a>
-                            </button>
+                                bdMode === "R" && (
+                                    <button>
+                                        <a href="#">List</a>
+                                    </button>
+                                )
                             }
                             {
                                 // 수정모드 (U)
-                                bdMode === 'U' &&
-                                <>
-                            <button>
-                                <a href="#">Submit</a>
-                            </button>
-                            <button>
-                                <a href="#">Delete</a>
-                            </button>
-                            <button>
-                                <a href="#">List</a>
-                            </button>
-                                </>
+                                bdMode === "U" && (
+                                    <>
+                                        <button>
+                                            <a href="#">Submit</a>
+                                        </button>
+                                        <button>
+                                            <a href="#">Delete</a>
+                                        </button>
+                                        <button>
+                                            <a href="#">List</a>
+                                        </button>
+                                    </>
+                                )
                             }
                             {/* <button>
                                 <a href="#">Modify</a>
