@@ -16,6 +16,8 @@ export const CartList = memo(({ selData, flag }) => {
   // 상태관리변수 설정 /////////////
   // 1. 변경 데이터 변수 : 전달된 데이터로 초기셋팅
   const [cartData, setCartData] = useState(selData);
+  // 2. 리랜더링 강제적용 상태변수
+  const [force,setForce] = useState(null);
 
   console.log("받은 데이터", selData, "\n기존 데이터", cartData);
 
@@ -82,7 +84,7 @@ export const CartList = memo(({ selData, flag }) => {
     // 삭제기능만 작동한다!
     flag.current = false;
 
-    let confMsg = "정말정말정말로 지우시겠습니까? 할인도하는데?";
+    let confMsg = "하지마하지마하지마하지마제발!";
     // 지울지 여부를 사용자에게 물어본다!
     // confirm() 대화창에
     // '확인'->true, '취소'->false 리턴함!
@@ -179,6 +181,12 @@ export const CartList = memo(({ selData, flag }) => {
 
     // 전체 데이터 업데이트 하면 모두 리랜더링되게 하자!
     setCartData(cartData);
+    // BUT! 기존 배열 자체가 추가/삭제 되지않는 한
+    // 배열 데이터가 업데이트 된것으로 인식되지 않는다
+    // 따라서 강제 리랜더링 상태값을 설정하여 이 값을 
+    // 변경하여 리 랜더링 하자!
+    setForce(Math.random());
+    // 매번 랜덤수를 넣으면 반드시 리랜더링 된다!
 
   }; ////////// goResult 함수 //////////
 
