@@ -13,6 +13,8 @@ import { initData } from "../func/mem_fn";
 
 export function Member() {
 
+  
+
   // 컨텍스트 API 사용하기
   const myCon = useContext(dcCon);
 
