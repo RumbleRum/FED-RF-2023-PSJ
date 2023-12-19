@@ -1,5 +1,4 @@
-// 로그인페이지
-
+// 익페 로그인페이지
 
 // 제이쿼리
 import $ from 'jquery';
@@ -20,6 +19,10 @@ export function Login() {
     // 아이디 비번 메시지
     const msgId = ["아이디 필수입력.","아이디가 존재하지 않습니다."];
     const msgPwd = ["비밀번호 필수입력.","비밀번호가 존재하지 않습니다."];
+
+    // 에러 상태변수
+    const [idEr, setIdEr] = useState(msgId[0]);
+    const [pwdEr, setPwdEr] = useState(msgPwd[0]);
     
 
     return(
@@ -35,9 +38,17 @@ export function Login() {
                               maxLength="30"
                               placeholder="아이디를 입혁해 주세요!!"
                               value={useId}
-                              onChange={useIdError}
+                              
                             />
-
+                            {
+                                useIdError &&(
+                                  <div className="msg">
+                                    <small style={{color:"blue",fontSize:"20px"}}>
+                                        {idEr}
+                                    </small>
+                                  </div>
+                                )
+                            }
                         </li>
                         <li>
                             <label>비밀번호 : </label>
@@ -46,8 +57,17 @@ export function Login() {
                               maxLength="30"
                               placeholder="비밀번호를 입력해 주세요!!"
                               value={pwd}
-                              onChange={useIdError}
+                              
                              />
+                             {
+                                pwdError &&(
+                                    <div className="msg">
+                                        <small style={{color:"skyblue",fontSize:"10px"}}>
+                                            {pwdEr}
+                                        </small>
+                                    </div>
+                                )
+                             }
                         </li>
                     </ul>
                 </form>

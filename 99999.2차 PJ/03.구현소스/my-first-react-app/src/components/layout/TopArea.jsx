@@ -65,8 +65,12 @@ export function TopArea({ chgPg }) {
                             </h1>
                         </div>
                         <div className="partbox col-7">
-                            <FontAwesomeIcon className="plane" icon={faPlane} />
-                            <FontAwesomeIcon className="user" icon={faCircleUser} />
+                            <FontAwesomeIcon className="plane" icon={faPlane}>
+                               
+                            </FontAwesomeIcon>
+                            <FontAwesomeIcon className="user" icon={faCircleUser}>
+                                
+                            </FontAwesomeIcon>
                         </div>
                         <div className="t2 partbox col-1 br tr">
                             <h1>
