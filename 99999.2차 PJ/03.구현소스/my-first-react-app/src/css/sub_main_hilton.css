@@ -1,0 +1,100 @@
+
+
+/* 리셋,공통 외부 CSS 합치기(merging) */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./sub.css);
+
+/* 공사중표시 */
+ body * {
+    /* outline: 2px dashed blue; */
+}
+
+ body > div > * {
+    /* outline-color: red; */
+}
+
+ body{
+    overflow-x: hidden;
+}
+
+
+ .inbox1 {
+    width: 100vw;
+}
+.inbox::after,
+ .group-part::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+ .partbox {
+    /* float: left; */
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    /* height: 100%; */
+}
+ .flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+/* 숨길 박스 */
+ .col-none{display: none;}
+/* 보일 박스 */
+ .col-block{display: block;}
+
+
+#header.sub-header {
+    background-color: #fff;
+    position: fixed;
+    top: -60px;
+    left: 0;
+    width: 100vw;
+    z-index: 99999;
+    top: 0;
+}
+
+ .header .partbox {
+    height: 3vh;
+}
+
+ #header a{
+    color: #000;
+    text-decoration: none;
+}
+
+.fam2{
+    padding-left: 20px;
+    cursor: pointer;
+  }
+
+
+ #main {
+    background-color: #000;
+}
+ .main .ap2 .partbox {
+    height: 140vh;
+    padding-top: 100px;
+}
+ .main .ap3 .partbox {
+    height: 150vh;
+}
+ .main .ap3-11 .partbox {
+    height: 150vh;
+}
+
+ .main .ap4 .partbox {
+    height: 145vh;
+}
+
+ .main .ap5 .partbox {
+    height: 29vh;
+    
+}
+
+
+

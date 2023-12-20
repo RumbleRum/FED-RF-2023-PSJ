@@ -36,7 +36,6 @@ export function SubTopArea({ chgPg }) {
                             </h1>
                         </div>
                         <div className="partbox col-7">
-                            <FontAwesomeIcon className="Plane2" icon={faPlane} fontSize={'1vw'} />
                         </div>
                         <div className="t22 partbox col-1 br2">
                             <h1>
