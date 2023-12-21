@@ -5,24 +5,16 @@ import $ from 'jquery';
 
 import { useState } from 'react';
 
-export function Login11() {
+export function Login() {
 
     // 아디
     const [useId, setUseId] = useState('');
     // 비번
     const [pwd, setPwd] = useState('');
 
-    // 아디 비번 에러변수
-    const [useIdError, setUseIdError] = useState(false);
-    const [pwdError, setPwdError] = useState(false);
-
-    // 아이디 비번 메시지
-    const msgId = ["아이디 필수입력.","아이디가 존재하지 않습니다."];
-    const msgPwd = ["비밀번호 필수입력.","비밀번호가 존재하지 않습니다."];
-
-    // 에러 상태변수
-    const [idEr, setIdEr] = useState(msgId[0]);
-    const [pwdEr, setPwdEr] = useState(msgPwd[0]);
+    const reLogin = () => {
+        if()
+    }
     
 
     return(

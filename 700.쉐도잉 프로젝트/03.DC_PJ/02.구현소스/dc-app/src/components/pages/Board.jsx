@@ -38,25 +38,23 @@ let orgData;
 if (localStorage.getItem("bdata"))
   orgData = JSON.parse(localStorage.getItem("bdata"));
 // 로컬스 없으면 제이슨 데이터 넣기 + 로컬스 생성하기!
-else {
+else{ 
   // 기본 데이터 제이슨에서 가져온것 넣기
-  orgData = baseData;
-  // 로컬스 'bdata' 가 없으므로 여기서 최초 생성하기
-  // -> 조회수 증가시 로컬스 데이터로 확인하기 때문
-  localStorage.setItem('bdata',JSON.stringify(baseData));
-
-} /////////// else ///////////////////////
+  orgData = baseData;  
+} /////// else /////////
 // else orgData = [];
 
 // // console.log(org);
 
 // ******* Borad 컴포넌트 ******* //
 export function Board() {
-
-
-// 보드 에이터가 오컬스에 없으면 생성하기
-if(!localStorage.getItem)
-
+  
+  // 보드 데이터가 로컬스에 없으면 생성하기!
+  if (!localStorage.getItem("bdata")){ // !연산자로 false일때 실행
+    // 로컬스 'bdata'가 없으므로 여기서 최초 생성하기
+    // -> 조회수증가시 로컬스 데이터로 확인하기 때문!
+    localStorage.setItem('bdata',JSON.stringify(orgData));
+  } //////////// if ///////////////
 
 
   // 기본사용자 정보 셋업 함수 호출
@@ -578,7 +576,7 @@ if(!localStorage.getItem)
 
     // 3. [ 카운트 증가하기 조건검사 ] //////////
 
-    // 세션스에 등록된 글번호만큼 돌다가 같은 글이면
+    // 3-1. 세션스에 등록된 글번호만큼 돌다가 같은 글이면
     // isOK값을 false로 처리함!
     // 주의: cntIdx는 숫자로만 된 배열이다! [1,2,5,6]
     cntIdx.some((v) => {
@@ -589,21 +587,25 @@ if(!localStorage.getItem)
       } /// if /////
     }); /////////// some //////
 
-    // 로그인한 사용자일 경우 로그인 사용자 계정과 같은 
+    // 3-2. 로그인한 사용자일 경우 로그인 사용자계정과 같은
     // 글이면 증가하지 않는다!
     if(localStorage.getItem('minfo')){
-      
-      // 사용자 로그인정보 로컬스
-      let minfo = JSON.parse(localStorage.getItem('minfo'));
+      // 1.사용자 로그인정보 로컬스
+      let minfo = 
+      JSON.parse(localStorage.getItem('minfo'));
 
-      // 로그인 아이디
+      // 2.로그인 아이디
       let cUid = minfo.uid;
 
-      // 로그인 아이디 === 현재글 아이디
+      // 3.로그인 아이디 === 현재글 아이디 검사통과시 
+      // isOK 값 false처리로 조회수 증가막기!
       if(cUid === cData.current.uid) isOK = false;
-      
-      console.log('로그인 사용자 검사',cUid,isOK);
-    } ////// if /////////////////////////
+
+      console.log('로그인사용자검사',cUid,isOK);
+
+    } ////////////// if //////////////
+
+    console.log(localStorage.getItem("bdata"));
 
     // 4. [ 카운트 증가하기 ] ////////
     if (isOK) {

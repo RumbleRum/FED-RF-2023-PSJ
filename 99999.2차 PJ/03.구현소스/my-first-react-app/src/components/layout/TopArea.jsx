@@ -1,19 +1,25 @@
 // 상단영역 컴포넌트
 // GNB 데이터
 
+import { Route } from "react-router-dom"
+
 // 제이쿼리
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
-import { useEffect } from "react";
 
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
+
+
+
+
+
 //////////////// 상단영역 //////////////////////////////////////
 export function TopArea({ chgPg }) {
-    useEffect(() => {}, []);
 
     const goSub = (e) => {
         let tg = e.currentTarget;
@@ -48,7 +54,7 @@ export function TopArea({ chgPg }) {
     };
 
     return (
-        <>
+        <Router>
             <div id="header1">
                 <header className="header gnb">
                     <div className="flex-box">
@@ -69,7 +75,7 @@ export function TopArea({ chgPg }) {
                                
                             </FontAwesomeIcon>
                             <FontAwesomeIcon className="user" icon={faCircleUser}>
-                                
+                                <Route /> 
                             </FontAwesomeIcon>
                         </div>
                         <div className="t2 partbox col-1 br tr">
@@ -105,6 +111,6 @@ export function TopArea({ chgPg }) {
                     </div>
                 </header>
             </div>
-        </>
+        </Router>
     );
 }
