@@ -13,8 +13,26 @@ export function Login() {
     const [pwd, setPwd] = useState('');
 
     const reLogin = () => {
-        
+        if(useId==='user' && pwd==='password'){
+        history.push('/home');
     }
+    else{
+        
+        alert('로그인에 실패하였습니다, 아이디와 비밀번호를 확인하여주세요')
+    }
+    };
+
+    // 유효성 검사
+    const totalValid = () => {
+        if(!useId) true;
+        if(!pwd) true;
+        // 통과시
+        if(useId&&pwd) return true;
+        else return false;
+    }
+    
+    
+    
     
 
     return(
@@ -27,39 +45,17 @@ export function Login() {
                             <label>아이디 : </label>
                             <input 
                               type="text" 
-                              maxLength="30"
-                              placeholder="아이디를 입혁해 주세요!!"
                               value={useId}
-                              
-                            />
-                            {
-                                useIdError &&(
-                                  <div className="msg">
-                                    <small style={{color:"blue",fontSize:"20px"}}>
-                                        {idEr}
-                                    </small>
-                                  </div>
-                                )
-                            }
+                              onChange={e=>setUseId(e.currentTarget.value)}
+                              />
                         </li>
                         <li>
                             <label>비밀번호 : </label>
                             <input
                               type="text"
-                              maxLength="30"
-                              placeholder="비밀번호를 입력해 주세요!!"
                               value={pwd}
-                              
+                              onChange={e=>setPwd(e.currentTarget.value)}
                              />
-                             {
-                                pwdError &&(
-                                    <div className="msg">
-                                        <small style={{color:"skyblue",fontSize:"10px"}}>
-                                            {pwdEr}
-                                        </small>
-                                    </div>
-                                )
-                             }
                         </li>
                     </ul>
                 </form>
