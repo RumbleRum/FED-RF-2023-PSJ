@@ -1,11 +1,14 @@
-// 익페 로그인페이지
+//  로그인페이지
 
 // 제이쿼리
 import $ from 'jquery';
 
+import '../../css/member.css';
+
 import { useState } from 'react';
 
-export function Login11() {
+
+export function Login() {
 
     // 아디
     const [useId, setUseId] = useState('');
@@ -23,7 +26,7 @@ export function Login11() {
     // 에러 상태변수
     const [idEr, setIdEr] = useState(msgId[0]);
     const [pwdEr, setPwdEr] = useState(msgPwd[0]);
-    
+
 
     return(
         <div className="out-box">
@@ -36,7 +39,7 @@ export function Login11() {
                             <input 
                               type="text" 
                               maxLength="30"
-                              placeholder="아이디를 입혁해 주세요!!"
+                              placeholder="아이디를 입혁해 주세요!"
                               value={useId}
                               
                             />
@@ -55,7 +58,7 @@ export function Login11() {
                             <input
                               type="text"
                               maxLength="30"
-                              placeholder="비밀번호를 입력해 주세요!!"
+                              placeholder="비밀번호를 입력해 주세요!"
                               value={pwd}
                               
                              />

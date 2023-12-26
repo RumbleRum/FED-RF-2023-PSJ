@@ -54,7 +54,6 @@ export function TopArea({ chgPg }) {
     };
 
     return (
-        <Router>
             <div id="header1">
                 <header className="header gnb">
                     <div className="flex-box">
@@ -111,6 +110,5 @@ export function TopArea({ chgPg }) {
                     </div>
                 </header>
             </div>
-        </Router>
     );
 }
