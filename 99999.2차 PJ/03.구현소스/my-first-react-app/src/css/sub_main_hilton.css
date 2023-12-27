@@ -3,7 +3,7 @@
 /* 리셋,공통 외부 CSS 합치기(merging) */
 @import url(./reset.css);
 @import url(./core.css);
-@import url(./sub.css);
+@import url(./sub_main_hilton.css);
 
 /* 공사중표시 */
  body * {
@@ -19,7 +19,7 @@
 }
 
 
- .inbox1 {
+ .inbox2 {
     width: 100vw;
 }
 .inbox::after,
@@ -76,22 +76,22 @@
  #main {
     background-color: #000;
 }
- .main .ap2 .partbox {
+ .main .bp2 .partbox {
     height: 140vh;
     padding-top: 100px;
 }
- .main .ap3 .partbox {
+ .main .bp3 .partbox {
     height: 150vh;
 }
- .main .ap3-11 .partbox {
+ .main .bp3-11 .partbox {
     height: 150vh;
 }
 
- .main .ap4 .partbox {
+ .main .bp4 .partbox {
     height: 145vh;
 }
 
- .main .ap5 .partbox {
+ .main .bp5 .partbox {
     height: 29vh;
     
 }

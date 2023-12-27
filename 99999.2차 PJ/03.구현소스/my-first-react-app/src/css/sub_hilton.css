@@ -1,5 +1,3 @@
-
-
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
@@ -19,42 +17,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Orbit&display=swap");
 /* font-family: 'Gugi', cursive; */
 
-
 /* 상단영역 //////////////////////////////////////////////// */
 
- .t11 {
+.t11 {
     display: flex;
     align-items: center;
     justify-content: center;
     border-right: 2px solid #000;
 }
 
- .t11 img {
+.t11 img {
     width: 120%;
     color: #fff;
     cursor: pointer;
-    
 }
 
-.hom2{
+.hom2 {
     width: 80px;
 }
 
-
- .t22 {
+.t22 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
- .t22 h1 {
+.t22 h1 {
     font-size: 0.9vw;
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
- .t22 h1:after {
+.t22 h1:after {
     display: block;
     content: "";
     border-bottom: solid 2px #000;
@@ -62,49 +57,45 @@
     transition: transform 0.3s ease-in-out;
 }
 
- .t22 h1:hover:after {
+.t22 h1:hover:after {
     transform: scaleX(1);
 }
 
- .br2{
+.br2 {
     border-right: 2px solid #000;
 }
 
-
 /* 메인영역 //////////////////////////////////////////////// */
 
-.move-txt{
+.move-txt {
     position: relative;
     top: 400px;
     opacity: 0;
 }
 
-
-.ap1{
-     aspect-ratio: 2/1.25;
-    background: url(../../public/images/sub/thum.jpg) no-repeat top/100%;
+.bp1 {
+    aspect-ratio: 2/1.25;
+    background: url(../../public/images/sub/hlt/ht1.png) no-repeat top/100%;
 }
 
-
- .ap1-1 {
+.bp1-1 {
     height: 25vh;
 }
 
- .ap1-2 {
+.bp1-2 {
     gap: 10px;
     font-size: 15.5vw;
     color: #fff;
 }
 
- .ap1-3 {
+.bp1-3 {
     font-size: 2.5vw;
     color: rgb(241, 220, 191);
     font-weight: bold;
     margin-top: 150px;
-
 }
 
- .ap1-4 {
+.bp1-4 {
     font-size: 15px;
     color: #fff;
     display: flex;
@@ -112,11 +103,11 @@
     align-items: flex-end;
 }
 
- .ap2 .flex-box {
+.bp2 .flex-box {
     background-color: #fff;
 }
 
- .ap2-1 h1{
+.bp2-1 h1 {
     display: flex;
     font-size: 2vw;
     color: #000;
@@ -124,30 +115,30 @@
     font-weight: bold;
 }
 
- .ap2-1 span{
+.bp2-1 span {
     display: flex;
     font-size: 8vw;
     font-weight: bold;
     color: #000;
-    line-height: 160px;   
+    line-height: 160px;
     padding-left: 15px;
 }
 
- .ap2-1 img{
+.bp2-1 img {
     position: relative;
     width: 60%;
     display: flex;
     top: 215px;
 }
- .ap2-2 {
+.bp2-2 {
     background: url(../../public/images/sub/ssub2.jpg) no-repeat center/cover;
 }
 
- .ap3{
+.bp3 {
     background-color: #fff;
 }
 
- .ap3-1 h1{
+.bp3-1 h1 {
     position: relative;
     flex-wrap: wrap;
     padding: 15px;
@@ -159,62 +150,60 @@
     top: 200px;
 }
 
- .ap3-2 {
+.bp3-2 {
     background: url(../../public/images/sub/ssub3.png) no-repeat center/cover;
 }
 
-
- .ap4-2 {
+.bp4-2 {
     background: url(../../public/images/sub/ssub4.png) no-repeat center/cover;
 }
 
- .ap4{
+.bp4 {
     background-color: #fff;
 }
 
-
- .ap4-1 h1{
+.bp4-1 h1 {
     padding: 15px;
     display: flex;
     font-size: 12vw;
     font-weight: bold;
     line-height: 100px;
     padding-top: 70px;
-    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-family: "IBM Plex Sans KR", sans-serif;
 }
 
- .ap4-1 h2{
+.bp4-1 h2 {
     padding: 15px;
     display: flex;
     font-size: 4vw;
     font-weight: bold;
     padding-top: 175px;
-    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-family: "IBM Plex Sans KR", sans-serif;
 }
 
- .ap4-1 span{
+.bp4-1 span {
     display: flex;
     font-size: 1.4vw;
     font-weight: bold;
     color: #000;
-    line-height: 40px;   
+    line-height: 40px;
     padding-left: 15px;
-    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-family: "IBM Plex Sans KR", sans-serif;
 }
 
-.ap4-1 img{
+.bp4-1 img {
     position: relative;
     width: 60%;
     display: flex;
     top: 60px;
 }
 
- .ap5{
+.bp5 {
     /* height: 100vh; */
     background-color: #0e0f47;
 }
 
- .ap5-1 h1{
+.bp5-1 h1 {
     margin-top: 10px;
     padding: 15px;
     display: flex;
@@ -225,46 +214,43 @@
     color: rgb(241, 220, 191);
     justify-content: center;
     letter-spacing: 1px;
-    word-spacing: -35px
+    word-spacing: -35px;
 }
 
-
- .ap5-2 img{
+.bp5-2 img {
     position: relative;
     height: 400px;
     width: 850px;
     display: flex;
     transform: scale(0.95);
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
     padding-left: 20px;
 }
 
- .ap5-2-2 img{
+.bp5-2-2 img {
     padding-left: 20px;
     position: relative;
     height: 400px;
     width: 850px;
     display: flex;
     transform: scale(0.95);
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
- .ap5-2 img:hover{
+.bp5-2 img:hover {
     transform: scale(1);
 }
- .ap5-2-2 img:hover{
+.bp5-2-2 img:hover {
     transform: scale(1);
 }
 
-
-
- .ap5-3 {
+.bp5-3 {
     background: url(../../public/images/hotel/conrad.png) no-repeat bottom;
 }
- .ap5-3-3 {
+.bp5-3-3 {
     background: url(../../public/images/hotel/hilton.png) no-repeat bottom;
 }
 
- .ap5-4{
+.bp5-4 {
     padding: 15px;
     display: flex;
     font-size: 12vw;
@@ -278,7 +264,7 @@
     align-items: flex-end;
 }
 
- .ap6-4 {
+.bp6-4 {
     height: 1vh;
     font-size: 13px;
     color: #fff;
