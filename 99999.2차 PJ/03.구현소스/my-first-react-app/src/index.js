@@ -10,6 +10,7 @@ import ReactDOM from "react-dom/client";
 import "./css/main.css";
 import { MainPage } from "./components/pages/MainPage";
 import { SubPage } from "./components/pages/SubPage";
+import { SubPage_HT } from "./components/pages/SubPage_HT";
 
 function App() {
   const [pgName, setPgName] = useState("main");
@@ -28,7 +29,11 @@ function App() {
           <MainPage chgPg={chgPage} />
         ) : pgName === "sub" ? (
           <SubPage chgPg={chgPage} />
-        ) : (
+        ) : pgName === "sub2" ? (
+          <SubPage_HT chgPg={chgPage} />
+        ) 
+          :
+        (
           <MainPage chgPg={chgPage} />
         )}
       </div>

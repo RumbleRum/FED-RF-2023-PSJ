@@ -25,7 +25,71 @@ export function TopArea({ chgPg }) {
         let tg = e.currentTarget;
         let txt = tg.innerText;
         console.log(txt);
-        if (txt === "HILTON" || txt === "CROCKFORDS" || txt === "CONRAD") {
+        if (txt === "CROCKFORDS") {
+            $(tg)
+                .siblings(".nail")
+                .css({
+                    transform: "none",
+                })
+                .animate(
+                    {
+                        width: "100vw",
+                        top: "0",
+                        left: "0",
+                        marginLeft: "0",
+                    },
+                    2000,
+                    () => {
+                        setTimeout(() => {
+                            chgPg("sub");
+                        }, 1000);
+                    }
+                )
+                .parent()
+                .addClass("on");
+        }
+
+        // 홈버튼클릭
+        if (txt === "Home") chgPg("main");
+    };
+
+    const goSub2 = (e) => {
+        let tg = e.currentTarget;
+        let txt = tg.innerText;
+        console.log(txt);
+        if (txt === "HILTON") {
+            $(tg)
+                .siblings(".nail")
+                .css({
+                    transform: "none",
+                })
+                .animate(
+                    {
+                        width: "100vw",
+                        top: "0",
+                        left: "0",
+                        marginLeft: "0",
+                    },
+                    2000,
+                    () => {
+                        setTimeout(() => {
+                            chgPg("sub2");
+                        }, 1000);
+                    }
+                )
+                .parent()
+                .addClass("on");
+        }
+
+        // 홈버튼클릭
+        if (txt === "Home") chgPg("main");
+    };
+
+    const goSub3 = (e) => {
+        let tg = e.currentTarget;
+        let txt = tg.innerText;
+        console.log(txt);
+        if (txt === "CONRAD") {
             $(tg)
                 .siblings(".nail")
                 .css({
@@ -79,7 +143,7 @@ export function TopArea({ chgPg }) {
                         </div>
                         <div className="t2 partbox col-1 br tr">
                             <h1>
-                                <a href="#" onClick={goSub}>
+                                <a href="#" onClick={goSub2}>
                                     HILTON
                                 </a>
                                 <div className="nail">
@@ -99,7 +163,7 @@ export function TopArea({ chgPg }) {
                         </div>
                         <div className="t2 partbox col-1 ">
                             <h1>
-                                <a href="#" onClick={goSub}>
+                                <a href="#" onClick={goSub3}>
                                     CONRAD
                                 </a>
                                 <div className="nail">
