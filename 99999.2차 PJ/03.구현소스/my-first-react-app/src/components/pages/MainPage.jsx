@@ -29,6 +29,7 @@ export function MainPage({chgPg}) {
         initWnum();
         
         return(()=>{
+          if(document.querySelector(".wrap"))
             document.querySelector(".wrap").removeEventListener("wheel", wheelFn);
         });
       }, []);
