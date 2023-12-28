@@ -58,6 +58,10 @@
     top: 0;
 }
 
+.sub-header{
+    border-bottom: 1px solid #000;
+}
+
  .header .partbox {
     height: 3vh;
 }

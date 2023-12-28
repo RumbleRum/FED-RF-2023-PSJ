@@ -30,7 +30,7 @@ export function Login({ chgPg }) {
     <>
       <SubTopArea chgPg={chgPg} />
 
-      <div className="out-box" style={{ marginTop: "100px" }}>
+      <div className="out-box">
         <section className="log-box" style={{ minHeight: "500px" }}>
           <h2>LOGIN</h2>
           <form method="post" action="/login">
@@ -52,10 +52,10 @@ export function Login({ chgPg }) {
                 )}
               </li>
               <li>
-                <label>비밀번호 : </label>
+                <label style={{paddingRight:"20px"}}>비밀번호 : </label>
                 <input
+                  paddingRight="20px"
                   type="text"
-                  maxLength="30"
                   placeholder="비밀번호를 입력해 주세요!"
                   value={pwd}
                 />

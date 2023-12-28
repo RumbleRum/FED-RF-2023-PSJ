@@ -1,26 +1,31 @@
 /* 회원가입 페이지 CSS */
 
 /* 최상위 부모박스 */
-.out-bx{
-    padding: 25px;
+.out-box{
+    background: url(../../public/images/gaip_main.jpg) no-repeat center/100%;
+    height: 100vh;
+    opacity: 70%;
 }
 /* 전체박스 */
 .log-box{
+    position: relative;
     max-width: 700px;
     min-height: 600px;
     padding: 15px;
-    border: 1px solid #555;
+    border: 2px solid #000;
+    border-radius: 2%;
     margin: 0 auto;
     font-family: 'Ubuntu Condensed', sans-serif;
-    
+    top: 180px;
+    background-color: #f7efdf;
 }
 
 .log-box h2{
     text-align: center;
-    text-decoration: underline;
-    text-decoration-style: double;
-    padding: 15px;
-    font-size: 30px;
+    text-decoration: dotted;
+    text-decoration-style: solid;
+    padding: 35px;
+    font-size: 45px;
 }
 
 .log-box li{

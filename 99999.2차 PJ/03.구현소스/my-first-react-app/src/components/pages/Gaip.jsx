@@ -229,7 +229,7 @@ export function Gaip({ chgPg }) {
     <>
       <SubTopArea chgPg={chgPg} />
 
-      <div className="outbx" style={{ marginTop: "100px" }}>
+      <div className="outbx">
         {/* 회원가입 모듈코드 */}
         <section className="membx">
           <h2>Wellcome Join Us</h2>
@@ -392,6 +392,7 @@ export function Gaip({ chgPg }) {
                 {/* 7. 로그인 페이지링크 */}
                 혹시 이전에 회원에 가입하셨나요?
                 <a
+                  style={{fontSize:"15px"}}
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
