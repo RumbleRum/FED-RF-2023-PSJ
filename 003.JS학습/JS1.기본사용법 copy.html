@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JS01. 자바스크립트 기본 + DOM선택법</title>
+        <style>
+            body * {
+                outline: 2px dashed blue;
+            }
+
+            body > div > * {
+                outline-color: red;
+            }
+
+            .hotel-box {
+                display: flex;
+            }
+
+            .inbox {
+                flex-shrink: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+            /* .inbox::after,
+            .group-part::after {
+                content: "";
+                display: block;
+                clear: both;
+            } */
+
+            .main .partbox {
+                height: 100vh;
+            }
+
+            .partbox {
+                /* float: left; */
+                text-align: center;
+                box-sizing: border-box;
+                padding: 15px;
+                /* height: 100%; */
+            }
+            .flex-box {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 15px;
+            }
+
+            .hotlist{
+                font-size: 50px;
+            }
+            .htbox{
+                font-size: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div className="hotel-box">
+            <section className="main inbox2">
+                <div className="flex-box">
+                    <div className="partbox col-7 hotlist">
+                        <h2>나는 박서진이다</h2>
+                    </div>
+                    <div className="partbox col-5 htbox">
+                        <h2>응응 나는 박서진이다</h2>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

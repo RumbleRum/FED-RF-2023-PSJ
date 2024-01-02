@@ -52,7 +52,7 @@ export function Login({ chgPg }) {
                 )}
               </li>
               <li>
-                <label style={{paddingRight:"20px"}}>비밀번호 : </label>
+                <label>비밀번호 : </label>
                 <input
                   paddingRight="20px"
                   type="text"
@@ -67,6 +67,11 @@ export function Login({ chgPg }) {
                   </div>
                 )}
               </li>
+              <li style={{overflow:'hidden'}}>
+              <button className="sbtn"  >
+                로그인
+              </button>
+            </li>
             </ul>
           </form>
         </section>
