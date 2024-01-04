@@ -39,7 +39,7 @@ export function SubTopArea({ chgPg }) {
                         </div>
                         <div className="t22 partbox col-1 br2">
                             <h1>
-                                <a href="#" onClick={() => chgPg("sub")}>
+                                <a href="#" onClick={() => chgPg("sub2")}>
                                     HILTON
                                 </a>
                             </h1>
