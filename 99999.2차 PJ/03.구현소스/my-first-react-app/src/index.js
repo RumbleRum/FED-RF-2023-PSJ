@@ -13,7 +13,7 @@ import { SubPage } from "./components/pages/SubPage";
 import { Gaip } from "./components/pages/Gaip";
 import { Login } from "./components/pages/Login";
 import { SubPage_HT } from "./components/pages/SubPage_HT";
-
+import { HotelApp } from "./components/pages/HotelApp";
 
 function App() {
     const [pgName, setPgName] = useState("main");
@@ -37,6 +37,8 @@ function App() {
                     <Gaip chgPg={chgPage} />
                 ) : pgName === "login" ? (
                     <Login chgPg={chgPage} />
+                ) : pgName === "hotel" ? (
+                    <HotelApp chgPg={chgPage} />
                 ) : (
                     <MainPage chgPg={chgPage} />
                 )}

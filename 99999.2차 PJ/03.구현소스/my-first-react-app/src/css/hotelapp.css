@@ -1,0 +1,8 @@
+.hoi{
+    position: relative;
+    display: flex;
+    text-align: center;
+    left: 20vw;
+    margin-top: 100px;
+    /* background-color: #ffe3b8; */
+}

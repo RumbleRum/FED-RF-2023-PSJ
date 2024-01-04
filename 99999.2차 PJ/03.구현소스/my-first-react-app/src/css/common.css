@@ -81,7 +81,7 @@
     font-size: 1.5vw;
     color: #fff;
     position: relative;
-    left: 520px;
+    left: 550px;
     bottom: 15px;
     cursor: pointer;
 }
@@ -101,7 +101,7 @@
     font-size: 1.5vw;
     color: #fff;
     position: relative;
-    left: 440px;
+    left: 470px;
     bottom: 15px;
     cursor: pointer;
 }
@@ -114,6 +114,26 @@
 }
 
 .user:hover {
+    transform: scale(1.2);
+}
+
+.hotel{
+    font-size: 1.5vw;
+    color: #fff;
+    position: relative;
+    left: 385px;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+.hotel::after{
+    display: block;
+    content: "";
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hotel:hover {
     transform: scale(1.2);
 }
 
