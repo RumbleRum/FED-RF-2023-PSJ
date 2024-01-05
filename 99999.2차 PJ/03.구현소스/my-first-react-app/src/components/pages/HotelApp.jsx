@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { SubTopArea } from "./SubTopArea";
+import { DateRangePicker } from "./DateRangePicker";
+import 'react-datepicker/dist/react-datepicker.css';
 
 // css
 import "../../css/hotelapp.css";
@@ -10,29 +12,14 @@ import "../../css/hotelapp.css";
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
-const RoomList = ({ rooms, onRoomSelect }) => {
-    return (
-        <div className="hoi">
-            <div>
-                <h2 style={{ fontSize: "30px" }}>※객실 목록※</h2>
-                <ul style={{ fontSize: "30px" }}>
-                    {rooms.map((room) => (
-                        <li key={room.id} onClick={() => onRoomSelect(room)}>
-                            {room.name}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </div>
-    );
-};
 
 const ReservationForm = ({ room, onReservation }) => {
     const [name, setName] = useState("");
     const [date, setDate] = useState("");
-
+   
+    
     const handleReservation = () => {
-        onReservation(name, date);
+        onReservation(name, date,);
         setName("");
         setDate("");
     };
@@ -46,11 +33,32 @@ const ReservationForm = ({ room, onReservation }) => {
                     이름:
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
                 </label>
-                <label style={{ fontSize: "20px" }}>
-                    예약일:
+                <DateRangePicker />
+                {/* <label style={{ fontSize: "20px" }}>
+                    체크인:    
                     <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
                 </label>
+                <label style={{ fontSize: "20px" }}>
+                    체크아웃:   
+                    <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+                </label> */}
                 <button onClick={handleReservation}>예약하기</button>
+            </div>
+        </div>
+    );
+};
+
+const RoomList = ({ rooms, onRoomSelect }) => {
+    return (
+        <div className="hoi">
+            <div>
+                <ul style={{ fontSize: "30px" }}>
+                    {rooms.map((room) => (
+                        <li key={room.id} onClick={() => onRoomSelect(room)}>
+                            {room.name}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     );
@@ -60,18 +68,36 @@ export function HotelApp({ chgPg }) {
     const [selectedRoom, setSelectedRoom] = useState("");
     const [reservations, setReservations] = useState([]);
 
+    ////// 날짜 가져오기 ///////////////////////////
+    const [startDate, setStartDate] = useState("");
+    const [endDate, setEndDate] = useState("");
+
+    const handleStartDateChange = (date) => {
+        setStartDate(date);
+    };
+    const handleEndDateChange = (date) => {
+        setEndDate(date);
+    };
+    ///////////////////////////////////////////////
+
     const rooms = [
         {
             id: 1,
             name: "Deluxe room",
+            info:"149000",
+            isrc:"../../../public/images/hotel/conrad1.jpg"
         },
         {
             id: 2,
             name: "Strip View Deluxe room",
+            info:"289000",
+            isrc:"../../../public/images/hotel/crockfords1.jpg"
         },
         {
             id: 3,
             name: "City View Deluxe room",
+            info:"528000",
+            isrc:"../../../public/images/hotel/hilton1.jpeg"
         },
     ];
 
@@ -79,12 +105,12 @@ export function HotelApp({ chgPg }) {
         setSelectedRoom(room);
     };
 
-    const handleReservation = (name, date) => {
+    const handleReservation = (name, date, startDate, endDate) => {
         const reservation = {
             id: reservations.length + 1,
             room: selectedRoom.name,
-            name,
-            date,
+            name, startDate,
+            date, endDate,
         };
         setReservations([...reservations, reservation]);
         setSelectedRoom(null);
@@ -93,21 +119,20 @@ export function HotelApp({ chgPg }) {
     return (
         <>
          <SubTopArea chgPg={chgPg} />
-
             <div className="hoi">
-                <div>
-                    <RoomList rooms={rooms} onRoomSelect={handleRoomSelect} />
-                    {selectedRoom && <ReservationForm room={selectedRoom} onReservation={handleReservation} />}
-                    <div>
+                    <div className="res">
                         <h2 style={{ fontSize: "30px" }}>예약 목록</h2>
                         <ul style={{ fontSize: "30px" }}>
                             {reservations.map((reservation) => (
                                 <li key={reservation.id}>
-                                    {`${reservation.name}님, 객실 ${reservation.room}을(를) ${reservation.date}일에 예약하셨습니다.`}
+                                    {`${reservation.name}님, 객실 ${reservation.room}을(를) ${reservation.date}부터~${reservation.date}일에 예약하셨습니다.`}
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </div> 
+                <div>
+                    {selectedRoom && <ReservationForm room={selectedRoom} onReservation={handleReservation} />}
+                    <RoomList rooms={rooms} onRoomSelect={handleRoomSelect} />
                 </div>
             </div>
         </>
