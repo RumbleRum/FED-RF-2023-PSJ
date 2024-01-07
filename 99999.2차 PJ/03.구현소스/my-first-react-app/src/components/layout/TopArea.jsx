@@ -19,7 +19,31 @@ export function TopArea({ chgPg }) {
     let tg = e.currentTarget;
     let txt = tg.innerText;
     console.log(txt);
-    if (txt === "HILTON" || txt === "CROCKFORDS" || txt === "CONRAD") {
+    if (txt === "HILTON") {
+      $(tg)
+        .siblings(".nail")
+        .css({
+          transform: "none",
+        })
+        .animate(
+          {
+            width: "100vw",
+            top: "0",
+            left: "0",
+            marginLeft: "0",
+          },
+          2000,
+          () => {
+            setTimeout(() => {
+              chgPg("sub2");
+            }, 1000);
+          }
+        )
+        .parent()
+        .addClass("on");
+    }
+
+    if (txt === "CROCKFORDS") {
       $(tg)
         .siblings(".nail")
         .css({
@@ -42,6 +66,32 @@ export function TopArea({ chgPg }) {
         .parent()
         .addClass("on");
     }
+
+    if (txt === "CONRAD") {
+      $(tg)
+        .siblings(".nail")
+        .css({
+          transform: "none",
+        })
+        .animate(
+          {
+            width: "100vw",
+            top: "0",
+            left: "0",
+            marginLeft: "0",
+          },
+          2000,
+          () => {
+            setTimeout(() => {
+              chgPg("sub3");
+            }, 1000);
+          }
+        )
+        .parent()
+        .addClass("on");
+    }
+
+
 
     console.log(e.currentTarget.classList.contains('plane'));
     if(e.currentTarget.classList.contains('plane')) chgPg('gaip');

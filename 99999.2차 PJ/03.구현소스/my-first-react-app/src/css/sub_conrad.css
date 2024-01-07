@@ -73,30 +73,30 @@
 
 /* 메인영역 //////////////////////////////////////////////// */
 
-.move-txt{
+.move-txt3{
     position: relative;
     top: 400px;
     opacity: 0;
 }
 
 
-.ap1{
+.cp1{
      aspect-ratio: 2/1.25;
-    background: url(../../public/images/sub/thum.jpg) no-repeat top/100%;
+    background: url(../../public/images/sub/thum3.jpg) no-repeat top/100%;
 }
 
 
- .ap1-1 {
+ .cp1-1 {
     height: 25vh;
 }
 
- .ap1-2 {
+ .cp1-2 {
     gap: 10px;
     font-size: 15.5vw;
     color: #fff;
 }
 
- .ap1-3 {
+ .cp1-3 {
     font-size: 2.5vw;
     color: rgb(241, 220, 191);
     font-weight: bold;
@@ -104,7 +104,7 @@
 
 }
 
- .ap1-4 {
+ .cp1-4 {
     font-size: 15px;
     color: #fff;
     display: flex;
@@ -112,11 +112,11 @@
     align-items: flex-end;
 }
 
- .ap2 .flex-box {
+ .cp2 .flex-box {
     background-color: #fff;
 }
 
- .ap2-1 h1{
+ .cp2-1 h1{
     display: flex;
     font-size: 2vw;
     color: #000;
@@ -124,7 +124,7 @@
     font-weight: bold;
 }
 
- .ap2-1 span{
+ .cp2-1 span{
     display: flex;
     font-size: 8vw;
     font-weight: bold;
@@ -133,21 +133,21 @@
     padding-left: 15px;
 }
 
- .ap2-1 img{
+ .cp2-1 img{
     position: relative;
     width: 60%;
     display: flex;
     top: 215px;
 }
- .ap2-2 {
+ .cp2-2 {
     background: url(../../public/images/sub/ssub2.jpg) no-repeat center/cover;
 }
 
- .ap3{
+ .cp3{
     background-color: #fff;
 }
 
- .ap3-1 h1{
+ .cp3-1 h1{
     position: relative;
     flex-wrap: wrap;
     padding: 15px;
@@ -159,21 +159,21 @@
     top: 200px;
 }
 
- .ap3-2 {
+ .cp3-2 {
     background: url(../../public/images/sub/ssub3.png) no-repeat center/cover;
 }
 
 
- .ap4-2 {
+ .cp4-2 {
     background: url(../../public/images/sub/ssub4.png) no-repeat center/cover;
 }
 
- .ap4{
+ .cp4{
     background-color: #fff;
 }
 
 
- .ap4-1 h1{
+ .cp4-1 h1{
     padding: 15px;
     display: flex;
     font-size: 12vw;
@@ -183,7 +183,7 @@
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
- .ap4-1 h2{
+ .cp4-1 h2{
     padding: 15px;
     display: flex;
     font-size: 4vw;
@@ -192,7 +192,7 @@
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
- .ap4-1 span{
+ .cp4-1 span{
     display: flex;
     font-size: 1.4vw;
     font-weight: bold;
@@ -202,19 +202,19 @@
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
-.ap4-1 img{
+.cp4-1 img{
     position: relative;
     width: 60%;
     display: flex;
     top: 60px;
 }
 
- .ap5{
+ .cp5{
     /* height: 100vh; */
     background-color: #0e0f47;
 }
 
- .ap5-1 h1{
+ .cp5-1 h1{
     margin-top: 10px;
     padding: 15px;
     display: flex;
@@ -229,7 +229,7 @@
 }
 
 
- .ap5-2 img{
+ .cp5-2 img{
     position: relative;
     height: 400px;
     width: 850px;
@@ -239,7 +239,7 @@
     padding-left: 20px;
 }
 
- .ap5-2-2 img{
+ .cp5-2-2 img{
     padding-left: 20px;
     position: relative;
     height: 400px;
@@ -248,23 +248,23 @@
     transform: scale(0.95);
     transition: .4s ease-in-out;
 }
- .ap5-2 img:hover{
+ .cp5-2 img:hover{
     transform: scale(1);
 }
- .ap5-2-2 img:hover{
+ .cp5-2-2 img:hover{
     transform: scale(1);
 }
 
 
 
- .ap5-3 {
+ .cp5-3 {
     background: url(../../public/images/hotel/conrad.png) no-repeat bottom;
 }
- .ap5-3-3 {
+ .cp5-3-3 {
     background: url(../../public/images/hotel/hilton.png) no-repeat bottom;
 }
 
- .ap5-4{
+ .cp5-4{
     padding: 15px;
     display: flex;
     font-size: 12vw;
@@ -278,7 +278,7 @@
     align-items: flex-end;
 }
 
- .ap6-4 {
+ .cp6-4 {
     height: 1vh;
     font-size: 13px;
     color: #fff;

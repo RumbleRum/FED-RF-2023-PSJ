@@ -107,9 +107,9 @@ export function SubMainArea_HT() {
                         </div>
                         <div className="partbox col-5 bp6-4">
                             <h1>
-                                <FontAwesomeIcon icon={faTiktok} fontSize={"25px"} className="fam" />
-                                <FontAwesomeIcon icon={faInstagram} fontSize={"25px"} className="fam" />
-                                <FontAwesomeIcon icon={faYoutube} fontSize={"25px"} className="fam" />
+                                <FontAwesomeIcon icon={faTiktok} fontSize={"25px"} className="fam2" />
+                                <FontAwesomeIcon icon={faInstagram} fontSize={"25px"} className="fam2" />
+                                <FontAwesomeIcon icon={faYoutube} fontSize={"25px"} className="fam2" />
                             </h1>
                         </div>
                         <div className="partbox col-1 bp6-4">

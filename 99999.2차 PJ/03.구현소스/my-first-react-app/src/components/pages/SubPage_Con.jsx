@@ -1,23 +1,22 @@
-import { SubMainArea } from "./SubMainArea";
-import { SubTopArea } from "./SubTopArea";
-
 
 // 서브 css
-import "../../css/sub_main.css";
-import "../../css/sub.css";
+import "../../css/sub_main_conrad.css";
+import "../../css/sub_conrad.css";
 
 import { useEffect } from "react";
 
 import $ from 'jquery'
+import { SubMainArea_Con } from "./SubMainArea_Con";
+import { SubTopArea_Con } from "./SubTopArea_Con";
 
-export function SubPage({chgPg}){
+export function SubPage_Con({chgPg}){
     useEffect(()=>{
         $('html,body').css({overflow:'visible'})
     },[])
     return(
         <>
-            <SubTopArea chgPg={chgPg} />
-            <SubMainArea />
+            <SubTopArea_Con chgPg={chgPg} />
+            <SubMainArea_Con />
         </>
     )
 }

@@ -4,9 +4,6 @@
 import { useLayoutEffect } from "react";
 import $ from "jquery";
 
-import { faPlane } from "@fortawesome/free-solid-svg-icons";
-import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 ///////// 서브 상단 영역 //////////////////////////////
 export function SubTopArea_HT({ chgPg }) {
@@ -53,7 +50,7 @@ export function SubTopArea_HT({ chgPg }) {
                         </div>
                         <div className="t22 partbox col-1">
                             <h1>
-                                <a href="#" onClick={() => chgPg("sub")}>
+                                <a href="#" onClick={() => chgPg("sub3")}>
                                     CONRAD
                                 </a>
                             </h1>

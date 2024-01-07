@@ -13,6 +13,7 @@ import { SubPage } from "./components/pages/SubPage";
 import { Gaip } from "./components/pages/Gaip";
 import { Login } from "./components/pages/Login";
 import { SubPage_HT } from "./components/pages/SubPage_HT";
+import { SubPage_Con } from "./components/pages/SubPage_Con";
 import { HotelApp } from "./components/pages/HotelApp";
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
                 ) : pgName === "sub" ? (
                     <SubPage chgPg={chgPage} />
                 ) : pgName === "sub2" ? (
+                    <SubPage_HT chgPg={chgPage} />
+                ) : pgName === "sub3" ? (
+                    <SubPage_Con chgPg={chgPage} />
+                ) : pgName === "gaip" ? (
                     <SubPage_HT chgPg={chgPage} />
                 ) : pgName === "gaip" ? (
                     <Gaip chgPg={chgPage} />
