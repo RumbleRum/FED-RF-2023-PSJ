@@ -78,7 +78,7 @@
 
 
 .plane{
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     color: #fff;
     position: relative;
     left: 550px;
@@ -98,10 +98,10 @@
 }
 
 .user{
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     color: #fff;
     position: relative;
-    left: 470px;
+    left: 465px;
     bottom: 15px;
     cursor: pointer;
 }
@@ -118,10 +118,10 @@
 }
 
 .hotel{
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     color: #fff;
     position: relative;
-    left: 385px;
+    left: 380px;
     bottom: 15px;
     cursor: pointer;
 }

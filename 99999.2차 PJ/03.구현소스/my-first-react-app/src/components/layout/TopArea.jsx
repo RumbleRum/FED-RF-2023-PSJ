@@ -10,7 +10,7 @@ import "jquery-ui-dist/jquery-ui";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
-import { faBed } from "@fortawesome/free-solid-svg-icons";
+import { faClipboardQuestion } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //////////////// 상단영역 //////////////////////////////////////
@@ -117,11 +117,11 @@ export function TopArea({ chgPg }) {
                 Home
               </a>
             </h1>
-          </div>
+          </div> 
           <div className="partbox col-7">
-            <FontAwesomeIcon className="plane" icon={faPlane} onClick={goSub}></FontAwesomeIcon>
-            <FontAwesomeIcon className="user" icon={faCircleUser} onClick={goSub}></FontAwesomeIcon>
-            <FontAwesomeIcon className="hotel" icon={faBed} onClick={goSub}></FontAwesomeIcon>
+            <FontAwesomeIcon className="plane" icon={faCircleUser} onClick={goSub}></FontAwesomeIcon>
+            <FontAwesomeIcon className="user" icon={faPlane} onClick={goSub}></FontAwesomeIcon>
+            <FontAwesomeIcon className="hotel" icon={faClipboardQuestion} onClick={goSub}></FontAwesomeIcon>
           </div>
           <div className="t2 partbox col-1 br tr">
             <h1>
