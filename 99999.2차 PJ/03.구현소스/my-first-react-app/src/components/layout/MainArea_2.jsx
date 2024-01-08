@@ -5,12 +5,10 @@ import { useInView } from "react-intersection-observer";
 import "../../css/ani.css";
 
 export function MainArea2() {
-    // cat 속성으로 메뉴분류 전달
-
-    
+   
     const [ref, inView] = useInView({
         threshold: 0.3,
-        triggerOnce: true
+        triggerOnce: false
       });
 
     return (

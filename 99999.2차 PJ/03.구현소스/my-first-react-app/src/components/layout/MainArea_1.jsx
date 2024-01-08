@@ -12,7 +12,7 @@ import "../../css/ani.css";
 export function MainArea1() {
 
     const [ref, inView] = useInView({
-      triggerOnce: true
+      triggerOnce: false
     });
 
     return (

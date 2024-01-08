@@ -29,3 +29,40 @@
   }
 
 
+  
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+
+
+  .fade-in-text4{
+    transform: translateX(100px);
+    transition: opacity 1.5s ease-in-out ,transform 1.5s ease-in-out;
+    opacity: 0;
+  }
+  .fade-in-text4.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+.fade-in-text5{
+    transform: translateX(60px);
+    transition: opacity 2.3s ease-in-out ,transform 2.3s ease-in-out;
+    opacity: 0;
+  }
+  .fade-in-text5.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+.fade-in-text6{
+    transform: translateY(50px);
+    transition: opacity 3s ease-in-out ,transform 3s ease-in-out;
+    opacity: 0;
+  }
+  .fade-in-text6.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+/* ////////////////////////////////////////////////////////////////////////////// */
