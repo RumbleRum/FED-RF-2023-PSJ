@@ -5,7 +5,7 @@ import "../../css/ani.css";
 
 export function MainArea5() {
     const [ref, inView] = useInView({
-        threshold: 0.1,
+        threshold: 0,
         triggerOnce: false,
     });
 
@@ -18,7 +18,11 @@ export function MainArea5() {
                             <h1 ref={ref} className={`fade-in-text4 ${inView ? "visible" : ""}`}>
                                 <p>Cue</p>
                             </h1>
-                            <img src="./images/racon1.jpg" alt="라콘" />
+                            <h1 ref={ref} className={`fade-in-text4 ${inView ? "visible" : ""}`}>
+                                <p>
+                                    <img src="./images/racon1.jpg" alt="라콘" />
+                                </p>
+                            </h1>
                         </div>
                         <div className="partbox col-6 ep5-2">
                             <h1 ref={ref} className={`fade-in-text6 ${inView ? "visible" : ""}`}>
@@ -31,7 +35,11 @@ export function MainArea5() {
                             </h1>
                         </div>
                         <div className="partbox col-3 ep5-3-img">
-                            <img src="./images/racon2.jpg" alt="라콘" />
+                            <h1 ref={ref} className={`fade-in-text4 ${inView ? "visible" : ""}`}>
+                                <p>
+                                    <img src="./images/racon2.jpg" alt="라콘" />
+                                </p>
+                            </h1>
                         </div>
                         <div className="partbox col-4 ep5-3">
                             <h1 ref={ref} className={`fade-in-text4 ${inView ? "visible" : ""}`}>
