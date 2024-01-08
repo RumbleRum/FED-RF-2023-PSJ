@@ -5,6 +5,7 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
+
 ///////// 서브 메인 영역 //////////////////////////////
 export function SubMainArea_Con() {
     return (

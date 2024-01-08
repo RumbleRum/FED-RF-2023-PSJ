@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+
  
 ///////// 서브 메인 영역 //////////////////////////////
 export function SubMainArea_HT() {
+
     return ( 
         <>
             {/* <!-- 서브 1페이지 -->  */}
