@@ -3,7 +3,7 @@
 /* CSS Document */
 
 .seo0{
-    margin-top: 200px;
+    margin-top: 130px;
     /* background-color: #0074e8; */
 }
 
@@ -11,7 +11,7 @@
 /* 검색옵션박스 */
 .selbx {
     max-width: 90%;
-    width: 950px;
+    width: 1050px;
     margin: 0 auto;
     padding: 20px 10px 10px;
     box-sizing: border-box;
@@ -26,22 +26,23 @@
     text-align: center;
     /*텍스트 가로 중앙*/
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     border-collapse: collapse;
-    max-width: 90%;
-    width: 950px;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 1500px;
+    margin: 5px auto;
+    
 }
 
 .dtbl caption,
 .dtblview caption {
     /*테이블 타이틀*/
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
     /*글자두께*/
-    color: #333;
-    padding: 10px 0;
+    color: #333333;
+    padding: 20px 20px;
 }
 
 .dtbl a {
@@ -81,6 +82,7 @@
 /*각 th별 가로크기지정 */
 .dtbl th:nth-child(1){
     width: 5%;
+    height: 30px;
 }
 .dtbl th:nth-child(2){
     width: 40%;
@@ -98,6 +100,7 @@
 .dtbl tbody tr td {
     /*본문 td 밑줄*/
     border-bottom: 1px solid #ccc;
+    /* margin: 20px; */
     /*두종색*/
 }
 
@@ -124,9 +127,10 @@
 	단, 자식 태그의 종류가 한가지 여야함~!!!!
 */
 /*짝수번째 배경색 넣기*/
+
 .dtbl tbody tr:nth-child(even) td {
     /*even 짝수, odd 홀수*/
-    background-color: #F3F3F3;
+    background-color: #fcdfdf;
 }
 
 /*하단 패딩*/

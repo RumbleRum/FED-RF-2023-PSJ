@@ -811,7 +811,7 @@ export function Board({chgPg}) {
 
     // 3. 검색어입력 안한경우 경고창과 return
     if (inpVal === "") {
-      alert("Write down keyword!!!");
+      alert("아무것도 안썻어요!!!");
       return;
     } //////// if //////
 
@@ -885,16 +885,18 @@ export function Board({chgPg}) {
             <h1 className="tit"
             style={{
                 textAlign:"center",
-                fontSize: "40px",
-                paddingBottom: "50px"
+                fontSize: "55px",
+                paddingBottom: "60px"
             }}>📑 건 의 사 항 </h1>
 
             {/* 검색옵션박스 */}
-            <div className="selbx">
+            <div className="selbx" style={{
+                textAlign:"center",
+            }}>
               <select name="cta" id="cta" className="cta">
-                <option value="tit">제목</option>
-                <option value="cont">Contents</option>
-                <option value="unm">Writer</option>
+                <option value="tit">제 목</option>
+                <option value="cont">내 용</option>
+                <option value="unm">글쓴이</option>
               </select>
               <select
                 name="sel"
@@ -927,7 +929,7 @@ export function Board({chgPg}) {
                 }}
               />
               <button className="sbtn" onClick={searchList}>
-                Search
+                검 색
               </button>
             </div>
 
@@ -937,11 +939,11 @@ export function Board({chgPg}) {
               {/* 상단 컬럼명 표시영역 */}
               <thead>
                 <tr>
-                  <th>Number</th>
-                  <th>Title</th>
-                  <th>Writer</th>
-                  <th>Date</th>
-                  <th>Hits</th>
+                  <th>순 번</th>
+                  <th>제 목</th>
+                  <th>글 쓴 이</th>
+                  <th>날 짜</th>
+                  <th>조 회 수</th>
                 </tr>
               </thead>
 
@@ -1019,7 +1021,7 @@ export function Board({chgPg}) {
                   <input
                     type="text"
                     className="name"
-                    size="20"
+                    size="30"
                     readOnly
                     value={cData.current.unm}
                   />
@@ -1073,7 +1075,7 @@ export function Board({chgPg}) {
                 </td>
               </tr>
               <tr>
-                <td>Title</td>
+                <td>제목</td>
                 <td>
                   <input
                     type="text"
@@ -1128,34 +1130,48 @@ export function Board({chgPg}) {
                   </>
                 )
               }
-              {/* {
-                // 리스트 모드(L) : 로그인상태이면 쓰기버튼 보이기
-                bdMode === "L" && myCon.logSts !== null && (
-                  <>
-                    <button onClick={chgMode}>
-                      <a href="#">Write</a>
-                    </button>
-                  </>
-                )
-              } */}
               {
-                // 글쓰기 모드(C)
-                bdMode === "C" && (
+                // 리스트 모드(L) : 로그인상태이면 쓰기버튼 보이기
+                bdMode === "L" &&  (
                   <>
-                    <button onClick={chgMode}>
-                      <a href="#">Submit</a>
-                    </button>
-                    <button onClick={chgMode}>
-                      <a href="#">List</a>
+                    <button onClick={chgMode}
+                    style={{
+                        marginBottom:"40px",
+                        fontSize:"20px"
+                    }}
+                    >
+                      <a href="#">글쓰기</a>
                     </button>
                   </>
                 )
               }
               {
+                // 글쓰기 모드(C)
+                
+                  <>
+                    <button onClick={chgMode}
+                    style={{
+                        fontSize:"20px"
+                    }}>
+                      <a href="#">List</a>
+                    </button>
+                    <button onClick={chgMode}
+                    style={{
+                        fontSize:"20px"
+                    }}>
+                      <a href="#">List</a>
+                    </button>
+                  </>
+               
+              }
+              {
                 // 읽기 모드(R)
                 bdMode === "R" && (
                   <>
-                    <button onClick={chgMode}>
+                    <button onClick={chgMode}
+                    style={{
+                        fontSize:"20px"
+                    }}>
                       <a href="#">List</a>
                     </button>
                     {
