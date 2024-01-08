@@ -13,7 +13,7 @@ export const CartList = memo(({ selData, flag }) => {
   // flag - 상태값 체크변수(true/false) -> 업데이트 여부결정!
   console.log("업뎃상태값:", flag.current);
 
-  // [컴포넌트 전체 공통변수] /////////////secsecsec
+  // [컴포넌트 전체 공통변수] /////////////
   // 1. 페이지 단위수 : 한 페이지 당 레코드수
   const pgBlock = 5;
 
