@@ -37,8 +37,6 @@ function App() {
                 ) : pgName === "sub3" ? (
                     <SubPage_Con chgPg={chgPage} />
                 ) : pgName === "gaip" ? (
-                    <SubPage_HT chgPg={chgPage} />
-                ) : pgName === "gaip" ? (
                     <Gaip chgPg={chgPage} />
                 ) : pgName === "login" ? (
                     <Login chgPg={chgPage} />
