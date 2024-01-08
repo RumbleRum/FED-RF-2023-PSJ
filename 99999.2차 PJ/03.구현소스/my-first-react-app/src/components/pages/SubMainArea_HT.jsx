@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-
+ 
 ///////// 서브 메인 영역 //////////////////////////////
 export function SubMainArea_HT() {
     return ( 
@@ -35,7 +35,7 @@ export function SubMainArea_HT() {
                             <span>classic</span>
                             <span>Hilton</span>
                             <span>service.</span>
-                            <img src="./images/sub/ssub1.jpg" alt="서브" />
+                            <img src="./images/sub/hlt/ht3.jpg" alt="서브" />
                         </div>
                         <div className="partbox col-6 bp2-2"></div>
                     </div>
@@ -73,10 +73,10 @@ export function SubMainArea_HT() {
                             <span>
                                 <br />
                                 <br />
-                                CHOOSE FROM 1,774 ROOMS AND CITY OR STRIP VIEWS WITH THE MOST RECOGNIZED NAME IN THE HOSPITALITY INDUSTRY.
+                                CHOOSE FROM 1,774 ROOMS AND CITY OR STRIP VIEWS WITH THEMOST RECOGNIZED NAME IN THE HOSPITALITY INDUSTRY.
                             </span>
-                            <span>라스베가스의 최고에 전망이 보이는 객실내부는</span>
-                            <span>고객님들에게 최고의 경험을 선사할 것입니다.</span>
+                            <span>라스베가스의 최고에 전망이 보이는 객실내부는 숙박 업계에서</span>
+                            <span>가장 잘 알려진 이름을 지닌 1,774개의 객실과 도시 또는 스트립 전망을 제공합니다.</span>
                             <img src="./images/sub/htt1.jpg" alt="축배" />
                         </div>
                         <div className="partbox col-6 bp4-2"></div>

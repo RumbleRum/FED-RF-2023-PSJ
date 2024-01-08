@@ -113,6 +113,7 @@
     color: #000;
     padding-left: 15px;
     font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .bp2-1 span {
@@ -122,16 +123,17 @@
     color: #000;
     line-height: 160px;
     padding-left: 15px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .bp2-1 img {
     position: relative;
-    width: 60%;
+    width: 85%;
     display: flex;
-    top: 215px;
+    top: 450px;
 }
 .bp2-2 {
-    background: url(../../public/images/sub/ssub2.jpg) no-repeat center/cover;
+    background: url(../../public/images/sub/hlt/ht2.jpg) no-repeat center/cover;
 }
 
 .bp3 {
@@ -145,17 +147,18 @@
     display: flex;
     font-size: 10vw;
     font-weight: bold;
-    line-height: 50px;
+    line-height: 80px;
     padding-top: 100px;
     top: 200px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .bp3-2 {
-    background: url(../../public/images/sub/ssub3.png) no-repeat center/cover;
+    background: url(../../public/images/sub/hlt/ht5.png) no-repeat center/cover;
 }
 
 .bp4-2 {
-    background: url(../../public/images/sub/ssub4.png) no-repeat center/cover;
+    background: url(../../public/images/sub/hlt/ht6.png) no-repeat center/cover;
 }
 
 .bp4 {
@@ -187,20 +190,21 @@
     font-weight: bold;
     color: #000;
     line-height: 40px;
-    padding-left: 15px;
+    padding-left: 5px;
     font-family: "IBM Plex Sans KR", sans-serif;
+    text-align: left;
 }
 
 .bp4-1 img {
     position: relative;
-    width: 60%;
+    width: 50%;
     display: flex;
     top: 60px;
 }
 
 .bp5 {
     /* height: 100vh; */
-    background-color: #0e0f47;
+    background-color: #8f360d;
 }
 
 .bp5-1 h1 {

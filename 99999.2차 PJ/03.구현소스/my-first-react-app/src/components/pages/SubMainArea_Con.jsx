@@ -30,11 +30,12 @@ export function SubMainArea_Con() {
                 <div className="cp cp2">
                     <div className="flex-box">
                         <div className="partbox col-6 cp2-1">
-                            <h1>welcome</h1>
-                            <h1>to the</h1>
+                            <h1>BOASTING 1,496 ULTRA</h1>
+                            <h1>STYLISH ROOMS</h1>
+                            <span>welcome</span>
+                            <span>to the</span>
                             <span>largest Conrad</span>
-                            <span>in the world.</span>
-                            <img src="./images/sub/ssub1.jpg" alt="서브" />
+                            <img src="./images/sub/conn/conn1.jpg" alt="서브" />
                         </div>
                         <div className="partbox col-6 cp2-2"></div>
                     </div>
@@ -52,8 +53,8 @@ export function SubMainArea_Con() {
                             5 outdoor pools,
                         </h1>
                         <h1>Michelin-starred</h1>
-                        <h1>OTHER HIGHLIGHTS AT THIS</h1>
-                        <h1>HOTEL INCLUDE</h1>
+                        <h1>OTHER HIGHLIGHTS AT </h1>
+                        <h1>THIS HOTEL INCLUDE</h1>
                     </div>
                 </div>
             </section>
@@ -73,11 +74,12 @@ export function SubMainArea_Con() {
                             <span>
                                 <br />
                                 <br />
-                                FEATURING PREMIUM ROOMS, SWANKY SUITES AND ACCESSIBLE OPTIONS, ALL ROOMS OFFER A PRIVATE RECEPTION, VIP CHECK-IN AND DIGITAL KEYS.
+                                FEATURING PREMIUM ROOMS, SWANKY SUITES AND ACCESSIBLE OPTIONS, ALL ROOMS OFFER A PRIVATE RECEPTION, 
+                                <br />VIP CHECK-IN AND DIGITAL KEYS.
                             </span>
-                            <span>라스베가스의 최고에 전망이 보이는 객실내부는</span>
-                            <span>고객님들에게 최고의 경험을 선사할 것입니다.</span>
-                            <img src="./images/sub/htt1.jpg" alt="축배" />
+                            <span>라스베가스의 최고의 프리미엄룸, 멋진 스위트룸, 장애인용 옵션을 갖춘 모든 객실은</span>
+                            <span>예약 하시는 고객님들에게 최고의 경험을 선사할 것입니다.</span>
+                            <img src="./images/sub/conn/conn5.jpg" alt="축배" />
                         </div>
                         <div className="partbox col-6 cp4-2"></div>
                     </div>

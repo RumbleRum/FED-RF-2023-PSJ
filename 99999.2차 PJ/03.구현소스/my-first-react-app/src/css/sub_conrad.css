@@ -122,25 +122,28 @@
     color: #000;
     padding-left: 15px;
     font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
  .cp2-1 span{
     display: flex;
+    text-align: left;
     font-size: 8vw;
     font-weight: bold;
     color: #000;
     line-height: 160px;   
     padding-left: 15px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
  .cp2-1 img{
     position: relative;
-    width: 60%;
+    width: 80%;
     display: flex;
-    top: 215px;
+    top:80px;
 }
  .cp2-2 {
-    background: url(../../public/images/sub/ssub2.jpg) no-repeat center/cover;
+    background: url(../../public/images/sub/conn/conn7.jpeg) no-repeat center/cover;
 }
 
  .cp3{
@@ -152,20 +155,21 @@
     flex-wrap: wrap;
     padding: 15px;
     display: flex;
-    font-size: 10vw;
+    font-size: 8.5vw;
     font-weight: bold;
-    line-height: 50px;
+    line-height: 80px;
     padding-top: 100px;
     top: 200px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
  .cp3-2 {
-    background: url(../../public/images/sub/ssub3.png) no-repeat center/cover;
+    background: url(../../public/images/sub/conn/conn6.jpeg) no-repeat center/cover;
 }
 
 
  .cp4-2 {
-    background: url(../../public/images/sub/ssub4.png) no-repeat center/cover;
+    background: url(../../public/images/sub/conn/conn4.jpeg) no-repeat center/cover;
 }
 
  .cp4{
@@ -188,7 +192,7 @@
     display: flex;
     font-size: 4vw;
     font-weight: bold;
-    padding-top: 175px;
+    padding-top: 125px;
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
@@ -200,18 +204,19 @@
     line-height: 40px;   
     padding-left: 15px;
     font-family: 'IBM Plex Sans KR', sans-serif;
+    text-align: left;
 }
 
 .cp4-1 img{
     position: relative;
-    width: 60%;
+    width: 51%;
     display: flex;
-    top: 60px;
+    top: 40px;
 }
 
  .cp5{
     /* height: 100vh; */
-    background-color: #0e0f47;
+    background-color: #a8058d;
 }
 
  .cp5-1 h1{
