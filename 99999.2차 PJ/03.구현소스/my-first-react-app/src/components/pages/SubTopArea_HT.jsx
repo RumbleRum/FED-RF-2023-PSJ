@@ -9,17 +9,17 @@ import $ from "jquery";
 export function SubTopArea_HT({ chgPg }) {
     useLayoutEffect(() => {
         $(".bp1").css({
-            background: "#000 url(./images/sub/hlt/ht1.png) no-repeat top/100%",
+            background: "#000 url(./images/sub/thum2.jpg) no-repeat top/100%",
         });
 
-        $(".sub-header2").css({ top: "-60px" }).delay(2000).animate({ top: "0" }, 1500);
+        $(".sub-header").css({ top: "-60px" }).delay(2000).animate({ top: "0" }, 1500);
 
         $(".move-txt2").delay(1500).animate({ top: "200px", opacity: 1 }, 1500);
     });
 
     return (
         <>
-            <div id="header" className="sub-header2">
+            <div id="header" className="sub-header">
                 <header className="header gnb">
                     <div className="flex-box">
                         <div className="t11 partbox col-1">

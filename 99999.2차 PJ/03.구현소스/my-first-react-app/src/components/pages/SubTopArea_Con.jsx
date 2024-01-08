@@ -12,14 +12,14 @@ export function SubTopArea_Con({ chgPg }) {
             background: "#000 url(./images/sub/thum3.jpg) no-repeat top/100%",
         });
 
-        $(".sub-header3").css({ top: "-60px" }).delay(2000).animate({ top: "0" }, 1500);
+        $(".sub-header").css({ top: "-60px" }).delay(2000).animate({ top: "0" }, 1500);
 
         $(".move-txt3").delay(1500).animate({ top: "200px", opacity: 1 }, 1500);
     });
 
     return (
         <>
-            <div id="header" className="sub-header3">
+            <div id="header" className="sub-header">
                 <header className="header gnb">
                     <div className="flex-box">
                         <div className="t11 partbox col-1">
