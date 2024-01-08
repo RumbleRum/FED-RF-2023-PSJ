@@ -12,7 +12,6 @@ export function MainArea2() {
         threshold: 0.3,
         triggerOnce: true
       });
-  
 
     return (
         <>

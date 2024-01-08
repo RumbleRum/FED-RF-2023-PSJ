@@ -12,7 +12,6 @@ import "../../css/ani.css";
 export function MainArea1() {
 
     const [ref, inView] = useInView({
-      threshold: 1,
       triggerOnce: true
     });
 
