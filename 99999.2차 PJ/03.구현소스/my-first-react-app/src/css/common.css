@@ -95,6 +95,7 @@
 
 .plane:hover {
     transform: scale(1.2);
+    color: yellow;
 }
 
 .user{
@@ -102,7 +103,7 @@
     color: #fff;
     position: relative;
     left: 465px;
-    bottom: 15px;
+    bottom: 13px;
     cursor: pointer;
 }
 
@@ -115,15 +116,16 @@
 
 .user:hover {
     transform: scale(1.2);
+    color: yellow;
 }
 
 .hotel{
     font-size: 1.6vw;
     color: #fff;
     position: relative;
-    left: 380px;
     bottom: 15px;
     cursor: pointer;
+    left: 385px;
 }
 
 .hotel::after{
@@ -135,6 +137,7 @@
 
 .hotel:hover {
     transform: scale(1.2);
+    color: yellow;
 }
 
 

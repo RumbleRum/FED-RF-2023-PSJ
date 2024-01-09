@@ -13,7 +13,6 @@ import { useState, useContext, useCallback, useEffect, useLayoutEffect } from "r
 // 로컬스 데이터 초기화 함수
 import { initData } from "../func/mem_fn";
 import { SubTopArea } from "./SubTopArea";
-import { useNavigate } from "react-router-dom";
 
 
 export function Login({chgPg}) {
@@ -153,7 +152,7 @@ export function Login({chgPg}) {
           myCon.setLogSts(localStorage.getItem('minfo'));
 
           // 유저아이콘
-          const usrIcon = ["🙍‍♂️","🧏‍♀️","🦸‍♂","👨‍🎤","🦸‍♀"];
+          const usrIcon = ["👨","👨","👨","👨","👨"];
 
           // 3. 컨텍스트 API에 공개된 로그인 메시지 업데이트하기!
           myCon.setLogMsg("Welcome "+

@@ -7,7 +7,7 @@ import { Route } from "react-router-dom";
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
-import { faPlane } from "@fortawesome/free-solid-svg-icons";
+import { faPersonChalkboard } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 import { faClipboardQuestion } from "@fortawesome/free-solid-svg-icons";
@@ -102,6 +102,7 @@ export function TopArea({ chgPg }) {
     if (txt === "Home") chgPg("main");
   };
 
+
   return (
     <div id="header1">
       <header className="header gnb">
@@ -120,7 +121,7 @@ export function TopArea({ chgPg }) {
           </div> 
           <div className="partbox col-7">
             <FontAwesomeIcon className="plane" icon={faCircleUser} onClick={goSub}></FontAwesomeIcon>
-            <FontAwesomeIcon className="user" icon={faPlane} onClick={goSub}></FontAwesomeIcon>
+            <FontAwesomeIcon className="user" icon={faPersonChalkboard} onClick={goSub}></FontAwesomeIcon>
             <FontAwesomeIcon className="hotel" icon={faClipboardQuestion} onClick={goSub}></FontAwesomeIcon>
           </div>
           <div className="t2 partbox col-1 br tr">
