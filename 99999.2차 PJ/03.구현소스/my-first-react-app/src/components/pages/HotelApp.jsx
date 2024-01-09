@@ -138,8 +138,8 @@ export function Board({chgPg}) {
   const rawData = () => {
     // orgData를 로컬스 데이터로 덮어쓰기
     // 단, 내림차순으로 정렬하여 넣어준다!
-    orgData = sortData(JSON.parse(localStorage.getItem('bdata'),[-1,1]));
-    // orgData = JSON.parse(localStorage.getItem("bdata"), [1, -1]);
+    // orgData = sortData(JSON.parse(localStorage.getItem('bdata'),[-1,1]));
+    orgData = JSON.parse(localStorage.getItem("bdata"), [1, -1]);
   }; ///////////// rawData /////////////
 
   ///////////////////////////////////////
