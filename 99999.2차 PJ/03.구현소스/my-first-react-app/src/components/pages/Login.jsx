@@ -149,6 +149,7 @@ export function Login({chgPg}) {
           .setItem('minfo',JSON.stringify(findD));
 
           // 2. 컨텍스트 API에 공개된 로그인상태 업데이트하기!
+          console.log(myCon);
           myCon.setLogSts(localStorage.getItem('minfo'));
 
           // 유저아이콘
@@ -164,7 +165,7 @@ export function Login({chgPg}) {
           // 3. 라우팅 페이지 이동하기(useNavigate)
           // 컨텍스트 API 함수호출!
           setTimeout(()=>
-          myCon.chgPage('/',{}),1000);
+          chgPg('main'),1000);
           
 
         } /////////// if //////////
