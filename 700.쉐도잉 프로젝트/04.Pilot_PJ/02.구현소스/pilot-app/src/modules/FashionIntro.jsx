@@ -86,7 +86,7 @@ export function FashionIntro(props) {
         }
         {/* 스타일 패션에서만 나오는 이미지 */}
         {props.cat == "style" && (
-          <li className="imgc">
+          <li className="imgc sc-ani">
             <img src={selData.isrc[1]} alt={selData.ialt[1]} />
           </li>
         )}
@@ -96,7 +96,7 @@ export function FashionIntro(props) {
         props.cat == "sub" && props.subcat[1] === 0 && (
           <>
             {/* 글자박스 */}
-            <li className="txtc">
+            <li className="txtc sc-ani">
               <h2>
                 <a href="#">
                   {selData.tit[0]} <br />
@@ -105,7 +105,7 @@ export function FashionIntro(props) {
               </h2>
             </li>
             {/* 이미지박스 */}
-            <li className="imgc">
+            <li className="imgc sc-ani">
               <img
                 src={selData.isrc}
                 alt={selData.ialt}
@@ -117,21 +117,21 @@ export function FashionIntro(props) {
           props.cat == "sub" && props.subcat[1] === 1 &&
           <>
           {/* 이미지박스 */}
-          <li className="imgc">
+          <li className="imgc sc-ani">
               <img
                 src={selData.isrc[0]}
                 alt={selData.ialt[0]}
               />
             </li>
             {/* 글자박스 */}
-            <li className="txtc">
+            <li className="txtc sc-ani">
               <h2 className="tm">
                 <a href="#">
                   {selData.tit[0][0]} <br />
                   {selData.tit[0][1]}
                 </a>
               </h2>
-              <h2 className="tw">
+              <h2 className="tw sc-ani">
                 <a href="#">
                   {selData.tit[1][0]} <br />
                   {selData.tit[1][1]}
@@ -139,7 +139,7 @@ export function FashionIntro(props) {
               </h2>
             </li>
             {/* 이미지박스 */}
-            <li className="imgc">
+            <li className="imgc sc-ani">
               <img
                 src={selData.isrc[1]}
                 alt={selData.ialt[1]}
