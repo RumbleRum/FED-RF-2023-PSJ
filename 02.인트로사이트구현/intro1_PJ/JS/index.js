@@ -24,7 +24,6 @@ $(window).scroll(function(){
 	//각페이지 높이값
 	var Home=$("#Home").offset().top;//1
 	var About=$("#About").offset().top;//2
-	var Skill=$("#Skill").offset().top;//3
 	var Portfolio=$("#Portfolio").offset().top;//4
 	var Contact=$("#Contact").offset().top;//5
 	
