@@ -7,8 +7,19 @@
     .wrap {
       overflow: hidden;
     }
+
+    
+    .tbx{
+      width: 45vw;
+    }
+
     
 }
+
+
+
+
+
 @media screen and (max-width:1000px) {
 
   html,
@@ -24,12 +35,28 @@
       flex-direction: column;
     }
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 @media screen and (max-width:800px) {
 
     
 
 }
+
+
+
+
 @media screen and (max-width:500px) {
 
     

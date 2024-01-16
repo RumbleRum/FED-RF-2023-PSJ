@@ -1,7 +1,7 @@
 // 상단영역 컴포넌트
 // GNB 데이터
 
-import { Route } from "react-router-dom";
+import "../../css/media.css";
 
 // 제이쿼리
 import $ from "jquery";
@@ -119,7 +119,7 @@ export function TopArea({ chgPg }) {
               </a>
             </h1>
           </div> 
-          <div className="partbox col-7">
+          <div className="partbox col-7 tbx">
             <FontAwesomeIcon className="plane" icon={faCircleUser} onClick={goSub}></FontAwesomeIcon>
             <FontAwesomeIcon className="user" icon={faPersonChalkboard} onClick={goSub}></FontAwesomeIcon>
             <FontAwesomeIcon className="hotel" icon={faClipboardQuestion} onClick={goSub}></FontAwesomeIcon>
