@@ -1,2 +1,29 @@
 /* 미디워꿔리 */
 
+@media screen and (max-width:1200px) {
+
+    html,
+    body,
+    .wrap {
+      overflow: hidden;
+    }
+    
+}
+@media screen and (max-width:800px) {
+
+    html,
+    body,
+    .wrap {
+      overflow: hidden;
+    }
+
+}
+@media screen and (max-width:500px) {
+
+    html,
+    body,
+    .wrap {
+      overflow: hidden;
+    }
+
+}
