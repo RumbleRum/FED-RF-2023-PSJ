@@ -124,32 +124,32 @@ export function TopArea({ chgPg }) {
             <FontAwesomeIcon className="user" icon={faPersonChalkboard} onClick={goSub}></FontAwesomeIcon>
             <FontAwesomeIcon className="hotel" icon={faClipboardQuestion} onClick={goSub}></FontAwesomeIcon>
           </div>
-          <div className="t2 partbox col-1 br tr">
+          <div className="t2 partbox col-1 br tr at">
             <h1>
               <a href="#" onClick={goSub}>
                 HILTON
               </a>
-              <div className="nail">
+              <div className="nail at">
                 <img src="./images/sub/thum2.jpg" alt="썸네일" />
               </div>
             </h1>
           </div>
-          <div className="t2 partbox col-1 br ">
+          <div className="t2 partbox col-1 br at">
             <h1>
               <a href="#" onClick={goSub}>
                 CROCKFORDS
               </a>
-              <div className="nail">
+              <div className="nail at">
                 <img src="./images/sub/thum.jpg" alt="썸네일" />
               </div>
             </h1>
           </div>
-          <div className="t2 partbox col-1 ">
+          <div className="t2 partbox col-1 at">
             <h1>
               <a href="#" onClick={goSub}>
                 CONRAD
               </a>
-              <div className="nail">
+              <div className="nail at">
                 <img src="./images/sub/thum3.jpg" alt="썸네일" />
               </div>
             </h1>
