@@ -18,6 +18,15 @@ const scaleBox = $('.scale-box');
 
 // 2. 이벤트 함수 셋팅하기
 menu.on('click',function(){
+    // 1. 배율 속성값 읽어오기 : data-num
+    let scaleNum = $(this).attr('data-num');
+    console.log('배율',scaleNum);
 
-    
+    // 2. 배율 적용하기
+    scaleBox.css({transform:`scale(${scaleNum})`});
+
+    // 3. 클릭된 메뉴에 클래스 on 넣기
+    // 나머지는 빼기
+    $(this).addClass('on').siblings().removeClass('on');
+
 }); ///click /////
