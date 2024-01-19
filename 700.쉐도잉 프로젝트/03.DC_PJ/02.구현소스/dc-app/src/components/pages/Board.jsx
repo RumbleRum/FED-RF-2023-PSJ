@@ -1247,6 +1247,18 @@ const AttachBox = () => {
     // 파일정보셋팅 메서드 호출!
     setFileInfo(fileInfo);
 
+    // 원래는 form 태그로 싸여있어서 서버전송을 하지만
+    // 없어도 form 전송을 서버에 할수 있는 객체가 있다!
+    // FormData() 클래스 객체임
+    const formData = new FormData();
+    // 전송할 데이터 추가하기
+    formData.append("file", fileInfo);
+
+    // 폼데이터에는 키값이 있음 확인하자
+    for(const key of formData) console.log(key);
+
+    // 서버전송은 엑시오스로 하자!!
+
   }; ///////// controlDrop 메서드 ////////
 
   // 드롭된 파일 정보를 화면 뿌려주는 메서드 //////
