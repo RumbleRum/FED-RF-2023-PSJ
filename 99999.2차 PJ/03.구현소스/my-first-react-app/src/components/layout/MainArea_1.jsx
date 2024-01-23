@@ -22,7 +22,7 @@ export function MainArea1() {
                 <div className="ep ep1 first-bx">
                     <div className="flex-box">
                         <div className="col-12 ep1-1"></div>
-                        <div className="partbox col-12 ep1-2">
+                        <div className="partbox col-12 ep1-2 o1">
                             <h1 ref={ref} className={`fade-in-text ${inView ? "visible" : ""}`}>
                                 <p>This is</p>
                             </h1>

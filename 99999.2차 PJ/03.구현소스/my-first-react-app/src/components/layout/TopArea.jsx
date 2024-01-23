@@ -124,7 +124,7 @@ export function TopArea({ chgPg }) {
             <FontAwesomeIcon className="user" icon={faPersonChalkboard} onClick={goSub}></FontAwesomeIcon>
             <FontAwesomeIcon className="hotel" icon={faClipboardQuestion} onClick={goSub}></FontAwesomeIcon>
           </div>
-          <div className="t2 partbox col-1 br tr at">
+          <div className="t2 partbox col-1 br tr at ">
             <h1>
               <a href="#" onClick={goSub}>
                 HILTON
@@ -134,7 +134,7 @@ export function TopArea({ chgPg }) {
               </div>
             </h1>
           </div>
-          <div className="t2 partbox col-1 br at">
+          <div className="t2 partbox col-1 br at o2">
             <h1>
               <a href="#" onClick={goSub}>
                 CROCKFORDS
@@ -144,7 +144,7 @@ export function TopArea({ chgPg }) {
               </div>
             </h1>
           </div>
-          <div className="t2 partbox col-1 at">
+          <div className="t2 partbox col-1 at o3">
             <h1>
               <a href="#" onClick={goSub}>
                 CONRAD
