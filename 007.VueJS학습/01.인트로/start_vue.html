@@ -64,11 +64,90 @@
                             코드: 'pros3324',
                             가격: '455,000원',
                         },
-                    ]
+                    ],
+                }, // data 
+            }); /// #app2 //////////////////////
 
-                }
+
+            // 3. 이벤트 사용하기 ///////////
+            new Vue({
+                el: '#app3',
+                // 함수호출
+                methods: {
+                    // 클릭시함수
+                    myClick : function(e){
+                        // 버튼자신은? 
+                        // e.target ? e.currentTarget ? 
+                        // 참고 this는 뷰 인트턴스 자신임!
+                        console.log('버튼클릭이야!!',
+                        e.target
+                        ,e.currentTarget);
+                        // e.target : 이벤트가 발생한 근본요소
+                        // e.currentTarget : 현재 이벤트가 발생한 요소
+
+                        // 현재는 하위요소가 없어서 동일함!
+                        
+                        // 1. 버튼글자 바꾸기
+                        e.target.innerText = "엉엉엉";
+
+                        // 2. 잠시후 해당요소(Root) 아래에
+                        // 새로운 html 넣기
+                        setTimeout(() => {
+                            console.log('2초후:',this);
+                            // 콘솔에 찍힌 this를 보면
+                            // 객체속성변수가 $el 이 
+                            // 인스턴스 대상요소가 담겨있음
+                            // this.$el.innerHTML += 
+                            // '<div>엉엉크크야야캬캬</div>';
+                            document.querySelector('#app3').innerHTML +=
+                            '<div>엉엉크크야야캬캬</div>';
+                        }, 2000);
+                        // 
+                    },
+                    // 함수 할당속성 원형은  
+                    // -> 함수명:function(){}
+                    // 함수축약형은 -> 함수명(){}
+                    // JS 오리지널 문법이다!(객체함수 축약형)
+                    myOver: function(){
+                        // 현재 이벤트 대상
+                        let cEvt = event.target;
+                        console.log('오버시:',cEvt);
+                        // 1. 글자변경하기
+                        cEvt.innerText = '오버하지마';
+                        // 2. 2초후에 글자 또 변경하기
+                        setTimeout(() => {
+                            cEvt.innerText = '클릭해봐';
+                        }, 2000);
+                    }, // 
+                    overClick(txt){ // txt-전달변수
+                     console.log('오버클릭:',txt);
+                    //  기존 인스턴스 루트요소에 html넣기
+                    this.$el.innerHTML +=
+                        `<h1> 내가 ${txt}야! </h1>`;
+                    }, // overClick /////////
+                },
+            }); /////#app3 ///////
+
+            // 4. 입력 양식과 동기화하기 //////////
+            new Vue({
+                // 대상선정
+                el: '#app4',
+                // 데이타변수
+                data: {
+                    msg : `여기에입력!`,
+                },
             });
 
+            // 5. 조건분기하기 //////
+            new Vue({
+                el: '#app5',
+                data :{
+                    show: false,
+                    // show변수에 false를 담고 이것을
+                    // v-if 조건문 디렉티브에 사용하면
+                    // true이면 출력하고 false 이면 아예지운다!
+                },
+            })
 
         }); ////// 로드구역 ///////////////////
 
@@ -113,22 +192,105 @@
     <hr />
 
     <h2>2. 반복 렌더링</h2>
-    <div id="app2"></div>
+    <div id="app2">
+        <!-- 단순 배열데이터 -->
+        <ol>
+            <li v-for="item in list"> {{item}} </li>
+        </ol>
+
+        <!-- 배열안에 반복되는 객체데이터 -->
+        <!-- 배열은 for문에서 값,순번 순으로 순회한다  =-->
+        <div v-for="(item,idx) in goods">
+           <h4>
+            {{ "아이템 번호: " + (idx+1) }}
+           </h4> 
+           <ul>
+            <!-- 바깥쪽 for문의 item에 담긴 객체값을 순회하여 찍음 -->
+             <!-- 객체는 for문에서 값,속성명 순으로 순회한다 -->
+            <li v-for="(val,name) in item">
+                {{name+ " : " +val}}
+            </li>
+           </ul>
+        </div>
+        <!-- 
+        [v-for 디렉티브]
+        는 뷰JS에서 사용하는 반복구분이다!
+        반복할 요소에 직접 속성형식으로 사용함
+
+        1. 값구성: 변수 in 데이터변수
+        -> 변수는 내가지은이름, in 뒤의 데이터변수는
+        뷰인스턴스의 data속성에 셋팅된 변수!
+        셋팅된변수가 배열/객체 이다!
+
+        2. 해석 : list 에 할당된 개수만큼 돌아서
+        하나씩 변수에 넣을때 머스테쉬가 있는 요소를
+        반복하여 DOM에 반영한다!
+
+        3. 배열일 경우 전달값 2개
+        -> (하나,둘) in 배열
+        ->> 하나 - 배열값, 둘 - 순번
+
+        4. 객체일 경우 전달값 2개
+        -> (하나,둘) in 객체
+        ->> 하나 - 객체값, 둘 - 속성명
+
+        ->>> 배열이든 객체든 반복시 값만 쓸 경우에는
+        전달변수를 하나만써도 무방함! 왜? 첫번째 전달변수가
+        배열값/객체값 이기 때문이다!!!
+
+
+     -->
+
+    </div>
 
     <hr />
 
     <h2>3. 이벤트 사용하기</h2>
-    <div id="app3"></div>
+    <div id="app3">
+        <!-- <button v-on:click="myClick">클릭해봐!!</button> -->
+        <button @click="myClick">클릭해봐!!</button>
+        <!-- 
+            v-on:이벤트명='값'
+            축약형
+            @이벤트명='값'
+         -->
+         <button 
+         @mouseover="myOver"
+         @click="overClick('후계자')"
+         >오버해봐~~~</button>
+         <!-- 함수호출시 값을 보낼수 있고 소괄호가 있는 함수일지라도 바로 실행되지 않고 이벤트 발생시에만 실행된다! -->
+    </div>
 
     <hr />
 
     <h2>4. 입력 양식과 동기화하기</h2>
-    <div id="app4"></div>
+    <div id="app4">
+        <input type="text" v-model="msg" />
+        <!-- 
+            v-model 디렉티브 속성은 요소 자신의 값이 타겟 값으로 반영되게 해준다!
+            변경 데이터의 뷰JS의 동기화 가능을 확인!
+         -->
+         <p>
+            {{msg}}
+         </p>
+    </div>
 
     <hr />
 
     <h2>5. 조건분기</h2>
-    <div id="app5"></div>
+    <div id="app5">
+        <button @click="show=!show">
+            뒤집어!{{show}}
+            <!-- 해석: show가 true이면 false, false이면 true로 불린값을 반대로 해서 다시 할당함! 
+                (이벤트값 설정구역에 코드를 쓸 수도 있음!)
+            -->
+        </button>
+        <p>
+            나는 사실 사람이 아니다!
+            <span v-if="show">뻥이야</span>
+            <!-- 결과적으로 가상돔에 출력을 안하면 실제돔에 출력되지 않는다 -->
+        </p>
+    </div>
     
 </body>
 </html>
