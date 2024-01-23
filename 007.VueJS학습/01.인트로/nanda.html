@@ -31,11 +31,11 @@
                 <!-- v-text 디렉티브: 텍스트 속성 -->
 
                 <!-- 1-2.로고 -->
-                <div v-html="logo"></div>
+                <div v-html="logo" class="logo"></div>
             </section>
             <!-- 2. 배너파트 -->
             <section class="part">
-                <p v-html="content"></p>
+                <p v-html="content" class="banner"></p>
             </section>
             <!-- 3. 상품리스트파트  -->
             <section class="part gwrap">
@@ -45,11 +45,26 @@
                     v-if:
                     속성명이 'img' 인것 
                     v-html: 이미지태그 경로 전달하여 만들기
+                    -> makeImg() 는 내가만든 함수
                 -->              
                     <li v-for="(val,key) in item"
                     v-if="key==='img'"
                     v-html="makeImg(val)"
                     ></li>
+                    <!-- 상품명 출력: 
+                        조건: 속성명이 'name' 인것
+                    -->
+                    <li
+                    v-for="(val,key) in item"
+                    v-if="key==='name'"
+                    > Item: {{val}} </li>
+                    <!-- 상품가격 출력: 
+                        조건: 속성명이 'price' 인것
+                    -->
+                    <li
+                    v-for="(val,key) in item"
+                    v-if="key==='price'"
+                    > price: ₩{addCommas(val)} </li>
                 </ol>
             </section>
         </div>

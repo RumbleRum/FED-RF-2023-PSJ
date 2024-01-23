@@ -72,7 +72,7 @@ class GetList {
               `;
       },
       //정규식함수(숫자 세자리마다 콤마해주는 기능)
-      numberWithCommas(x) {
+      addCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       },
     }, /////// methods ///////
@@ -112,4 +112,40 @@ class GetList {
       // 생성된 상품데이터 확인
       console.log('itemData:',this.itemData);
     }, /////////// created ////////////////
+
+    // [ 뷰 랜더링 완료 단계 : mounted ] /////
+    // -> JS, 제이쿼리 등 DOM에 그려진 후 코딩해야하는
+    // 것을 이 파트에 연결시킨다!
+    mounted: function(){
+        // 랜더링 후 자동실행구역
+        // 1. 제목 숨겼다 보이기
+        $('.tit').hide().delay(1000).slideDown(300);
+
+        // 2. 로고 왼쪽에서 날아오기
+        $('.logo')
+        .css({
+            position: 'relative',
+            opacity:0,
+            left:"-100%"
+        })
+        .animate({
+            opacity:1,
+            left:'0',
+        },800,'easeInOutExpo',()=>{
+            // 등장후 콜백함수로 스크롤 이동
+            
+            // 배너선택
+            const ban = $('.banner');
+    
+            // 3. 스크롤 이동하기
+            $('html,body').delay(3000)
+            .animate({
+                scrollTop:(ban.offset().top+ban.height()+120)+'px',
+            },600,'easeInOutExpo')
+
+
+        }); //// 애니메이트 콜백 ///////
+
+    }, ///mounted ////////////
+
   }); //////// Vue 인스턴스 설정 /////////
