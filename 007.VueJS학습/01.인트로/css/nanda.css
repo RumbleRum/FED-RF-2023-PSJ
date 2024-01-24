@@ -50,10 +50,35 @@
 .glist li {
     position: relative;
 }
+
+/* 이미지 li 배경색 */
+.glist li:first-child{
+    background-color: rgb(248, 242, 235);
+}
 /* 상품이미지 */
 .glist img {
     width: 100%;
+    transform: opacity .3s;
+    cursor: pointer;
 }
+
+/* 오버시이미지 */
+.glist img:last-child{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+/* 오버시설정 */
+.glist li:hover img:first-child{
+    opacity: 0;
+}
+.glist li:hover img:last-child{
+    opacity: 1;
+}
+
 @media screen and (max-width: 1024px) {
     .glist {
         width: 30%;
