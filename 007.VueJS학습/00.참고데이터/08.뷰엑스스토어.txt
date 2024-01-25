@@ -37,6 +37,7 @@
 
     => actions 와 mutations 내부의 메서드는
     다음과 같은 형태로 구성된다!
+ 
     actions/mutations:{
         메서드명(첫변수,둘째변수){
 
