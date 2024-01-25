@@ -9,33 +9,30 @@ import store from "./store.js";
 // 등록 방법: new Vue({el:"",store,methods:{}})
 // -> 스토아 변수를 그대로 써주면 된다!!
 
+// 리스트 만들기 함수
+const makeList = x => {
+    console.log('메뉴배열:',x);
+    // x 메뉴 배열
+    return x.map(v=>`
+    <li>
+        <a href="#"
+        v-on:click="changeData('${v}')"
+        >${v=='처음'?'🎅':v}</a>
+    </li>
+    `).join('');
+    // map으로 만든 배열값에 콤마제거는 join
+}; ///// makeList //////////////////////
+
 // [1] 컴포넌트 셋팅하기 ///////////
 // 1. 상단영역 컴포넌트 셋팅
 Vue.component("top-area", {
     // 1. 템플릿 설정
     template: `
         <header>
-            <ul>
-                <li>
-                    <a href="#"
-                    v-on:click="changeData('처음')"
-                    >🎅</a>
-                </li>
-                <li>
-                    <a href="#"
-                    v-on:click="changeData('서울')"
-                    >서울</a>
-                </li>
-                <li>
-                    <a href="#"
-                    v-on:click="changeData('부산')"
-                    >부산</a>
-                </li>
-                <li>
-                    <a href="#"
-                    v-on:click="changeData('제주')"
-                    >제주</a>
-                </li>
+            <ul class="gnb">
+                ${makeList(
+                    Object.keys
+                        (store.state.cityData))}
             </ul>
         </header>
     `,
@@ -136,6 +133,34 @@ new Vue({
     },
     // DOM 생성후 실행구역(mounted) : 제이쿼리(JS) 코드
     mounted() {
+        // 1. 메뉴 클릭시 클릭된 li의 a요소에 .on주기
+        // 나머지는 .on지우고 home은 적용제외!
+        $('.gnb a').click(function(){
+            // 넣기는 첫번쨰껏 제외
+            if($(this).parent().index()!==0){
+                $(this).addClass('on');
+            }// if ////
+            // 지우기는 무조건
+            $(this).parent().siblings()
+            .find('a').removeClass('on');
+
+            // 박스 나타나기 함수호출
+            showBox();
+        });
+
+        function showBox(){
+            // 이미지와 설명박스 순서대로 나타나기
+            // 대상 : 
+            $('main img').css({opacity:0}).stop()
+            .delay(500).fadeTo(500,1);
+            // stop() - 기존 애니메이션 지우기
+            // fadeTo - 시간,투명도 애니메이션
+
+            $('main p').css({opacity:0}).stop()
+            .delay(1000).fadeTo(500,1);
+
+        } ///// showBox ///
+
 
     }, /// mounted ///////
 });
