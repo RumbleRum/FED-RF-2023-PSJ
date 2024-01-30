@@ -1,5 +1,3 @@
-import { SubTopArea } from "./SubTopArea";
-
 
 // 서브 css
 import "../../css/sub_main_hilton.css";

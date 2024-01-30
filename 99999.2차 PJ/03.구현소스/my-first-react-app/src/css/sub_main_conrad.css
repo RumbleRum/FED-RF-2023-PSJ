@@ -19,7 +19,7 @@
 }
 
 
- .inbox1 {
+ .inbox3 {
     width: 100vw;
 }
 .inbox::after,
@@ -67,7 +67,7 @@
     text-decoration: none;
 }
 
-.fam2{
+.fam3{
     padding-left: 20px;
     cursor: pointer;
   }
@@ -76,22 +76,22 @@
  #main {
     background-color: #000;
 }
- .main .ap2 .partbox {
+ .main .cp2 .partbox {
     height: 140vh;
     padding-top: 100px;
 }
- .main .ap3 .partbox {
+ .main .cp3 .partbox {
     height: 150vh;
 }
- .main .ap3-11 .partbox {
+ .main .cp3-11 .partbox {
     height: 150vh;
 }
 
- .main .ap4 .partbox {
+ .main .cp4 .partbox {
     height: 145vh;
 }
 
- .main .ap5 .partbox {
+ .main .cp5 .partbox {
     height: 29vh;
     
 }

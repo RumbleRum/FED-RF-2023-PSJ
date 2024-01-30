@@ -2,6 +2,7 @@
 
 // 메인 css
 import "../../css/main.css";
+import "../../css/media.css";
 
 // 상단메뉴
 import { TopArea } from "../layout/TopArea";

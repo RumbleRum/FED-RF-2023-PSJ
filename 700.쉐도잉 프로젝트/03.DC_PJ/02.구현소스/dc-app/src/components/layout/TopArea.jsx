@@ -88,22 +88,21 @@ export const TopArea = memo(
     chgPageFn('/schpage',{state:{keyword:txt}})
   }; //////////// goSearch 함수 /////////////
 
-  // 햄버거용 함수 전체메뉴 보이기
+  // 햄버거용 함수 : 전체메뉴 보이기
   const showMenu = () => $(".top-area").toggleClass('on');
 
-
-  // 랜더링 후 실행구역 //////////////
+  // 랜더링후 실행구역 ///////////////
   useEffect(()=>{
 
     // GNB a요소 클릭시 전체메뉴 닫기
-    // 대상 : href가 '#'이 아닌 gnb 하위 모든 a요소
-    // != 은 제이쿼리 전용!
+    // 대상: .gnb a[href!='#'] 
+    // -> href가 '#'이 아닌 gnb 하위 모든 a요소
+    // -> != 은 제이쿼리전용!
     $(".gnb a[href!='#']").on('click',()=>{
       $(".top-area").removeClass('on');
-    }); //// click ////////
+    }); /////////// click //////////
 
-  }); //// use
-
+  }); ///////// useEffect /////////
 
 
   // 리턴코드 ///////////////////////////
@@ -150,8 +149,8 @@ export const TopArea = memo(
             ))}
             {/* 3. 검색,회원가입,로그인 링크 */}
             <li style={{ 
-              marginLeft: "auto",
-              marginRight: "25px"}}>
+              marginLeft: "auto", 
+              marginRight:"25px" }}>
               {/* 검색입력박스 */}
               <div className="searchingGnb">
                 {/* 검색버튼 돋보기 아이콘 */}

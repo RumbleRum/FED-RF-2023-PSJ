@@ -175,8 +175,7 @@ export function ItemDetail({ cat, goods }) {
       $("#total").text(addComma(ginfo[3] * num) + "원");
     });
 
-   
-
+    
   }, []); ////  한번만 실행 /////
 
   // 리랜더링 실행구역 /////
@@ -290,6 +289,7 @@ export function ItemDetail({ cat, goods }) {
         </div>
       </div>
 
+     
     </>
   );
 } /////////// ItemDetail 컴포넌트 ///////////

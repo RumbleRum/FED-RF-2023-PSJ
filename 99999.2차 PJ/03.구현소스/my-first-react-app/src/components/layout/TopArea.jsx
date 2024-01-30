@@ -1,15 +1,16 @@
 // 상단영역 컴포넌트
 // GNB 데이터
 
-import { Route } from "react-router-dom";
+import "../../css/media.css";
 
 // 제이쿼리
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
-import { faPlane } from "@fortawesome/free-solid-svg-icons";
+import { faPersonChalkboard } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
+import { faClipboardQuestion } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //////////////// 상단영역 //////////////////////////////////////
@@ -18,7 +19,31 @@ export function TopArea({ chgPg }) {
     let tg = e.currentTarget;
     let txt = tg.innerText;
     console.log(txt);
-    if (txt === "HILTON" || txt === "CROCKFORDS" || txt === "CONRAD") {
+    if (txt === "HILTON") {
+      $(tg)
+        .siblings(".nail")
+        .css({
+          transform: "none",
+        })
+        .animate(
+          {
+            width: "100vw",
+            top: "0",
+            left: "0",
+            marginLeft: "0",
+          },
+          2000,
+          () => {
+            setTimeout(() => {
+              chgPg("sub2");
+            }, 1000);
+          }
+        )
+        .parent()
+        .addClass("on");
+    }
+
+    if (txt === "CROCKFORDS") {
       $(tg)
         .siblings(".nail")
         .css({
@@ -42,13 +67,41 @@ export function TopArea({ chgPg }) {
         .addClass("on");
     }
 
+    if (txt === "CONRAD") {
+      $(tg)
+        .siblings(".nail")
+        .css({
+          transform: "none",
+        })
+        .animate(
+          {
+            width: "100vw",
+            top: "0",
+            left: "0",
+            marginLeft: "0",
+          },
+          2000,
+          () => {
+            setTimeout(() => {
+              chgPg("sub3");
+            }, 1000);
+          }
+        )
+        .parent()
+        .addClass("on");
+    }
+
+
+
     console.log(e.currentTarget.classList.contains('plane'));
     if(e.currentTarget.classList.contains('plane')) chgPg('gaip');
     if(e.currentTarget.classList.contains('user')) chgPg('login');
+    if(e.currentTarget.classList.contains('hotel')) chgPg('hotel');
 
     // 홈버튼클릭
     if (txt === "Home") chgPg("main");
   };
+
 
   return (
     <div id="header1">
@@ -65,39 +118,38 @@ export function TopArea({ chgPg }) {
                 Home
               </a>
             </h1>
+          </div> 
+          <div className="partbox col-7 tbx">
+            <FontAwesomeIcon className="plane" icon={faCircleUser} onClick={goSub}></FontAwesomeIcon>
+            <FontAwesomeIcon className="user" icon={faPersonChalkboard} onClick={goSub}></FontAwesomeIcon>
+            <FontAwesomeIcon className="hotel" icon={faClipboardQuestion} onClick={goSub}></FontAwesomeIcon>
           </div>
-          <div className="partbox col-7">
-            <FontAwesomeIcon className="plane" icon={faPlane} onClick={goSub}></FontAwesomeIcon>
-            <FontAwesomeIcon className="user" icon={faCircleUser} onClick={goSub}>
-              <Route />
-            </FontAwesomeIcon>
-          </div>
-          <div className="t2 partbox col-1 br tr">
+          <div className="t2 partbox col-1 br tr at ">
             <h1>
               <a href="#" onClick={goSub}>
                 HILTON
               </a>
-              <div className="nail">
+              <div className="nail at">
                 <img src="./images/sub/thum2.jpg" alt="썸네일" />
               </div>
             </h1>
           </div>
-          <div className="t2 partbox col-1 br ">
+          <div className="t2 partbox col-1 br at o2">
             <h1>
               <a href="#" onClick={goSub}>
                 CROCKFORDS
               </a>
-              <div className="nail">
+              <div className="nail at">
                 <img src="./images/sub/thum.jpg" alt="썸네일" />
               </div>
             </h1>
           </div>
-          <div className="t2 partbox col-1 ">
+          <div className="t2 partbox col-1 at o3">
             <h1>
               <a href="#" onClick={goSub}>
                 CONRAD
               </a>
-              <div className="nail">
+              <div className="nail at">
                 <img src="./images/sub/thum3.jpg" alt="썸네일" />
               </div>
             </h1>
