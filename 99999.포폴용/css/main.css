@@ -1,0 +1,18 @@
+/* 리셋,공통 외부 CSS 합치기(merging) */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+
+/* 공사중표시 */
+body * {
+  outline: 1px dashed blue;
+}
+
+body > div > * {
+    outline-color: red;
+  }
+
+#header{
+    height: 12vh;
+    background-color: rgb(0, 0, 201);
+}

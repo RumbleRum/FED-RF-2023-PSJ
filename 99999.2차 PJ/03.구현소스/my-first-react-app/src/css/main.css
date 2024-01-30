@@ -5,7 +5,7 @@
 
 /* 공사중표시 */
 /* body * {
-  outline: 2px dashed blue;
+  outline: 1px dashed blue;
 } */
 
 body > div > * {
