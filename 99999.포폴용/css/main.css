@@ -1,18 +1,163 @@
 /* 리셋,공통 외부 CSS 합치기(merging) */
 @import url(./reset.css);
 @import url(./core.css);
-@import url(./common.css);
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+/* font-family: 'Gowun Batang', serif; */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+/* font-family: 'IBM Plex Sans KR', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap");
+/* font-family: 'Sunflower', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Stylish&family=Sunflower:wght@500&display=swap");
+/* font-family: 'Stylish', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Orbit&display=swap");
+/* font-family: 'Orbit', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Gugi&family=Orbit&display=swap");
+/* font-family: 'Gugi', cursive; */
 
-/* 공사중표시 */
-body * {
-  outline: 1px dashed blue;
+
+
+:root{
+  --main-color: rgb(237, 72, 72);
+  --blue: blue;
+  --blue-dark: darkblue;
+  --orange: orange;
+  --green-yellow: yellowgreen;
+  --pink-light : lightpink;
+  --cyan-light: rgb(125, 235, 235);
+  --white: white;
+  --white-alpha-40: rgb(255, 255, 255, 0.40);
+  --white-alpha-25: rgb(255, 255, 255, 0.25);
+  --webkit-backdrop-filter: blur(5px);
+
 }
 
-body > div > * {
-    outline-color: red;
-  }
 
-#header{
-    height: 12vh;
-    background-color: rgb(0, 0, 201);
+/* 전체효과 셋팅 */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+::before
+::after{
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, var(--cyan-light), var(--pink-light) );
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  color: var(--blue-dark); 
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-top-highlight-color: transparent;
+  padding: 5vh 15px;
+}
+
+body::before{
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--green-yellow);
+  z-index: -1;
+  opacity: 0.12;
+}
+h1,h2{
+  font-weight: 600;
+}
+h3,h4,h5,h6{
+  font-weight: 500;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+section{
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  min-height: 90vh;
+  border-radius: 30px;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container{
+  padding: 0 40px;
+  width: 100%;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.act{
+  align-items: center;
+}
+
+/* 버튼 */
+.btn{
+  line-height: 1.5;
+  background-color: var(--white-alpha-25);
+  padding: 10px 28px;
+  display: inline-block;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: inherit;  
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+/* 홈섹션 */
+.hom-sec{
+  display: flex;
+  padding: 120px 0;
+}
+
+
+.hom-txt,.hom-img{
+  width: 50%;
+  padding: 15px;
+}
+.hom-txt p{
+  font-size: 18px;
+}
+.hom-txt h1{
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.hom-txt h2{
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.hom-img .img-box{
+  max-width: 360px;
+  background-color: var(--white-alpha-25);
+  border-radius: 50%;
+  border: 8px solid var(--white-alpha-25);
+  margin: 0 auto;
+}
+
+.hom-img .img-box img{
+  width: 100%;
+  border-radius: 50%;
 }
