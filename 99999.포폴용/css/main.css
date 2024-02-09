@@ -16,148 +16,350 @@
 @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Orbit&display=swap");
 /* font-family: 'Gugi', cursive; */
 
-
-
-:root{
-  --main-color: rgb(237, 72, 72);
-  --blue: blue;
-  --blue-dark: darkblue;
-  --orange: orange;
-  --green-yellow: yellowgreen;
-  --pink-light : lightpink;
-  --cyan-light: rgb(125, 235, 235);
-  --white: white;
-  --white-alpha-40: rgb(255, 255, 255, 0.40);
-  --white-alpha-25: rgb(255, 255, 255, 0.25);
-  --webkit-backdrop-filter: blur(5px);
-
+:root {
+    --main-color: rgb(237, 72, 72);
+    --blue: blue;
+    --blue-dark: black;
+    --orange: orange;
+    --green-yellow: yellowgreen;
+    --pink-light: lightpink;
+    --cyan-light: rgb(125, 235, 235);
+    --white: white;
+    --white-alpha-40: rgb(255, 255, 255, 0.4);
+    --white-alpha-25: rgb(255, 255, 255, 0.25);
+    --webkit-backdrop-filter: blur(5px);
 }
-
 
 /* 전체효과 셋팅 */
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  outline: none;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
 }
-::before
-::after{
-  box-sizing: border-box;
-}
-
-body{
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom right, var(--cyan-light), var(--pink-light) );
-  font-size: 16px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 300;
-  color: var(--blue-dark); 
-  line-height: 1.5;
-  overflow-x: hidden;
-  -webkit-top-highlight-color: transparent;
-  padding: 5vh 15px;
+::before ::after {
+    box-sizing: border-box;
 }
 
-body::before{
-  content: '';
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--green-yellow);
-  z-index: -1;
-  opacity: 0.12;
-}
-h1,h2{
-  font-weight: 600;
-}
-h3,h4,h5,h6{
-  font-weight: 500;
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, var(--cyan-light), var(--pink-light));
+    background-attachment: fixed;
+    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    color: var(--blue-dark);
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-top-highlight-color: transparent;
+    padding: 5vh 15px;
 }
 
-img{
-  max-width: 100%;
-  vertical-align: middle;
+body::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--green-yellow);
+    z-index: -1;
+    opacity: 0.12;
+}
+h1,
+h2 {
+    font-weight: 600;
+}
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
 }
 
-section{
-  background-color: var(--white-alpha-25);
-  border: 1px solid var(--white-alpha-40);
-  min-height: 90vh;
-  border-radius: 30px;
+img {
+    max-width: 100%;
+    vertical-align: middle;
 }
 
-.main{
-  max-width: 1200px;
-  margin: 0 auto;
+section {
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    min-height: 90vh;
+    border-radius: 30px;
+    backdrop-filter: var(--webkit-backdrop-filter);
 }
 
-.container{
-  padding: 0 40px;
-  width: 100%;
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.row{
-  display: flex;
-  flex-wrap: wrap;
+.container {
+    padding: 0 40px;
+    width: 100%;
 }
 
-.act{
-  align-items: center;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.act {
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.sec-padding {
+    padding: 80px 0;
+}
+
+/* 어바웃미 */
+.section-title {
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-title {
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--white);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+button {
+    font-family: inherit;
+    user-select: none;
 }
 
 /* 버튼 */
-.btn{
-  line-height: 1.5;
-  background-color: var(--white-alpha-25);
-  padding: 10px 28px;
-  display: inline-block;
-  border-radius: 30px;
-  color: var(--main-color);
-  font-weight: 500;
-  text-transform: capitalize;
-  font-family: inherit;  
-  font-size: 16px;
-  cursor: pointer;
-  user-select: none;
-  position: relative;
+.btn {
+    line-height: 1.5;
+    background-color: var(--white-alpha-25);
+    padding: 10px 28px;
+    display: inline-block;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+.btn:hover {
+    color: var(--white);
 }
 
 /* 홈섹션 */
-.hom-sec{
-  display: flex;
-  padding: 120px 0;
+.hom-sec {
+    display: flex;
+    padding: 120px 0;
 }
 
-
-.hom-txt,.hom-img{
-  width: 50%;
-  padding: 15px;
+.hom-txt,
+.hom-img {
+    width: 50%;
+    padding: 15px;
 }
-.hom-txt p{
+.hom-txt p {
+    font-size: 18px;
+}
+.hom-txt h1 {
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.hom-txt h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 0 0 30px;
+}
+.hom-txt .btn {
+    margin: 0 15px 15px 0;
+}
+
+.hom-img .img-box {
+    max-width: 360px;
+    background-color: var(--white-alpha-25);
+    border-radius: 50%;
+    border: 8px solid var(--white-alpha-25);
+    margin: 0 auto;
+}
+
+.hom-img .img-box img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* 어바웃섹션 */
+.about-img {
+    width: 40%;
+    padding: 0 15px;
+}
+
+.about-text {
+    width: 60%;
+    padding: 0 15px;
+}
+
+.about-img .img-box {
+    background-color: var(--white-alpha-25);
+    max-width: 380px;
+    border: 1px solid var(--white-alpha-40);
+    margin: auto;
+    border-radius: 10px;
+}
+
+.about-img .img-box img {
+    width: 100%;
+}
+.about-text h3 {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.about-text .skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-text .skills-item {
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    padding: 5px 15px;
+    text-transform: capitalize;
+    margin: 0 10px 10px 0;
+    border-radius: 20px;
+}
+.about-tab {
+    margin-top: 20px;
+}
+
+.about-tab .tab-item {
+    padding: 2px 0;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--blue-dark);
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 30px 0 0;
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.about-tab .tab-item:last-child {
+    margin: 0;
+}
+
+.about-tab .tab-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--blue-dark);
+    transition: width 0.3s ease;
+}
+
+.about-tab .tab-item:hover::before {
+    width: 100%;
+}
+
+.about-tab .tab-item.active::before {
+    width: 100%;
+    background-color: var(--main-color);
+}
+.about-tab .tab-item.active {
+    color: var(--main-color);
+    opacity: 1;
+    cursor: auto;
+}
+.about-text .timeline{
+  position: relative;
+}
+.about-text .timeline::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  left: 5px;
+  background-color: var(--main-color);
+}
+
+.about-text .tab-content {
+  padding: 40px 0;
+}
+.about-text .timeline-item {
+  margin-top: 5px;
+  position: relative;
+  padding: 10px 0 0 40px;
+}
+.about-text .timeline-item::before {
+  content: '';
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  background-color: var(--main-color);
+  left: 0;
+  top: 16px;
+  border-radius: 50%;
+}
+
+  
+.about-text .timeline-item .date{
+  display: block;
+  color: var(--main-color);
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+.about-text .timeline-item h4 {
   font-size: 18px;
-}
-.hom-txt h1{
-  font-size: 50px;
   text-transform: capitalize;
-}
-.hom-txt h2{
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: 300;
+  margin: 0 0 10px;
 }
 
-.hom-img .img-box{
-  max-width: 360px;
-  background-color: var(--white-alpha-25);
-  border-radius: 50%;
-  border: 8px solid var(--white-alpha-25);
-  margin: 0 auto;
+.about-text .timeline-item h4 span{
+  font-weight: 400;
 }
 
-.hom-img .img-box img{
-  width: 100%;
-  border-radius: 50%;
-}
