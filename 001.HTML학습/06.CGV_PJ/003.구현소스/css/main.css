@@ -85,35 +85,8 @@ body.on::after {
     /* 손가락모양 */
     cursor: pointer;
 }
-/* 맵버튼 가상요소로 무한이동 배경넣기 */
-.btn-map::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background:url(../images/street.jpg) repeat-x 0/50% 100%;
-    /* 애니메이션 */
-    animation: bg-ani .1s linear infinite ;
-}
-
-/* 걷는존 키프레임 */
-@keyframes bg-ani {
-    to{
-       background-position-x: -612px;
-       
-    }
-   
-}
 
 
-/* 배경애니 무한반복 키프레임 */
-@keyframes bg-ani {
-    to{
-    left: -100%;
-    }
-    
-}
 
 
 /* 1-1. 로고 */
@@ -122,7 +95,7 @@ body.on::after {
     font-size: 40px;
     font-family: 'Jua', sans-serif;
     text-align: center;
-    line-height: 80px;
+    line-height: 150px;
     /* 글자 글로우효과 */
     text-shadow: 0 0 4px aquamarine;
     /* 애니메이션 */
