@@ -34,8 +34,8 @@ a {
 
 
 body{
-    background-color: darkseagreen;
-    height: 200vh;
+    background-color: rgb(180, 240, 240);
+    height: 1000vh;
 }
 
 /* 개별 셋팅 */
@@ -171,4 +171,13 @@ body{
     /* 비율 적용 */
     aspect-ratio:  16/9;
     background: url(../images/dodo.jpg) no-repeat center / cover;
+}
+
+.goods1{
+    margin-top: 250px;
+    padding-left: 100px;
+}
+
+.goods1 h1{
+    font-size: 20px;
 }
