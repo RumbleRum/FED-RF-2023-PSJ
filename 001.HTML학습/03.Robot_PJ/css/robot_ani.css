@@ -80,7 +80,6 @@ animation : 이시이지반방마
 
 /* 로고이동 키프레임 */
 @keyframes logo-ani {
-    /* from{} 첫 상태 이미설정해서 생략 */
     80%{ 
         top: 50px;
         left: 50px;
@@ -92,11 +91,8 @@ animation : 이시이지반방마
         transform:  scale(1) rotate(-25deg);
     }
 }
-/* 로고이동+오뚜기애니 호출하기 - 대상 : .logo */
 .logo{
-    /* 이동 스케일 애니 3초후 작동*/
     animation: logo-ani 1.5s ease-in-out 2s forwards,
-    /* 기울기 애니 : 4.5초 후 작동*/
     swing-ani .5s ease-in-out 3.5s infinite alternate ;
 }
 
